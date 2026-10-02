@@ -1,0 +1,45 @@
+{
+  "source": "journey/cycles/2/harvest/feedback.json (8 stickies, Lucid d56b0edf) + PR #2 body (head 2649ac4; UI change in 40c9853)",
+  "flows": {
+    "vendor-approval": {
+      "default": [
+        "No vendor-specific feedback in cycle 2 (0 stickies on the vendor page).",
+        "Site-wide [must]: top bar now 72px tall with the new logo mark (indigo tile, geometric N) and two-weight “Northwind AI Ops” wordmark.",
+        "Site-wide [try]: subtle gray ASCII character-field background behind every screen (animated live; frozen static frame in these captures).",
+        "Square corners from cycle 2 unchanged."
+      ]
+    }
+  },
+  "steps": {
+    "home-00-landing": [
+      "New this cycle: first review of the landing page (home route /). No cycle-2 capture to compare.",
+      "Shows the site-wide 72px header + new logo/wordmark and the ASCII background.",
+      "The “Get started” click (cursor) is how the signup flow (page 2) now starts."
+    ],
+    "signup-01-create-account": [
+      "[must] Top bar 72px + new logo mark and wordmark, all pages (sticky: “Increase header height — and generate a modern logo”)",
+      "[try] “Send me marketing emails” checkbox removed (sticky: “remove checkbox”)",
+      "[try] ASCII background on all screens (from signup-02 sticky)",
+      "Journey: flow now enters from the landing page via “Get started” instead of opening /signup directly"
+    ],
+    "signup-02-role": [
+      "[try] Next button removed: clicking a role saves it and goes straight to goals (sticky: “move to next screen immediately on selection”)",
+      "[try] Gray ASCII character-field background on all screens (sticky: “ascii type shader animation”)",
+      "[must] 72px header + new logo (global)"
+    ],
+    "signup-03-goals": [
+      "[must] Goals are highlight-on-select tiles, no checkboxes, same style as role (sticky: “Match selection style of previous screen”)",
+      "[try] Back is now a secondary gray rectangle like “Go to vendors”; returns to role with your choice still highlighted",
+      "[try] “Create workspace” already right-aligned: no change needed (sticky: “Move create workspace back to right”)",
+      "Global: 72px header + logo, ASCII background"
+    ],
+    "signup-04-workspace-created": [
+      "No screen-specific UI change; global 72px header + logo and ASCII background apply",
+      "[try] Journey now clicks “Invite teammates” to reach the new step 5 (sticky: “Add invite teammates screen to next cycle flow”)"
+    ],
+    "signup-05-invite": [
+      "New this cycle: invite teammates placeholder (/workspace/:id/invite) added to the journey (cycle-2 sticky on step 4).",
+      "Screen itself unchanged since cycle 1 (placeholder copy + Back button). No cycle-2 capture to compare."
+    ]
+  }
+}

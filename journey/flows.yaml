@@ -7,9 +7,24 @@ version: 1
 base_url: https://design-loop-sample-prototype.netlify.app
 viewport: { width: 1440, height: 1024 }
 flows:
+  # cycle 3: the landing page (home route '/') is its own flow so existing signup/vendor step keys stay stable
+  # and every stepKey stays unique (harvest maps frame-<stepKey> -> step). Its single step clicks the
+  # "Get started" CTA, which is where the signup flow begins.
+  - key: landing
+    name: Landing page (home) → Get started
+    start_url: /
+    steps:
+      - key: home-00-landing
+        expect: { route: /, h1: Transform your org with AI }
+        action: { click: { role: link, name: Get started } }
   - key: signup
-    name: Sign up → onboarding → workspace created → invite teammates
-    start_url: /signup
+    name: Landing → Get started → sign up → onboarding → workspace created → invite teammates
+    # cycle 3: the flow is entered from the landing page by clicking "Get started" (not by deep-linking /signup).
+    # `entry` runs before step 1 and is not captured as its own frame (the landing flow already captures '/').
+    start_url: /
+    entry:
+      expect: { route: /, h1: Transform your org with AI }
+      click: { role: link, name: Get started }
     steps:
       - key: signup-01-create-account
         expect: { route: /signup, h1: Create your account }
@@ -36,6 +51,10 @@ flows:
   - key: vendor-approval
     name: Vendor list → vendor detail → review → approved
     start_url: /vendors
+    # Covers every vendor route in src/App.jsx: /vendors, /vendors/:id, /vendors/:id/review, /vendors/:id/approved.
+    # Other reachable paths land on already-captured screens: Reject and "OK" return to /vendors; the header
+    # "Vendors" nav, the landing "Vendors" button and WorkspaceReady "Go to vendors" all open /vendors.
+    # An unknown vendor id renders the generic NotFound screen (reachable only by typing a bad URL).
     steps:
       - key: vendor-01-list
         expect: { route: /vendors, h1: AI vendors }

@@ -57,3 +57,24 @@ Priority is parsed from a leading `must` / `try` / `maybe` (optionally after `TE
 
 ## Cycles
 `journey/cycles/<N>/` holds the frozen artifacts of a review cycle: `manifest.json`, `annotated/`, `asset-urls.json`, `lucid-spec.json`, `lucid-doc.json` (doc id / URLs), `export/` (Lucid PNG exports), `harvest/` (fetch transcription + `feedback.json`).
+
+## Cycle 3 additions (PR #2 preview)
+```bash
+COMMIT_SHA=<PR head sha> node journey/capture.mjs --cycle 3 --pr 2 --base-url https://deploy-preview-2--design-loop-sample-prototype.netlify.app
+python3 journey/annotate.py --cycle 3
+python3 journey/lucid/build_spec.py --cycle 3 --asset-prefix design-loop-c3 --layout pages --flows landing,signup,vendor-approval \
+  --before-urls journey/cycles/2/asset-urls.json --changes journey/cycles/3/changes.json --title-suffix ' (PR #2)' \
+  --page-label 'landing=Landing (home)' --page-label 'signup=Get started (signup)' --page-label 'vendor-approval=Vendors (vendor-approval)' \
+  --out journey/cycles/3/lucid-spec.json
+```
+- New flow `landing` (one step `home-00-landing`, route `/`, action = click link "Get started"). Kept as its own flow so every
+  stepKey stays unique (harvest maps `frame-<stepKey>`) and existing signup/vendor step keys are unchanged.
+- Flows may declare `entry: {expect, click}`: run on `start_url` before step 1 and not captured. The signup flow now starts on `/`
+  and clicks "Get started"; step 1 records it as `entry` and its frame header says "reached from / via link 'Get started'".
+- `capture.mjs`: `--pr N` (recorded per entry), `--flow a,b`; blocks `/.netlify/scripts/cdp` (the deploy-preview
+  "Collaborate on this Deploy Preview" drawer appeared intermittently over screenshots).
+- `build_spec.py`: steps with no previous-cycle image get a dashed **"New this cycle"** before-box (same ids/prefix, ignored by harvest);
+  `--page-label flow=Label`; step header text is 22pt/16pt in a 200px box at frame y+40 (30pt/22pt overflowed behind the screenshot).
+- `lucid_edit_item` `text` is plain text: HTML is rendered literally. Fix generated text by re-importing, not by editing.
+- `harvest.py`: the connector returns a page whose single frame has no connectors as `data.containers.childContainers[]`
+  (`containerId` + `itemIds`) instead of a `Frame` node with `childrenIds`; both forms are handled.

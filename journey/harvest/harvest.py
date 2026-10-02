@@ -65,9 +65,13 @@ def norm(item, page):
     p = item['properties']
     tas = p.get('TextAreas') or []
     text = '\n'.join(t.get('text', '') for t in tas if t.get('text')) or item.get('label') or item.get('text') or ''
-    return {'id': item.get('id') or item.get('itemId'), 'blockClass': p.get('BlockClass'), 'shapeType': item.get('shapeType'),
+    # Oct 2026 connector variant: a page whose only frame has no connectors comes back with the frame under
+    # data.containers.childContainers[] as {containerId, label, properties, itemIds} instead of a Frame node with childrenIds.
+    return {'id': item.get('id') or item.get('itemId') or item.get('containerId'), 'blockClass': p.get('BlockClass'),
+            'shapeType': item.get('shapeType') or ('Frame' if item.get('containerId') and p.get('BlockClass') in FRAME_CLASSES else None),
             'text': text, 'bbox': parse_bbox(p.get('BoundingBox')), 'fill': p.get('FillColor'),
-            'childrenIds': item.get('childrenIds'), 'pageId': page.get('pageId'), 'pageTitle': page.get('pageTitle')}
+            'childrenIds': item.get('childrenIds') or (item.get('itemIds') if item.get('containerId') else None),
+            'pageId': page.get('pageId'), 'pageTitle': page.get('pageTitle')}
 
 def overlap_ratio(a, f):
     ix = max(0, min(a['x'] + a['w'], f['x'] + f['w']) - max(a['x'], f['x']))
