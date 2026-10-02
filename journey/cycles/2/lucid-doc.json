@@ -1,0 +1,37 @@
+{
+  "cycle": 2,
+  "docId": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
+  "title": "Design loop — Cycle 2 review (PR #1)",
+  "editUrl": "https://lucid.app/lucidchart/d56b0edf-53e9-4933-a64b-a2be6c500d0d/edit",
+  "viewUrl": "https://lucid.app/lucidchart/d56b0edf-53e9-4933-a64b-a2be6c500d0d/view",
+  "layout": "pages+before-after",
+  "pages": [
+    {
+      "index": 1,
+      "id": "p1",
+      "title": "1. signup · cycle 2",
+      "flow": "signup",
+      "frames": 4
+    },
+    {
+      "index": 2,
+      "id": "p2",
+      "title": "2. vendor-approval · cycle 2",
+      "flow": "vendor-approval",
+      "frames": 4
+    }
+  ],
+  "layoutNotes": "Per step column (x = i*2720): y 0..660 = before panel (before-box/lbl/img-<flow>-<n>, cycle-1 image 720x512) at x+0..880 and changes-<flow>-<n> block at x+960..2240; y 900..2584 = review frame frame-<stepKey> 2240x1684 with img-<stepKey> 1440x1024 at (+400,+260). Legend/title above y=0. Before/changes items are plain shapes outside the frames.",
+  "createdAt": "2026-10-02T05:25:07Z",
+  "capturedCommit": "5461dffb543948bcd79c8a6e4d84f033d2befef8",
+  "pr": 1,
+  "deployUrl": "https://deploy-preview-1--design-loop-sample-prototype.netlify.app",
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-<flow>/",
+  "beforeAssetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-<flow>/",
+  "postImportEdits": "before-lbl-* text shortened to \"Cycle 1 (before) · reference only\" (bold 20pt) via lucid_edit_item to stop wrapping; build_spec.py updated to match",
+  "exports": [
+    "export/lucid-export-p1-signup.png",
+    "export/lucid-export-p2-vendor-approval.png",
+    "export/lucid-export-p1-detail-before-signup-1.png"
+  ]
+}

@@ -1,0 +1,208 @@
+{
+ "_note": "Condensed transcription of the Lucid connector fetch(id=c95ea620-f506-4499-9d67-dc821b143297, page_index=3) response taken 2026-10-02 ~10:15 MDT (re-harvest after review; metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id/itemId, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor, frame childrenIds / childContainers itemIds, ImageUrl) for frames, screenshots and every non-generated item; omits styling/ZOrder, hdr- step-header blocks (still listed in frame childrenIds) and generated standalone items (_omittedGeneratedIds; no reviewer item attached to any). Sticky texts are verbatim (incl. typos). Raw response size ~25k chars.",
+ "_omittedGeneratedIds": [
+  "doc-title-p3",
+  "legend-box-p3",
+  "legend-must-p3",
+  "legend-try-p3",
+  "legend-maybe-p3",
+  "before-lbl-vendor-approval-1",
+  "before-box-vendor-approval-1",
+  "before-img-vendor-approval-1",
+  "changes-vendor-approval-1",
+  "before-lbl-vendor-approval-2",
+  "before-box-vendor-approval-2",
+  "before-img-vendor-approval-2",
+  "changes-vendor-approval-2",
+  "before-lbl-vendor-approval-3",
+  "before-box-vendor-approval-3",
+  "before-img-vendor-approval-3",
+  "changes-vendor-approval-3",
+  "before-lbl-vendor-approval-4",
+  "before-box-vendor-approval-4",
+  "before-img-vendor-approval-4",
+  "changes-vendor-approval-4",
+  "arrow-vendor-approval-1",
+  "arrow-vendor-approval-2",
+  "arrow-vendor-approval-3"
+ ],
+ "document_id": "c95ea620-f506-4499-9d67-dc821b143297",
+ "page_id": "p3",
+ "page_index": 3,
+ "metadata": {
+  "page_count": 3,
+  "page_index": 3,
+  "page_region_counts": [
+   1,
+   1,
+   1
+  ]
+ },
+ "pages": [
+  {
+   "pageId": "p3",
+   "pageTitle": "3. Vendors (vendor-approval) · cycle 4",
+   "pageIndex": 2,
+   "totalChunks": 1,
+   "requestedChunks": [
+    {
+     "chunkIndex": 0,
+     "data": {
+      "flowcharts": [
+       {
+        "diagramGroupId": "group_0",
+        "nodes": [
+         {
+          "id": "frame-vendor-01-list",
+          "label": "vendor-01-list · /vendors · Vendors · Northwind AI Ops",
+          "shapeType": "Frame",
+          "childrenIds": [
+           "hdr-vendor-01-list",
+           "img-vendor-01-list",
+           "7pHzKpUvEyup"
+          ],
+          "properties": {
+           "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-01-list · /vendors · Vendors · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-01-list",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/01-vendor-01-list.png"
+          }
+         },
+         {
+          "id": "frame-vendor-02-detail",
+          "label": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops",
+          "shapeType": "Frame",
+          "childrenIds": [
+           "hdr-vendor-02-detail",
+           "img-vendor-02-detail",
+           "0oHzCYfI-6KV"
+          ],
+          "properties": {
+           "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-02-detail",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/02-vendor-02-detail.png"
+          }
+         },
+         {
+          "id": "frame-vendor-03-review",
+          "label": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops",
+          "shapeType": "Frame",
+          "childrenIds": [
+           "hdr-vendor-03-review",
+           "img-vendor-03-review"
+          ],
+          "properties": {
+           "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-03-review",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/03-vendor-03-review.png"
+          }
+         },
+         {
+          "id": "frame-vendor-04-approved",
+          "label": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops",
+          "shapeType": "Frame",
+          "childrenIds": [
+           "hdr-vendor-04-approved",
+           "img-vendor-04-approved"
+          ],
+          "properties": {
+           "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-04-approved",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/04-vendor-04-approved.png"
+          }
+         },
+         {
+          "id": "0oHzCYfI-6KV",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 3073.1464230594383, y: 1302.5818784335574, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "make \"Back\" an icon button with a back arrow - not a hyperlink"
+            }
+           ]
+          }
+         },
+         {
+          "id": "7pHzKpUvEyup",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#e81313ff",
+           "BoundingBox": "x: 286.78713866371527, y: 1689.8449347242745, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Add option to add a new vendor. This will also include a new screen with a form to input vendor detaills",
+             "textColor": "#ffffffff"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

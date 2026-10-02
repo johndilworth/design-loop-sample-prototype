@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 // Runs journey/flows.yaml with headless Chromium and writes screenshots + journey/manifest.json.
-// Usage: node journey/capture.mjs [--cycle 1] [--base-url URL] [--flow key] [--out journey/out]
+// Usage: node journey/capture.mjs [--cycle 1] [--base-url URL] [--flow key[,key]] [--out journey/out] [--pr N]
+// A flow may define `entry: { expect: {h1}, click: {role,name} }`: run on start_url before step 1 (not captured),
+// e.g. the signup flow starts on '/' and clicks "Get started". It is recorded on step 1 as `entry`.
+// A step may set `expect.toast` (text of a role=status toast that must be visible in the shot).
 import { chromium } from 'playwright'
 import YAML from 'yaml'
 import fs from 'node:fs'
@@ -19,6 +22,7 @@ const cycle = Number(args.cycle || 1)
 const baseUrl = (args['base-url'] || process.env.DEPLOY_URL || spec.base_url).replace(/\/$/, '')
 const outRoot = path.resolve(args.out || path.join(here, 'out'))
 const manifestPath = path.resolve(args.manifest || path.join(here, 'manifest.json'))
+const pr = args.pr ? Number(args.pr) : (process.env.PR_NUMBER ? Number(process.env.PR_NUMBER) : null)
 let commit = process.env.COMMIT_SHA || null
 try { commit = commit || execSync('git rev-parse HEAD', { cwd: here }).toString().trim() } catch {}
 
@@ -60,11 +64,27 @@ async function elementInfo(locator) {
 
 const browser = await chromium.launch({ headless: true })
 const entries = []
-const flows = spec.flows.filter((f) => !args.flow || f.key === args.flow)
+const only = args.flow ? String(args.flow).split(',') : null
+const flows = spec.flows.filter((f) => !only || only.includes(f.key))
 for (const flow of flows) {
-  const context = await browser.newContext({ viewport: spec.viewport, deviceScaleFactor: 1 })
+  // reducedMotion + capture flag: the animated ASCII background renders one deterministic static frame,
+  // so screenshots are stable across runs but still show the texture.
+  const context = await browser.newContext({ viewport: spec.viewport, deviceScaleFactor: 1, reducedMotion: 'reduce' })
+  await context.addInitScript(() => { window.__DESIGN_LOOP_CAPTURE__ = true })
+  // Deploy previews inject the Netlify collaboration drawer ("Collaborate on this Deploy Preview") via
+  // /.netlify/scripts/cdp; it appears intermittently over the screen, so block it for clean captures.
+  await context.route(/\/\.netlify\/scripts\/cdp/, (r) => r.abort())
   const page = await context.newPage()
   await page.goto(baseUrl + flow.start_url, { waitUntil: 'networkidle' })
+  let entry = null
+  if (flow.entry?.click) {
+    if (flow.entry.expect?.h1) await page.getByRole('heading', { level: 1, name: flow.entry.expect.h1, exact: true }).waitFor({ timeout: 10000 })
+    const fromUrl = page.url()
+    await loc(page, flow.entry.click).click()
+    await page.waitForLoadState('networkidle')
+    entry = { from: fromUrl, fromRoute: routeTemplate(fromUrl), click: flow.entry.click, to: page.url() }
+    console.log(`[cycle ${cycle}] ${flow.key} entry: ${entry.fromRoute} click ${flow.entry.click.role} "${flow.entry.click.name}" -> ${routeTemplate(entry.to)}`)
+  }
   const dir = path.join(outRoot, `cycle-${cycle}`, flow.key, 'raw')
   fs.mkdirSync(dir, { recursive: true })
   for (const [i, step] of flow.steps.entries()) {
@@ -73,6 +93,7 @@ for (const flow of flows) {
     for (const p of step.prepare || []) {
       if (p.fill) await loc(page, p.fill).fill(String(p.value))
       else if (p.check) await loc(page, p.check).check()
+      else if (p.select) await loc(page, p.select).selectOption(String(p.value)) // cycle 4: <select> fields
       else if (p.click) await loc(page, p.click).click()
     }
     await page.mouse.move(0, 0)
@@ -81,6 +102,12 @@ for (const flow of flows) {
     const route = routeTemplate(url)
     const info = await screenInfo(page)
     const warnings = []
+    // cycle 3: `expect.toast` = text of a toast that must be visible (role=status live region) when the shot is taken.
+    // The app keeps toasts up in capture mode (window.__DESIGN_LOOP_CAPTURE__), so there is no 3 s auto-dismiss race.
+    if (step.expect?.toast) {
+      const t = page.getByRole('status').getByText(step.expect.toast, { exact: true })
+      try { await t.waitFor({ state: 'visible', timeout: 5000 }) } catch { warnings.push(`toast "${step.expect.toast}" not visible`) }
+    }
     if (step.expect?.route && step.expect.route !== route) warnings.push(`route ${route} != expected ${step.expect.route}`)
     let clicked = null
     if (step.action?.click) {
@@ -99,7 +126,8 @@ for (const flow of flows) {
       url, route, title: info.title, h1: info.h1, clicked,
       textFingerprint: fingerprint, fingerprintSource: 'sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]',
       screenshot: path.relative(path.dirname(manifestPath), path.join(dir, file)),
-      timestamp: new Date().toISOString(), commit, deployUrl: baseUrl, viewport: spec.viewport, warnings,
+      timestamp: new Date().toISOString(), commit, deployUrl: baseUrl, pr, viewport: spec.viewport, warnings,
+      ...(i === 0 && entry ? { entry } : {}),
     })
     console.log(`[cycle ${cycle}] ${flow.key} ${step.key} ${route} "${info.title}" ${warnings.join('; ')}`)
     if (clicked) {

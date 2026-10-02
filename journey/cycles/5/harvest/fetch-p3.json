@@ -1,0 +1,302 @@
+{
+ "_note": "Condensed from Lucid fetch(page_index=3) 2026-10-02 ~11:25 MDT via board-state.py; see board-state.json",
+ "pages": [
+  {
+   "pageId": "p3",
+   "pageTitle": "3. Vendors (vendor-approval) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p3",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 0, y: -860, w: 4400, h: 200"
+     }
+    },
+    {
+     "id": "legend-box-p3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: -560, w: 2600, h: 360",
+      "FillColor": "#f4f6fbff"
+     }
+    },
+    {
+     "id": "legend-must-p3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2700, y: -530, w: 260, h: 300",
+      "FillColor": "#ff8a80ff"
+     }
+    },
+    {
+     "id": "legend-try-p3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3020, y: -530, w: 260, h: 300",
+      "FillColor": "#ffe066ff"
+     }
+    },
+    {
+     "id": "legend-maybe-p3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3340, y: -530, w: 260, h: 300",
+      "FillColor": "#a3e4ffff"
+     }
+    },
+    {
+     "id": "before-box-vendor-approval-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-vendor-approval-1",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 20, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-vendor-approval-1",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 80, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-vendor-approval-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 960, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-01-list",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-01-list · /vendors · Vendors · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-01-list",
+      "hdr-vendor-01-list"
+     ]
+    },
+    {
+     "id": "hdr-vendor-01-list",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 400, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-01-list",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-vendor-approval-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2720, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-vendor-approval-2",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 2740, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-vendor-approval-2",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 2800, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-vendor-approval-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3680, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-02-detail",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-02-detail",
+      "hdr-vendor-02-detail"
+     ]
+    },
+    {
+     "id": "hdr-vendor-02-detail",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 3120, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-02-detail",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-vendor-approval-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 5440, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-vendor-approval-3",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 5460, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-vendor-approval-3",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 5520, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-vendor-approval-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 6400, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-03-review",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-03-review",
+      "hdr-vendor-03-review"
+     ]
+    },
+    {
+     "id": "hdr-vendor-03-review",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 5840, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-03-review",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-vendor-approval-4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 8160, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-vendor-approval-4",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 8180, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-vendor-approval-4",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 8240, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-vendor-approval-4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 9120, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-04-approved",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-04-approved",
+      "hdr-vendor-04-approved"
+     ]
+    },
+    {
+     "id": "hdr-vendor-04-approved",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 8560, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-04-approved",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024"
+     }
+    }
+   ]
+  }
+ ]
+}

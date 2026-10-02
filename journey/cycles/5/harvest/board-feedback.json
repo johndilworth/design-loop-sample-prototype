@@ -1,0 +1,914 @@
+{
+  "docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215",
+  "cycle": 5,
+  "harvestedAt": "2026-10-02T17:25:00Z",
+  "scope": "Feedback on the REVIEW BOARD design (not the app): purple/violet stickies + notes starting \"Board:\" + direct layout edits diffed against journey/cycles/5/lucid-spec.json and lucid-layout.json.",
+  "detection": {
+    "purple": "sticky fill hue 260-320 deg, saturation >= 0.25 (all 8 are #ba23f6ff, hue 283 deg)",
+    "boardPrefix": "text starting \"Board:\" (none found)",
+    "anchoring": "nearest board element by bounding-box edge distance on the same page (diff_board.py), frames considered only when the note is outside them; semantic anchor chosen from the text when it names an element"
+  },
+  "counts": {
+    "purpleStickies": 8,
+    "boardTextNotes": 0,
+    "insideFrames": 4,
+    "outsideFrames": 4,
+    "byPage": {
+      "p1": 8,
+      "p2": 0,
+      "p3": 0,
+      "p4": 0
+    },
+    "directEdits": {
+      "p1": 8,
+      "p2": 1,
+      "p3": 0,
+      "p4": 0
+    },
+    "rules": 7
+  },
+  "items": [
+    {
+      "itemId": "XbIz-bjbxpkg",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "formatting updates for cycle board in Lucidchart are in purple.",
+      "insideFrame": null,
+      "anchor": "board (meta convention)",
+      "anchorReason": "outside frame, nearest frame-home-00-landing 262 px; text is a legend-style convention, not an element change",
+      "nearestByBBox": [
+        {
+          "id": "frame-home-00-landing",
+          "element": "frame",
+          "distance": 261.8
+        },
+        {
+          "id": "img-home-00-landing",
+          "element": "screenshot",
+          "distance": 661.8
+        },
+        {
+          "id": "legend-box-p1",
+          "element": "legend",
+          "distance": 920.2
+        }
+      ],
+      "bbox": {
+        "x": -421.756715403985,
+        "y": 595.6294200268935,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "jfIz4vMwkkTy",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "formatting updates for cycle board in Lucidchart are in purple.",
+      "insideFrame": null,
+      "anchor": "legend (meta convention)",
+      "anchorReason": "outside frame, next to legend-box-p1 (226 px); duplicate of XbIz-bjbxpkg",
+      "nearestByBBox": [
+        {
+          "id": "legend-box-p1",
+          "element": "legend",
+          "distance": 225.8
+        },
+        {
+          "id": "doc-title-p1",
+          "element": "page header",
+          "distance": 260.5
+        },
+        {
+          "id": "frame-home-00-landing",
+          "element": "frame",
+          "distance": 623.8
+        }
+      ],
+      "bbox": {
+        "x": -385.75671540398616,
+        "y": -530,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "6hIz-4FiXxk6",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "Change  from Red/Yellow/Blue to  \n\nDo or Must Do\nTry\nConsider\n\n\nKeep color coding, but also if text of any sticky not contains those words set the priority based on text over color (a blue sticky with \"Do or Must Do\" should be considered as Red ( maybe even change the colors during the \"harvest cycle\" pull.",
+      "insideFrame": null,
+      "anchor": "legend",
+      "anchorReason": "right of the legend swatches (legend-maybe-p1 109 px; doc-title-p1 100 px is nearer by edge but the text is about the legend labels)",
+      "nearestByBBox": [
+        {
+          "id": "doc-title-p1",
+          "element": "page header",
+          "distance": 100.0
+        },
+        {
+          "id": "legend-maybe-p1",
+          "element": "legend",
+          "distance": 109.1
+        },
+        {
+          "id": "legend-try-p1",
+          "element": "legend",
+          "distance": 429.1
+        }
+      ],
+      "bbox": {
+        "x": 3709.1420974445064,
+        "y": -560,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "icIz1BsecLhj",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "set border to zero and radius to zero for frame style",
+      "insideFrame": null,
+      "anchor": "frame (frame-home-00-landing)",
+      "anchorReason": "left of the frame, 122 px; text names \"frame style\"",
+      "nearestByBBox": [
+        {
+          "id": "frame-home-00-landing",
+          "element": "frame",
+          "distance": 122.3
+        },
+        {
+          "id": "img-home-00-landing",
+          "element": "screenshot",
+          "distance": 522.3
+        },
+        {
+          "id": "hdr-home-00-landing",
+          "element": "frame title/description (hdr)",
+          "distance": 887.7
+        }
+      ],
+      "bbox": {
+        "x": -282.2527671416587,
+        "y": 1082.8521647040548,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "3dIzN_rAGpYV",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "Create equal spacing around frame — this is where people can easily add notations to each screen without overlapping content or screenshots",
+      "insideFrame": "frame-home-00-landing",
+      "anchor": "frame padding (frame-home-00-landing top margin)",
+      "anchorReason": "inside frame, in the top margin above img-home-00-landing (86 px)",
+      "nearestByBBox": [
+        {
+          "id": "img-home-00-landing",
+          "element": "screenshot",
+          "distance": 85.6
+        },
+        {
+          "id": "legend-box-p1",
+          "element": "legend",
+          "distance": 611.7
+        },
+        {
+          "id": "doc-title-p1",
+          "element": "page header",
+          "distance": 985.2
+        }
+      ],
+      "bbox": {
+        "x": 501.79840462619904,
+        "y": 325.1596225452313,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "EdIz~gM9LFYo",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "Move screenshot title and description below screenshot",
+      "insideFrame": "frame-home-00-landing",
+      "anchor": "frame title / description (hdr-home-00-landing)",
+      "anchorReason": "inside frame left margin, level with hdr (78 px)",
+      "nearestByBBox": [
+        {
+          "id": "hdr-home-00-landing",
+          "element": "frame title/description (hdr)",
+          "distance": 77.5
+        },
+        {
+          "id": "changes-landing-1",
+          "element": "changes block",
+          "distance": 83.4
+        },
+        {
+          "id": "img-home-00-landing",
+          "element": "screenshot",
+          "distance": 393.6
+        }
+      ],
+      "bbox": {
+        "x": 162.45683097954714,
+        "y": 1980.6390752884245,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "YgIzRzAthhEC",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "Move changes in this cycle and the previous cycle screenshot below the title, that way current images are always front and center",
+      "insideFrame": "frame-home-00-landing",
+      "anchor": "changes block + before panel (changes-landing-1, before-*-landing-1)",
+      "anchorReason": "inside frame left margin, level with changes block (84 px)",
+      "nearestByBBox": [
+        {
+          "id": "changes-landing-1",
+          "element": "changes block",
+          "distance": 83.5
+        },
+        {
+          "id": "before-lbl-landing-1",
+          "element": "before panel",
+          "distance": 98.4
+        },
+        {
+          "id": "before-img-landing-1",
+          "element": "before panel",
+          "distance": 194.3
+        }
+      ],
+      "bbox": {
+        "x": 142.09818817686755,
+        "y": 2360.667074270663,
+        "w": 160,
+        "h": 160
+      }
+    },
+    {
+      "itemId": "DhIzzUw.36NA",
+      "page": "p1",
+      "fill": "#ba23f6ff",
+      "hue": "283deg purple",
+      "text": "Remove borders and background around text.",
+      "insideFrame": "frame-home-00-landing",
+      "anchor": "text containers (changes block, before panel, legend box)",
+      "anchorReason": "inside frame left margin next to before-lbl (90 px); matching direct edits removed fill/border on changes-landing-1 and legend-box-p1 and deleted before-box-landing-1",
+      "nearestByBBox": [
+        {
+          "id": "before-lbl-landing-1",
+          "element": "before panel",
+          "distance": 89.8
+        },
+        {
+          "id": "before-img-landing-1",
+          "element": "before panel",
+          "distance": 89.8
+        },
+        {
+          "id": "changes-landing-1",
+          "element": "changes block",
+          "distance": 94.0
+        }
+      ],
+      "bbox": {
+        "x": 142.09818817686755,
+        "y": 2580.695073252893,
+        "w": 160,
+        "h": 160
+      }
+    }
+  ],
+  "stickyToRule": {
+    "XbIz-bjbxpkg": [
+      "R6"
+    ],
+    "jfIz4vMwkkTy": [
+      "R6"
+    ],
+    "6hIz-4FiXxk6": [
+      "R5"
+    ],
+    "icIz1BsecLhj": [
+      "R1"
+    ],
+    "3dIzN_rAGpYV": [
+      "R2"
+    ],
+    "EdIz~gM9LFYo": [
+      "R3"
+    ],
+    "YgIzRzAthhEC": [
+      "R3"
+    ],
+    "DhIzzUw.36NA": [
+      "R4"
+    ]
+  },
+  "directEdits": [
+    {
+      "pageId": "p1",
+      "pageTitle": "1. Landing (home) · cycle 5",
+      "edits": [
+        {
+          "id": "legend-box-p1",
+          "element": "legend",
+          "change": "modified",
+          "diff": {
+            "h": {
+              "generated": 360,
+              "current": 273.4,
+              "delta": -86.6
+            },
+            "fill": {
+              "generated": "#F4F6FB",
+              "current": "#00000000"
+            },
+            "line": {
+              "generated": "#3A4FD8",
+              "current": "#00000000"
+            }
+          }
+        },
+        {
+          "id": "before-box-landing-1",
+          "element": "before panel",
+          "change": "deleted",
+          "generated": {
+            "x": 0,
+            "y": 0,
+            "w": 880,
+            "h": 660
+          }
+        },
+        {
+          "id": "before-lbl-landing-1",
+          "element": "before panel",
+          "change": "modified",
+          "diff": {
+            "x": {
+              "generated": 20,
+              "current": 391.9,
+              "delta": 371.9
+            },
+            "y": {
+              "generated": 20,
+              "current": 2561.0,
+              "delta": 2541.0
+            }
+          }
+        },
+        {
+          "id": "before-img-landing-1",
+          "element": "before panel",
+          "change": "modified",
+          "diff": {
+            "x": {
+              "generated": 80,
+              "current": 391.9,
+              "delta": 311.9
+            },
+            "y": {
+              "generated": 125,
+              "current": 2693.0,
+              "delta": 2568.0
+            }
+          }
+        },
+        {
+          "id": "changes-landing-1",
+          "element": "changes block",
+          "change": "modified",
+          "diff": {
+            "x": {
+              "generated": 960,
+              "current": 385.6,
+              "delta": -574.4
+            },
+            "y": {
+              "generated": 0,
+              "current": 2195.2,
+              "delta": 2195.2
+            },
+            "h": {
+              "generated": 660,
+              "current": 342.4,
+              "delta": -317.6
+            },
+            "fill": {
+              "generated": "#EAF7EE",
+              "current": "#00000000"
+            },
+            "line": {
+              "generated": "#2E7D32",
+              "current": "#00000000"
+            },
+            "text": "blank line inserted after the \"Changes in this cycle\" heading"
+          }
+        },
+        {
+          "id": "frame-home-00-landing",
+          "element": "frame",
+          "change": "modified",
+          "diff": {
+            "y": {
+              "generated": 900,
+              "current": 211.5,
+              "delta": -688.5
+            },
+            "h": {
+              "generated": 1684,
+              "current": 3351.8,
+              "delta": 1667.8
+            },
+            "fill": {
+              "generated": "#FFFFFF",
+              "current": "#f2f3f5ff"
+            },
+            "line": {
+              "generated": "#000000",
+              "current": "#00000000"
+            },
+            "titleColor": {
+              "generated": "#ffffff (on black title chip)",
+              "current": "#010000ff"
+            }
+          }
+        },
+        {
+          "id": "hdr-home-00-landing",
+          "element": "frame title/description (hdr)",
+          "change": "modified",
+          "diff": {
+            "y": {
+              "generated": 940,
+              "current": 1960.6,
+              "delta": 1020.6
+            }
+          }
+        },
+        {
+          "id": "img-home-00-landing",
+          "element": "screenshot",
+          "change": "modified",
+          "diff": {
+            "y": {
+              "generated": 1160,
+              "current": 570.7,
+              "delta": -589.3
+            }
+          }
+        }
+      ],
+      "boardNotes": [
+        {
+          "itemId": "XbIz-bjbxpkg",
+          "fill": "#ba23f6ff",
+          "text": "formatting updates for cycle board in Lucidchart are in purple.",
+          "bbox": {
+            "x": -421.756715403985,
+            "y": 595.6294200268935,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": null,
+          "nearest": [
+            {
+              "id": "frame-home-00-landing",
+              "element": "frame",
+              "distance": 261.8
+            },
+            {
+              "id": "img-home-00-landing",
+              "element": "screenshot",
+              "distance": 661.8
+            },
+            {
+              "id": "legend-box-p1",
+              "element": "legend",
+              "distance": 920.2
+            }
+          ]
+        },
+        {
+          "itemId": "jfIz4vMwkkTy",
+          "fill": "#ba23f6ff",
+          "text": "formatting updates for cycle board in Lucidchart are in purple.",
+          "bbox": {
+            "x": -385.75671540398616,
+            "y": -530,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": null,
+          "nearest": [
+            {
+              "id": "legend-box-p1",
+              "element": "legend",
+              "distance": 225.8
+            },
+            {
+              "id": "doc-title-p1",
+              "element": "page header",
+              "distance": 260.5
+            },
+            {
+              "id": "frame-home-00-landing",
+              "element": "frame",
+              "distance": 623.8
+            }
+          ]
+        },
+        {
+          "itemId": "6hIz-4FiXxk6",
+          "fill": "#ba23f6ff",
+          "text": "Change  from Red/Yellow/Blue to  \n\nDo or Must Do\nTry\nConsider\n\n\nKeep color coding, but also if text of any sticky not contains those words set the priority based on text over color (a blue sticky with \"Do or Must Do\" should be considered as Red ( maybe even change the colors during the \"harvest cycle\" pull.",
+          "bbox": {
+            "x": 3709.1420974445064,
+            "y": -560,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": null,
+          "nearest": [
+            {
+              "id": "doc-title-p1",
+              "element": "page header",
+              "distance": 100.0
+            },
+            {
+              "id": "legend-maybe-p1",
+              "element": "legend",
+              "distance": 109.1
+            },
+            {
+              "id": "legend-try-p1",
+              "element": "legend",
+              "distance": 429.1
+            }
+          ]
+        },
+        {
+          "itemId": "icIz1BsecLhj",
+          "fill": "#ba23f6ff",
+          "text": "set border to zero and radius to zero for frame style",
+          "bbox": {
+            "x": -282.2527671416587,
+            "y": 1082.8521647040548,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": null,
+          "nearest": [
+            {
+              "id": "frame-home-00-landing",
+              "element": "frame",
+              "distance": 122.3
+            },
+            {
+              "id": "img-home-00-landing",
+              "element": "screenshot",
+              "distance": 522.3
+            },
+            {
+              "id": "hdr-home-00-landing",
+              "element": "frame title/description (hdr)",
+              "distance": 887.7
+            }
+          ]
+        },
+        {
+          "itemId": "3dIzN_rAGpYV",
+          "fill": "#ba23f6ff",
+          "text": "Create equal spacing around frame — this is where people can easily add notations to each screen without overlapping content or screenshots",
+          "bbox": {
+            "x": 501.79840462619904,
+            "y": 325.1596225452313,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": "frame-home-00-landing",
+          "nearest": [
+            {
+              "id": "img-home-00-landing",
+              "element": "screenshot",
+              "distance": 85.6
+            },
+            {
+              "id": "legend-box-p1",
+              "element": "legend",
+              "distance": 611.7
+            },
+            {
+              "id": "doc-title-p1",
+              "element": "page header",
+              "distance": 985.2
+            }
+          ]
+        },
+        {
+          "itemId": "EdIz~gM9LFYo",
+          "fill": "#ba23f6ff",
+          "text": "Move screenshot title and description below screenshot",
+          "bbox": {
+            "x": 162.45683097954714,
+            "y": 1980.6390752884245,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": "frame-home-00-landing",
+          "nearest": [
+            {
+              "id": "hdr-home-00-landing",
+              "element": "frame title/description (hdr)",
+              "distance": 77.5
+            },
+            {
+              "id": "changes-landing-1",
+              "element": "changes block",
+              "distance": 83.4
+            },
+            {
+              "id": "img-home-00-landing",
+              "element": "screenshot",
+              "distance": 393.6
+            }
+          ]
+        },
+        {
+          "itemId": "YgIzRzAthhEC",
+          "fill": "#ba23f6ff",
+          "text": "Move changes in this cycle and the previous cycle screenshot below the title, that way current images are always front and center",
+          "bbox": {
+            "x": 142.09818817686755,
+            "y": 2360.667074270663,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": "frame-home-00-landing",
+          "nearest": [
+            {
+              "id": "changes-landing-1",
+              "element": "changes block",
+              "distance": 83.5
+            },
+            {
+              "id": "before-lbl-landing-1",
+              "element": "before panel",
+              "distance": 98.4
+            },
+            {
+              "id": "before-img-landing-1",
+              "element": "before panel",
+              "distance": 194.3
+            }
+          ]
+        },
+        {
+          "itemId": "DhIzzUw.36NA",
+          "fill": "#ba23f6ff",
+          "text": "Remove borders and background around text.",
+          "bbox": {
+            "x": 142.09818817686755,
+            "y": 2580.695073252893,
+            "w": 160,
+            "h": 160
+          },
+          "insideFrame": "frame-home-00-landing",
+          "nearest": [
+            {
+              "id": "before-lbl-landing-1",
+              "element": "before panel",
+              "distance": 89.8
+            },
+            {
+              "id": "before-img-landing-1",
+              "element": "before panel",
+              "distance": 89.8
+            },
+            {
+              "id": "changes-landing-1",
+              "element": "changes block",
+              "distance": 94.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pageId": "p2",
+      "pageTitle": "2. Get started (signup) · cycle 5",
+      "edits": [
+        {
+          "id": "frame-signup-01-create-account",
+          "element": "frame",
+          "change": "modified",
+          "diff": {
+            "fill": {
+              "generated": "#FFFFFF",
+              "current": "#f2f3f5ff"
+            },
+            "line": {
+              "generated": "#000000",
+              "current": "#00000000"
+            },
+            "titleColor": {
+              "generated": "#ffffff (on black title chip)",
+              "current": "#010000ff"
+            }
+          }
+        }
+      ],
+      "boardNotes": []
+    },
+    {
+      "pageId": "p3",
+      "pageTitle": "3. Vendors (vendor-approval) · cycle 5",
+      "edits": [],
+      "boardNotes": []
+    },
+    {
+      "pageId": "p4",
+      "pageTitle": "4. Add vendor (vendor-add) · cycle 5",
+      "edits": [],
+      "boardNotes": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "element": "frame",
+      "scope": "global (every frame, every page)",
+      "priority": "do",
+      "rule": "Frame style: fill #F2F3F5 (light gray), border width 0 / transparent, corner radius 0; frame title renders as plain dark text (#010000) above the frame instead of the white-on-black chip.",
+      "evidence": {
+        "stickies": [
+          "icIz1BsecLhj"
+        ],
+        "directEdits": [
+          "p1 frame-home-00-landing fill #ffffff->#f2f3f5, line #000000->transparent, title #ffffff->#010000",
+          "p2 frame-signup-01-create-account same restyle (only that frame on p2; p2 frames 02-04 and all p3/p4 frames left at default -> reviewer demonstrated, did not finish)"
+        ],
+        "export": "edited frames show square corners and no outline; untouched frames keep rounded black outline + black title chip"
+      },
+      "buildSpec": "journey/lucid/build_spec.py:106-110: add FRAME_STYLE = {'fill': {'type':'color','color':'#F2F3F5'}, 'stroke': {'color':'#F2F3F5','width':0,'style':'solid'}, 'rounding': 0} and set fr['style']=FRAME_STYLE for sparkFrame. VERIFY in the Lucid diagram-specification resource (read once at the next build) which style keys sparkFrame accepts (fill / stroke / rounding); the fetch does not expose corner radius, so radius 0 is inferred from the export only. Fallback if sparkFrame ignores style: keep sparkFrame for harvest (childrenIds) and draw no border, accept the default radius, and report it.",
+      "buildEvolution": "n/a (evolution doc has no frames).",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Phase C step 2 (Layout defaults): add \"Review frames: fill #F2F3F5, no border (width 0), radius 0; frame title = stepKey · route · title as plain dark text.\""
+    },
+    {
+      "id": "R2",
+      "element": "frame spacing",
+      "scope": "global",
+      "priority": "do",
+      "rule": "Equal padding on all four sides of the frame content (~360-400 px: measured top 359, left 400, right 400, bottom 358) - the margin is the notation area for reviewer stickies and must stay free of generated content. Use one PAD constant (400) for all sides.",
+      "evidence": {
+        "stickies": [
+          "3dIzN_rAGpYV"
+        ],
+        "directEdits": [
+          "p1 img top moved to frame.y+359 (was +260); frame bottom = before-img bottom + 358 (was screenshot bottom + 400)"
+        ],
+        "note": "reviewer placed 4 stickies in the left 400 px margin, confirming the margin is the sticky area"
+      },
+      "buildSpec": "journey/lucid/build_spec.py:41-42: replace MX, MTOP, MBOT = 400, 260, 400 with PAD = 400 (MX = MTOP = MBOT = PAD); FH becomes computed from the stacked content (see R3), not a constant; write pad into lucid-layout.json frame{}.",
+      "buildEvolution": "n/a",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Phase C step 2: \"Leave equal padding (400 px) on all sides inside each frame; that margin is reserved for reviewer stickies - never place generated text there.\""
+    },
+    {
+      "id": "R3",
+      "element": "frame title (hdr) + vertical order",
+      "scope": "global",
+      "priority": "do",
+      "rule": "Inside each frame, stack top->bottom, all left-aligned at frame.x + PAD: (1) current screenshot 1440x1024 first (\"front and center\"), (2) step title/description (hdr-) BELOW the screenshot, (3) \"Changes in this cycle\" block, (4) \"Cycle N-1 (before) · reference only\" label, (5) before thumbnail 720x512 (size unchanged), then bottom PAD. Measured gaps on p1: screenshot->hdr 366, hdr->changes 35, changes->before label 23, label->before image 42.",
+      "evidence": {
+        "stickies": [
+          "EdIz~gM9LFYo",
+          "YgIzRzAthhEC"
+        ],
+        "directEdits": [
+          "p1 hdr y 940->1960.6 (below screenshot)",
+          "p1 img y 1160->570.7 (to the top)",
+          "p1 changes-landing-1 moved from above the frame (x 960,y 0) into the frame at (385.6, 2195.2)",
+          "p1 before-lbl/before-img moved from above the frame into it at (391.9, 2561/2693); before image NOT resized (720x512)",
+          "frame grew 1684->3352 tall and its top moved 900->211.5"
+        ],
+        "note": "x 385.6/391.9 vs 400 is hand-placement imprecision; snap to frame.x + PAD."
+      },
+      "buildSpec": "journey/lucid/build_spec.py:83-124: BEFORE_ROW = 0 (nothing above frames any more). For each step compute y = fy + PAD: img at (fx+PAD, y); y += IH + CAPTION_GAP(~40, the 366 px observed gap reads as sticky room - make it a constant CAPTION_GAP=360 if we keep \"equal spacing\", see ambiguity A2); hdr (fx+PAD, y, IW, 200); y += 200 + 40; changes (fx+PAD, y, 1280, h_fit); y += h_fit + 30; before-lbl (fx+PAD, y, 840, 90); y += 130; before-img (fx+PAD, y, 720, 512); FH = y + 512 + PAD - fy. Use the max FH across a page so frames in a row stay equal height. Arrows (line 127-128): attach at the screenshot centre, position y = (PAD + IH/2)/FH instead of 0.45. Update the module docstring (lines 12-17) that says the panels are ABOVE/outside the frame.",
+      "buildEvolution": "n/a (rows x cycles grid has no captions under images).",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Phase C step 2: already says \"Caption text block below each screenshot\" (build_spec contradicted it); add: \"Order inside a frame: current screenshot, caption, Changes in this cycle, previous-cycle label + half-size thumbnail. Current image is always first.\""
+    },
+    {
+      "id": "R4",
+      "element": "changes block + before panel + legend box (text containers)",
+      "scope": "global",
+      "priority": "do",
+      "rule": "No borders and no background on text: the Changes block, before-panel container and legend \"How to review\" box are plain text (fill transparent, stroke none). The dashed before-box rectangle is dropped entirely. Boxes size to their text (changes h 660->342, legend h 360->273). Colored legend swatches (Red/Yellow/Blue) stay as filled squares.",
+      "evidence": {
+        "stickies": [
+          "DhIzzUw.36NA"
+        ],
+        "directEdits": [
+          "p1 changes-landing-1 fill #EAF7EE->transparent, line #2E7D32->transparent, h 660->342.4; text: blank line inserted after the heading",
+          "p1 before-box-landing-1 deleted",
+          "p1 legend-box-p1 fill #F4F6FB->transparent, line #3A4FD8->transparent, h 360->273.4",
+          "legend-must/try/maybe untouched"
+        ]
+      },
+      "buildSpec": "journey/lucid/build_spec.py:62-64 legend-box: type 'text' (or rectangle with fill transparent + stroke width 0), h ~280; :85-97 drop the before-box rectangle; for steps without a previous capture emit a plain text 'New this cycle · no cycle N-1 capture of this screen' (20pt, left) in the before-label slot, no box; :101-103 changes-: type 'text' (no fill/stroke), heading then '<br><br>' (blank line) before the bullets, height ~ 60 + 40 * lines. Keep REVERSAL lines as text (consider bold red text since the green box no longer carries meaning).",
+      "buildEvolution": "journey/lucid/build_evolution.py:30-33 evo-col-<c> headers are filled #3A4FD8 chips and :45-48 'Not captured' placeholders are dashed boxes - apply the same rule if the evolution doc is regenerated: plain bold text headers (dark text, no fill), plain text 'Not captured' with no dashed box. Proposed by analogy only; the reviewer did not mark the evolution doc.",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Phase C: \"Text blocks (captions, change notes, legend, labels) have no border and no background; only screenshots and the legend colour swatches are drawn as filled shapes.\""
+    },
+    {
+      "id": "R5",
+      "element": "legend + harvest priority vocabulary",
+      "scope": "global (legend on every page) + harvest tooling",
+      "priority": "do",
+      "rule": "Priority labels become \"Do or Must Do\" (red), \"Try\" (yellow), \"Consider\" (blue). Keep color coding, but sticky TEXT wins over color: a sticky whose text contains one of those labels gets that priority whatever its color (blue sticky saying \"Do or Must Do\" = must/red).",
+      "evidence": {
+        "stickies": [
+          "6hIz-4FiXxk6"
+        ],
+        "directEdits": [
+          "none (legend swatches still read Red must / Yellow try / Blue maybe)"
+        ]
+      },
+      "buildSpec": "journey/lucid/build_spec.py:49-53 LEGEND_TEXT -> 'Red = Do / Must do, Yellow = Try, Blue = Consider. Words win over colour: start a note with \"Do:\", \"Try:\" or \"Consider:\" to set its priority.'; :65-73 swatch texts -> '<b>Red</b><br>Do / Must do', '<b>Yellow</b><br>Try', '<b>Blue</b><br>Consider'.",
+      "harvest": "journey/harvest/harvest.py:41 PRIORITY_RE -> r'^\\s*(?:test\\s*[:\\-]?\\s*)?(must\\s+do|do\\s+or\\s+must\\s+do|must|do|try|consider|maybe)\\b\\s*[:\\-]?' with a map {must, must do, do, do or must do -> must; try -> try; consider, maybe -> maybe}; also scan for an explicit '(Do|Must do|Try|Consider)' token anywhere when it is the only one present, recording prioritySource 'text' and colorPriority separately so color/text conflicts are reported. Keep schema values must/try/maybe for continuity with cycles 1-4.",
+      "buildEvolution": "n/a",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Optional later-loop inputs + Phase D step 2: rename labels to Do or Must Do / Try / Consider (= must/try/maybe in feedback.json); \"text label overrides sticky colour\"; purple stickies and notes starting \"Board:\" are board-format feedback, harvested separately into board-feedback.json, never into app feedback."
+    },
+    {
+      "id": "R6",
+      "element": "board-feedback convention (purple)",
+      "scope": "global",
+      "priority": "do",
+      "rule": "Purple stickies = formatting updates for the review board itself.",
+      "evidence": {
+        "stickies": [
+          "XbIz-bjbxpkg",
+          "jfIz4vMwkkTy"
+        ],
+        "directEdits": []
+      },
+      "buildSpec": "journey/lucid/build_spec.py header_shapes: optionally add a 4th swatch legend-board-<pid> at x 3660 (fill #BA23F6, white text 'Purple<br>Board format') so the convention is on the board; ids keep the legend- prefix so harvest ignores it.",
+      "harvest": "journey/harvest/harvest.py: classify hue 260-320 deg (or text starting \"Board:\") as kind board, emit into a separate boardFeedback list with nearest-element anchoring (as done in cycles/5/harvest/diff_board.py) instead of frames/outsideFrames.",
+      "skill": "/home/box/agent-data/workflows/prototype-to-lucid-journey-map/SKILL.md Phase D step 2: document the purple / \"Board:\" convention and the board-feedback.json output."
+    },
+    {
+      "id": "R7",
+      "element": "harvest containment (consequence of R3)",
+      "scope": "tooling",
+      "priority": "do",
+      "rule": "With the before thumbnail inside the review frame, a sticky dropped on the old screenshot would be counted as feedback on the CURRENT screen.",
+      "evidence": {
+        "stickies": [],
+        "directEdits": [
+          "p1 frame childrenIds now include before-img-landing-1, before-lbl-landing-1, changes-landing-1"
+        ]
+      },
+      "harvest": "journey/harvest/harvest.py main(): if a sticky's bbox overlaps a before-img-* bbox >= 0.5, keep it in the frame but set onBeforePanel: true and add a note, so the reviewer intent (comment on old vs new) is confirmed before coding.",
+      "buildSpec": "none",
+      "skill": "n/a"
+    }
+  ],
+  "globalVsOneOff": {
+    "global": [
+      "R1-R6: sticky wording is generic (\"frame style\", \"screenshot title\", \"changes in this cycle\", \"text\") and the page-2 frame-signup-01 restyle shows the frame rule is meant beyond page 1"
+    ],
+    "oneOff": [
+      "exact heights legend 273.4 / changes 342.4 are content-fit, not constants",
+      "x offsets 385.6/391.9 instead of 400 are hand placement",
+      "only p1 was fully re-laid-out; p2 frames 02-04 and all of p3/p4 are untouched generated layout (not a rejection)"
+    ]
+  },
+  "ambiguities": [
+    "A1 radius 0: the fetch does not report corner radius; inferred from the export (square corners on the two restyled frames). Whether Standard Import sparkFrame accepts fill/stroke/rounding is unverified - check the spec resource before the next create.",
+    "A2 caption gap: screenshot->caption gap is 366 px on p1 (about the same as the padding). Either it is deliberate sticky space (keep ~360) or just where the block was dropped (use ~40). Proposed default CAPTION_GAP=40 with the 400 px side margins as notation space; confirm.",
+    "A3 6hIz-4FiXxk6 \"maybe even change the colors during the harvest cycle pull\": recolouring stickies is a Lucid edit; harvests are read-only, so not done. Needs an explicit decision (e.g. a separate, approved normalize-colors step).",
+    "A4 6hIz-4FiXxk6 \"if text of any sticky not contains those words\" read as \"note contains\". Bare \"Do\" as a keyword risks false positives (\"Do we need...?\"); proposed to match only at the start with a separator (Do:, Must do, Try:, Consider:).",
+    "A5 \"Remove borders and background around text\" - applied to changes/legend/before panel; screenshot image borders (#C9CED8) were left in place and legend colour swatches kept fills, so they are treated as not-text.",
+    "A6 \"New this cycle\" placeholders (p4 before-box-vendor-add-2/3) were not edited; with before-box removed they become a plain text line - inferred.",
+    "A7 frames become ~3350 px tall (2x); with 3-4 frames per page arrows should attach at the screenshot centre, not 45% of the frame.",
+    "Two duplicate convention stickies (XbIz-bjbxpkg, jfIz4vMwkkTy) - one rule."
+  ],
+  "conflictsWithEarlierDecisions": [
+    "build_spec.py docstring/cycles 2-5 put before/changes ABOVE and OUTSIDE the frame so harvest would never mistake them for feedback; R3 moves them inside (see R7).",
+    "SKILL.md already specified captions BELOW screenshots; build_spec placed hdr above since cycle 1 - R3 brings the code in line with the skill.",
+    "SKILL.md says ~280 px gap between frames; build_spec uses 480 (GAP). Not touched by the reviewer."
+  ]
+}

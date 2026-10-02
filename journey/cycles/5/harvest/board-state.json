@@ -1,0 +1,1586 @@
+{
+ "docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215",
+ "fetchedAt": "2026-10-02T17:25:00Z",
+ "pages": [
+  {
+   "pageId": "p1",
+   "pageTitle": "1. Landing (home) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p1",
+     "type": "text",
+     "bbox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "legend-box-p1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 273.43407665382256
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#00000000",
+     "line": "#00000000",
+     "lineWidth": 3,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-must-p1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ff8a80ff",
+     "line": "#c62828ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-try-p1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ffe066ff",
+     "line": "#9a7b00ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-maybe-p1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#a3e4ffff",
+     "line": "#1565c0ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "before-lbl-landing-1",
+     "type": "text",
+     "bbox": {
+      "x": 391.888371641056,
+      "y": 2561.0157913172948,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-landing-1",
+     "type": "image",
+     "bbox": {
+      "x": 391.888371641056,
+      "y": 2692.9711544985817,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-landing/01-home-00-landing.png"
+    },
+    {
+     "id": "changes-landing-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 385.5767490262617,
+      "y": 2195.1680759901833,
+      "w": 1280,
+      "h": 342.4027930539951
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#00000000",
+     "line": "#00000000",
+     "lineWidth": 2,
+     "strokeStyle": "solid",
+     "text": "Changes in this cycle (vs cycle 4)\n\n• [try] Testimonials section “What teams say”: 4 clearly fictional sample quotes, below the value props, before the CTA band (#1)\n• Spacing tightened so the page still fits 1440×1024"
+    },
+    {
+     "id": "frame-home-00-landing",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 0,
+      "y": 211.50396061047718,
+      "w": 2240,
+      "h": 3351.8421713905364
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#f2f3f5ff",
+     "line": "#00000000",
+     "lineWidth": 2,
+     "titleColor": "#010000ff",
+     "text": "home-00-landing · / · Home · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-home-00-landing",
+     "type": "text",
+     "bbox": {
+      "x": 400,
+      "y": 1960.6390752884245,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-home-00-landing",
+     "type": "image",
+     "bbox": {
+      "x": 400,
+      "y": 570.7352580820352,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-landing/01-home-00-landing.png"
+    },
+    {
+     "id": "XbIz-bjbxpkg",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": -421.756715403985,
+      "y": 595.6294200268935,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "formatting updates for cycle board in Lucidchart are in purple."
+    },
+    {
+     "id": "jfIz4vMwkkTy",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": -385.75671540398616,
+      "y": -530,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "formatting updates for cycle board in Lucidchart are in purple."
+    },
+    {
+     "id": "6hIz-4FiXxk6",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": 3709.1420974445064,
+      "y": -560,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "Change  from Red/Yellow/Blue to  \n\nDo or Must Do\nTry\nConsider\n\n\nKeep color coding, but also if text of any sticky not contains those words set the priority based on text over color (a blue sticky with \"Do or Must Do\" should be considered as Red ( maybe even change the colors during the \"harvest cycle\" pull."
+    },
+    {
+     "id": "icIz1BsecLhj",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": -282.2527671416587,
+      "y": 1082.8521647040548,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "set border to zero and radius to zero for frame style"
+    },
+    {
+     "id": "3dIzN_rAGpYV",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": 501.79840462619904,
+      "y": 325.1596225452313,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "Create equal spacing around frame — this is where people can easily add notations to each screen without overlapping content or screenshots"
+    },
+    {
+     "id": "EdIz~gM9LFYo",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": 162.45683097954714,
+      "y": 1980.6390752884245,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "Move screenshot title and description below screenshot"
+    },
+    {
+     "id": "YgIzRzAthhEC",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": 142.09818817686755,
+      "y": 2360.667074270663,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "Move changes in this cycle and the previous cycle screenshot below the title, that way current images are always front and center"
+    },
+    {
+     "id": "DhIzzUw.36NA",
+     "blockClass": "StickiesStickyNoteBlock",
+     "bbox": {
+      "x": 142.09818817686755,
+      "y": 2580.695073252893,
+      "w": 160,
+      "h": 160
+     },
+     "fill": "#ba23f6ff",
+     "line": "#000000ff",
+     "lineWidth": 0,
+     "textColor": "#ffffffff",
+     "text": "Remove borders and background around text."
+    }
+   ]
+  },
+  {
+   "pageId": "p2",
+   "pageTitle": "2. Get started (signup) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p2",
+     "type": "text",
+     "bbox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "legend-box-p2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#f4f6fbff",
+     "line": "#3a4fd8ff",
+     "lineWidth": 3,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-must-p2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ff8a80ff",
+     "line": "#c62828ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-try-p2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ffe066ff",
+     "line": "#9a7b00ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-maybe-p2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#a3e4ffff",
+     "line": "#1565c0ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "before-box-signup-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-signup-1",
+     "type": "text",
+     "bbox": {
+      "x": 20,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-signup-1",
+     "type": "image",
+     "bbox": {
+      "x": 80,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/01-signup-01-create-account.png"
+    },
+    {
+     "id": "changes-signup-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 960,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-signup-01-create-account",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 0,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#f2f3f5ff",
+     "line": "#00000000",
+     "lineWidth": 2,
+     "titleColor": "#010000ff",
+     "text": "signup-01-create-account · /signup · Create account · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-signup-01-create-account",
+     "type": "text",
+     "bbox": {
+      "x": 400,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-signup-01-create-account",
+     "type": "image",
+     "bbox": {
+      "x": 400,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-signup/01-signup-01-create-account.png"
+    },
+    {
+     "id": "before-box-signup-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2720,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-signup-2",
+     "type": "text",
+     "bbox": {
+      "x": 2740,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-signup-2",
+     "type": "image",
+     "bbox": {
+      "x": 2800,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/02-signup-02-role.png"
+    },
+    {
+     "id": "changes-signup-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3680,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-signup-02-role",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 2720,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-signup-02-role",
+     "type": "text",
+     "bbox": {
+      "x": 3120,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-signup-02-role",
+     "type": "image",
+     "bbox": {
+      "x": 3120,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-signup/02-signup-02-role.png"
+    },
+    {
+     "id": "before-box-signup-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 5440,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-signup-3",
+     "type": "text",
+     "bbox": {
+      "x": 5460,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-signup-3",
+     "type": "image",
+     "bbox": {
+      "x": 5520,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/03-signup-03-goals.png"
+    },
+    {
+     "id": "changes-signup-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 6400,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-signup-03-goals",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 5440,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-signup-03-goals",
+     "type": "text",
+     "bbox": {
+      "x": 5840,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-signup-03-goals",
+     "type": "image",
+     "bbox": {
+      "x": 5840,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-signup/03-signup-03-goals.png"
+    },
+    {
+     "id": "before-box-signup-4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 8160,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-signup-4",
+     "type": "text",
+     "bbox": {
+      "x": 8180,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-signup-4",
+     "type": "image",
+     "bbox": {
+      "x": 8240,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/04-signup-04-workspace-created.png"
+    },
+    {
+     "id": "changes-signup-4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 9120,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-signup-04-workspace-created",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 8160,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-signup-04-workspace-created",
+     "type": "text",
+     "bbox": {
+      "x": 8560,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-signup-04-workspace-created",
+     "type": "image",
+     "bbox": {
+      "x": 8560,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-signup/04-signup-04-workspace-created.png"
+    },
+    {
+     "id": "arrow-signup-1",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-signup-01-create-account",
+     "to": "frame-signup-02-role"
+    },
+    {
+     "id": "arrow-signup-2",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-signup-02-role",
+     "to": "frame-signup-03-goals"
+    },
+    {
+     "id": "arrow-signup-3",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-signup-03-goals",
+     "to": "frame-signup-04-workspace-created"
+    }
+   ]
+  },
+  {
+   "pageId": "p3",
+   "pageTitle": "3. Vendors (vendor-approval) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p3",
+     "type": "text",
+     "bbox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "legend-box-p3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#f4f6fbff",
+     "line": "#3a4fd8ff",
+     "lineWidth": 3,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-must-p3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ff8a80ff",
+     "line": "#c62828ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-try-p3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ffe066ff",
+     "line": "#9a7b00ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-maybe-p3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#a3e4ffff",
+     "line": "#1565c0ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "before-box-vendor-approval-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-vendor-approval-1",
+     "type": "text",
+     "bbox": {
+      "x": 20,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-vendor-approval-1",
+     "type": "image",
+     "bbox": {
+      "x": 80,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/01-vendor-01-list.png"
+    },
+    {
+     "id": "changes-vendor-approval-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 960,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-01-list",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 0,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-01-list · /vendors · Vendors · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-01-list",
+     "type": "text",
+     "bbox": {
+      "x": 400,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-01-list",
+     "type": "image",
+     "bbox": {
+      "x": 400,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-approval/01-vendor-01-list.png"
+    },
+    {
+     "id": "before-box-vendor-approval-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2720,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-vendor-approval-2",
+     "type": "text",
+     "bbox": {
+      "x": 2740,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-vendor-approval-2",
+     "type": "image",
+     "bbox": {
+      "x": 2800,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/02-vendor-02-detail.png"
+    },
+    {
+     "id": "changes-vendor-approval-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3680,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-02-detail",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 2720,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-02-detail",
+     "type": "text",
+     "bbox": {
+      "x": 3120,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-02-detail",
+     "type": "image",
+     "bbox": {
+      "x": 3120,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-approval/02-vendor-02-detail.png"
+    },
+    {
+     "id": "before-box-vendor-approval-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 5440,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-vendor-approval-3",
+     "type": "text",
+     "bbox": {
+      "x": 5460,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-vendor-approval-3",
+     "type": "image",
+     "bbox": {
+      "x": 5520,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/03-vendor-03-review.png"
+    },
+    {
+     "id": "changes-vendor-approval-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 6400,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-03-review",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 5440,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-03-review",
+     "type": "text",
+     "bbox": {
+      "x": 5840,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-03-review",
+     "type": "image",
+     "bbox": {
+      "x": 5840,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-approval/03-vendor-03-review.png"
+    },
+    {
+     "id": "before-box-vendor-approval-4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 8160,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-vendor-approval-4",
+     "type": "text",
+     "bbox": {
+      "x": 8180,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-vendor-approval-4",
+     "type": "image",
+     "bbox": {
+      "x": 8240,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/04-vendor-04-approved.png"
+    },
+    {
+     "id": "changes-vendor-approval-4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 9120,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-04-approved",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 8160,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-04-approved",
+     "type": "text",
+     "bbox": {
+      "x": 8560,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-04-approved",
+     "type": "image",
+     "bbox": {
+      "x": 8560,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-approval/04-vendor-04-approved.png"
+    },
+    {
+     "id": "arrow-vendor-approval-1",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-vendor-01-list",
+     "to": "frame-vendor-02-detail"
+    },
+    {
+     "id": "arrow-vendor-approval-2",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-vendor-02-detail",
+     "to": "frame-vendor-03-review"
+    },
+    {
+     "id": "arrow-vendor-approval-3",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-vendor-03-review",
+     "to": "frame-vendor-04-approved"
+    }
+   ]
+  },
+  {
+   "pageId": "p4",
+   "pageTitle": "4. Add vendor (vendor-add) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p4",
+     "type": "text",
+     "bbox": {
+      "x": 0,
+      "y": -860,
+      "w": 4400,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "legend-box-p4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": -560,
+      "w": 2600,
+      "h": 360
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#f4f6fbff",
+     "line": "#3a4fd8ff",
+     "lineWidth": 3,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-must-p4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2700,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ff8a80ff",
+     "line": "#c62828ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-try-p4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3020,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#ffe066ff",
+     "line": "#9a7b00ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "legend-maybe-p4",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3340,
+      "y": -530,
+      "w": 260,
+      "h": 300
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#a3e4ffff",
+     "line": "#1565c0ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "before-box-vendor-add-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "before-lbl-vendor-add-1",
+     "type": "text",
+     "bbox": {
+      "x": 20,
+      "y": 20,
+      "w": 840,
+      "h": 90
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "before-img-vendor-add-1",
+     "type": "image",
+     "bbox": {
+      "x": 80,
+      "y": 125,
+      "w": 720,
+      "h": 512
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 1,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/01-vendor-01-list.png"
+    },
+    {
+     "id": "changes-vendor-add-1",
+     "type": "rectangle",
+     "bbox": {
+      "x": 960,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-add-01-list",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 0,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-add-01-list · /vendors · Vendors · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-add-01-list",
+     "type": "text",
+     "bbox": {
+      "x": 400,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-add-01-list",
+     "type": "image",
+     "bbox": {
+      "x": 400,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-add/01-vendor-add-01-list.png"
+    },
+    {
+     "id": "before-box-vendor-add-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 2720,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "changes-vendor-add-2",
+     "type": "rectangle",
+     "bbox": {
+      "x": 3680,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-add-02-form",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 2720,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-add-02-form · /vendors/new · Add vendor · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-add-02-form",
+     "type": "text",
+     "bbox": {
+      "x": 3120,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-add-02-form",
+     "type": "image",
+     "bbox": {
+      "x": 3120,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-add/02-vendor-add-02-form.png"
+    },
+    {
+     "id": "before-box-vendor-add-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 5440,
+      "y": 0,
+      "w": 880,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eef0f4ff",
+     "line": "#8a90a0ff",
+     "lineWidth": 2,
+     "strokeStyle": "dashed"
+    },
+    {
+     "id": "changes-vendor-add-3",
+     "type": "rectangle",
+     "bbox": {
+      "x": 6400,
+      "y": 0,
+      "w": 1280,
+      "h": 660
+     },
+     "blockClass": "DefaultSquareBlock",
+     "fill": "#eaf7eeff",
+     "line": "#2e7d32ff",
+     "lineWidth": 2,
+     "strokeStyle": "solid"
+    },
+    {
+     "id": "frame-vendor-add-03-added",
+     "type": "sparkFrame",
+     "bbox": {
+      "x": 5440,
+      "y": 900,
+      "w": 2240,
+      "h": 1684
+     },
+     "blockClass": "SparkFrameBlock",
+     "fill": "#ffffffff",
+     "line": "#000000ff",
+     "lineWidth": 2,
+     "titleColor": "#ffffffff",
+     "text": "vendor-add-03-added · /vendors · Vendors · Northwind AI Ops"
+    },
+    {
+     "id": "hdr-vendor-add-03-added",
+     "type": "text",
+     "bbox": {
+      "x": 5840,
+      "y": 940,
+      "w": 1440,
+      "h": 200
+     },
+     "blockClass": "DefaultTextBlockNew"
+    },
+    {
+     "id": "img-vendor-add-03-added",
+     "type": "image",
+     "bbox": {
+      "x": 5840,
+      "y": 1160,
+      "w": 1440,
+      "h": 1024
+     },
+     "blockClass": "UserImage2Block",
+     "line": "#c9ced8ff",
+     "lineWidth": 2,
+     "url": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-vendor-add/03-vendor-add-03-added.png"
+    },
+    {
+     "id": "arrow-vendor-add-1",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-vendor-add-01-list",
+     "to": "frame-vendor-add-02-form"
+    },
+    {
+     "id": "arrow-vendor-add-2",
+     "type": "line",
+     "line": "#3a4fd8ff",
+     "lineWidth": 6,
+     "from": "frame-vendor-add-02-form",
+     "to": "frame-vendor-add-03-added"
+    }
+   ]
+  }
+ ]
+}

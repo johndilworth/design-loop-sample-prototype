@@ -1,0 +1,676 @@
+{
+ "_note": "Condensed transcription of the Lucid connector fetch(id=d56b0edf-53e9-4933-a64b-a2be6c500d0d, page_index=1) response re-taken 2026-10-01 ~23:45 MDT (reviewer pass). Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor, childrenIds, ImageUrl); omits styling/ZOrder/diagramGroupId. All generated items (frames/hdr/img/title/legend/before-/changes-) unchanged vs the 23:30 capture; 8 reviewer sticky notes added (frame/image childrenIds updated to match the live response). No cards, callouts or free text added by reviewers.",
+ "document_id": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
+ "page_id": "p1",
+ "page_index": 1,
+ "metadata": {
+  "page_count": 2,
+  "page_index": 1,
+  "page_region_counts": [
+   1,
+   1
+  ]
+ },
+ "pages": [
+  {
+   "pageId": "p1",
+   "pageTitle": "1. signup · cycle 2",
+   "pageIndex": 0,
+   "totalChunks": 1,
+   "requestedChunks": [
+    {
+     "chunkIndex": 0,
+     "data": {
+      "flowcharts": [
+       {
+        "diagramGroupId": "group_0",
+        "nodes": [
+         {
+          "id": "frame-signup-01-create-account",
+          "shapeType": "Frame",
+          "properties": {
+           "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-01-create-account · /signup · Create account · Northwind AI Ops"
+            }
+           ]
+          },
+          "label": "signup-01-create-account · /signup · Create account · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-01-create-account",
+           "img-signup-01-create-account",
+           "BJyzmk9RLurV"
+          ]
+         },
+         {
+          "id": "hdr-signup-01-create-account",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 400, y: 960, w: 1440, h: 150",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "1. signup-01-create-account  ·  /signup\nCreate account · Northwind AI Ops  —  h1: “Create your account”  —  click: button “Submit”"
+            }
+           ]
+          },
+          "label": "1. signup-01-create-account  ·  /signup\nCreate account · Northwind AI Ops  —  h1: “Create your account”  —  click: button “Submit”"
+         },
+         {
+          "id": "img-signup-01-create-account",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/01-signup-01-create-account.png"
+          },
+          "childrenIds": [
+           ".JyzE3ny0uEU"
+          ]
+         },
+         {
+          "id": "frame-signup-02-role",
+          "shapeType": "Frame",
+          "properties": {
+           "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops"
+            }
+           ]
+          },
+          "label": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-02-role",
+           "yIyzTSSVgdNA",
+           "img-signup-02-role"
+          ]
+         },
+         {
+          "id": "hdr-signup-02-role",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 960, w: 1440, h: 150",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "2. signup-02-role  ·  /onboarding/role\nOnboarding: role · Northwind AI Ops  —  h1: “What's your role?”  —  click: button “Next”"
+            }
+           ]
+          },
+          "label": "2. signup-02-role  ·  /onboarding/role\nOnboarding: role · Northwind AI Ops  —  h1: “What's your role?”  —  click: button “Next”"
+         },
+         {
+          "id": "img-signup-02-role",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/02-signup-02-role.png"
+          },
+          "childrenIds": [
+           "6FyzJYLYLCmY"
+          ]
+         },
+         {
+          "id": "frame-signup-03-goals",
+          "shapeType": "Frame",
+          "properties": {
+           "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops"
+            }
+           ]
+          },
+          "label": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops",
+          "childrenIds": [
+           "lEyzEL_XVLR1",
+           "hdr-signup-03-goals",
+           "img-signup-03-goals"
+          ]
+         },
+         {
+          "id": "hdr-signup-03-goals",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 960, w: 1440, h: 150",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "3. signup-03-goals  ·  /onboarding/goals\nOnboarding: goals · Northwind AI Ops  —  h1: “Pick your AI goals”  —  click: button “Create workspace”"
+            }
+           ]
+          },
+          "label": "3. signup-03-goals  ·  /onboarding/goals\nOnboarding: goals · Northwind AI Ops  —  h1: “Pick your AI goals”  —  click: button “Create workspace”"
+         },
+         {
+          "id": "img-signup-03-goals",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/03-signup-03-goals.png"
+          },
+          "childrenIds": [
+           "OGyzDpcA.Ky~",
+           "6GyzCIFQw2EB"
+          ]
+         },
+         {
+          "id": "frame-signup-04-workspace-created",
+          "shapeType": "Frame",
+          "properties": {
+           "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops"
+            }
+           ]
+          },
+          "label": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops",
+          "childrenIds": [
+           "img-signup-04-workspace-created",
+           "JHyzLmCvGX~a",
+           "hdr-signup-04-workspace-created"
+          ]
+         },
+         {
+          "id": "hdr-signup-04-workspace-created",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 960, w: 1440, h: 150",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "4. signup-04-workspace-created  ·  /workspace/:id\nWorkspace created · Northwind AI Ops  —  h1: “Workspace created”  —  end state"
+            }
+           ]
+          },
+          "label": "4. signup-04-workspace-created  ·  /workspace/:id\nWorkspace created · Northwind AI Ops  —  h1: “Workspace created”  —  end state"
+         },
+         {
+          "id": "img-signup-04-workspace-created",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/04-signup-04-workspace-created.png"
+          }
+         },
+         {
+          "id": "BJyzmk9RLurV",
+          "label": "Increase header height — and generate a modern logo for Northwind AI ops",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#e81313ff",
+           "BoundingBox": "x: 162.61479815736175, y: 1204.831329494119, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Increase header height — and generate a modern logo for Northwind AI ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": ".JyzE3ny0uEU",
+          "label": "remove checkbox for \"send me marketing emails\"",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 1250.6030209435808, y: 1823.7308431239926, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "remove checkbox for \"send me marketing emails\""
+            }
+           ]
+          }
+         },
+         {
+          "id": "yIyzTSSVgdNA",
+          "label": "Add a stylistic ascii type shader animation to background gray that appears on all screens to give more life and style to the whole screen. ",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 4637, y: 1948, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Add a stylistic ascii type shader animation to background gray that appears on all screens to give more life and style to the whole screen. "
+            }
+           ]
+          }
+         },
+         {
+          "id": "6FyzJYLYLCmY",
+          "label": "Because you can only select one option, remove the \"next\" button, and move to next screen immediately on selection.",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 3518.841943233871, y: 1822.8734273537175, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Because you can only select one option, remove the \"next\" button, and move to next screen immediately on selection."
+            }
+           ]
+          }
+         },
+         {
+          "id": "lEyzEL_XVLR1",
+          "label": "Match selection style of previous screen. No checkbox, only select to highlight",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#e81313ff",
+           "BoundingBox": "x: 5663.76251856024, y: 1784.5442678367303, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Match selection style of previous screen. No checkbox, only select to highlight"
+            }
+           ]
+          }
+         },
+         {
+          "id": "OGyzDpcA.Ky~",
+          "label": "Move \"create workspace\" button back to right",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 6655.9682723911565, y: 1853.9202019778218, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Move \"create workspace\" button back to right"
+            }
+           ]
+          }
+         },
+         {
+          "id": "6GyzCIFQw2EB",
+          "label": "Make back button a secondary button — gray, but still a rectangle and not text only. follow pattern on \"Go to Vendors\"",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 6067.114447020651, y: 1867.3738043149333, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Make back button a secondary button — gray, but still a rectangle and not text only. follow pattern on \"Go to Vendors\""
+            }
+           ]
+          }
+         },
+         {
+          "id": "JHyzLmCvGX~a",
+          "label": "Add invite teammates screen to next cycle flow so it can be reviewed.",
+          "shapeType": "Sticky note",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 9968.951194159261, y: 1721.2411889309137, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Add invite teammates screen to next cycle flow so it can be reviewed."
+            }
+           ]
+          }
+         }
+        ],
+        "edges": [
+         {
+          "id": "arrow-signup-1",
+          "sourceId": "frame-signup-01-create-account",
+          "targetId": "frame-signup-02-role"
+         },
+         {
+          "id": "arrow-signup-2",
+          "sourceId": "frame-signup-02-role",
+          "targetId": "frame-signup-03-goals"
+         },
+         {
+          "id": "arrow-signup-3",
+          "sourceId": "frame-signup-03-goals",
+          "targetId": "frame-signup-04-workspace-created"
+         }
+        ]
+       }
+      ],
+      "standaloneClusters": [
+       {
+        "cluster": [
+         {
+          "id": "doc-title-p1",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 0, y: -860, w: 4400, h: 200",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Northwind AI Ops · Design loop · Cycle 2 review (PR #1)\nSign up > onboarding > workspace created · Desktop 1440×1024 · commit 5461dff · https://deploy-preview-1--design-loop-sample-prototype.netlify.app"
+            }
+           ]
+          },
+          "label": "Northwind AI Ops · Design loop · Cycle 2 review (PR #1)\nSign up > onboarding > workspace created · Desktop 1440×1024 · commit 5461dff · https://deploy-preview-1--design-loop-sample-prototype.netlify.app"
+         },
+         {
+          "id": "legend-box-p1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 0, y: -560, w: 2600, h: 360",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "How to review\nLeave feedback as sticky notes INSIDE the screen's frame. Red = must, Yellow = try, Blue = maybe. Comments are read as general feedback."
+            }
+           ],
+           "FillColor": "#f4f6fbff"
+          },
+          "label": "How to review\nLeave feedback as sticky notes INSIDE the screen's frame. Red = must, Yellow = try, Blue = maybe. Comments are read as general feedback."
+         },
+         {
+          "id": "legend-must-p1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 2700, y: -530, w: 260, h: 300",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Red\nmust"
+            }
+           ],
+           "FillColor": "#ff8a80ff"
+          },
+          "label": "Red\nmust"
+         },
+         {
+          "id": "legend-try-p1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 3020, y: -530, w: 260, h: 300",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Yellow\ntry"
+            }
+           ],
+           "FillColor": "#ffe066ff"
+          },
+          "label": "Yellow\ntry"
+         },
+         {
+          "id": "legend-maybe-p1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 3340, y: -530, w: 260, h: 300",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Blue\nmaybe"
+            }
+           ],
+           "FillColor": "#a3e4ffff"
+          },
+          "label": "Blue\nmaybe"
+         },
+         {
+          "id": "before-box-signup-1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 0, y: 0, w: 880, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Text"
+            }
+           ],
+           "FillColor": "#eef0f4ff"
+          },
+          "label": "Text"
+         },
+         {
+          "id": "before-lbl-signup-1",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 20, y: 30.666666666666664, w: 840, h: 68.66666666666667",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Cycle 1 (before) · reference only"
+            }
+           ]
+          },
+          "label": "Cycle 1 (before) · reference only"
+         },
+         {
+          "id": "before-img-signup-1",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 80, y: 125, w: 720, h: 512",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/01-signup-01-create-account.png"
+          }
+         },
+         {
+          "id": "changes-signup-1",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 960, y: 0, w: 1280, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred in viewport (sticky: “center modal in viewport”)\n• [must] Removed subhead “It only takes a minute. Probably.” (sticky: “Remove the text ... headline is sufficient”)\n• [must] Square corners on buttons/fields/cards, all pages (from signup-02 sticky)"
+            }
+           ],
+           "FillColor": "#eaf7eeff"
+          },
+          "label": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred in viewport (sticky: “center modal in viewport”)\n• [must] Removed subhead “It only takes a minute. Probably.” (sticky: “Remove the text ... headline is sufficient”)\n• [must] Square corners on buttons/fields/cards, all pages (from signup-02 sticky)"
+         },
+         {
+          "id": "before-box-signup-2",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 2720, y: 0, w: 880, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Text"
+            }
+           ],
+           "FillColor": "#eef0f4ff"
+          },
+          "label": "Text"
+         },
+         {
+          "id": "before-lbl-signup-2",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 2740, y: 30.666666666666664, w: 840, h: 68.66666666666667",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Cycle 1 (before) · reference only"
+            }
+           ]
+          },
+          "label": "Cycle 1 (before) · reference only"
+         },
+         {
+          "id": "before-img-signup-2",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 2800, y: 125, w: 720, h: 512",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/02-signup-02-role.png"
+          }
+         },
+         {
+          "id": "changes-signup-2",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 3680, y: 0, w: 1280, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Changes in this cycle (vs cycle 1)\n• [try] “Step 1” > “Step 1 of 2”, 16px semibold black (sticky: “Step 1 text is small...”)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [must] “Product / design” > “Product / Design” (sticky: “Capitalize design”)\n• [must] Rounded corners removed everywhere (sticky: “Remove rounded corners... Apply to all pages”)"
+            }
+           ],
+           "FillColor": "#eaf7eeff"
+          },
+          "label": "Changes in this cycle (vs cycle 1)\n• [try] “Step 1” > “Step 1 of 2”, 16px semibold black (sticky: “Step 1 text is small...”)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [must] “Product / design” > “Product / Design” (sticky: “Capitalize design”)\n• [must] Rounded corners removed everywhere (sticky: “Remove rounded corners... Apply to all pages”)"
+         },
+         {
+          "id": "before-box-signup-3",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 5440, y: 0, w: 880, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Text"
+            }
+           ],
+           "FillColor": "#eef0f4ff"
+          },
+          "label": "Text"
+         },
+         {
+          "id": "before-lbl-signup-3",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 5460, y: 30.666666666666664, w: 840, h: 68.66666666666667",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Cycle 1 (before) · reference only"
+            }
+           ]
+          },
+          "label": "Cycle 1 (before) · reference only"
+         },
+         {
+          "id": "before-img-signup-3",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 5520, y: 125, w: 720, h: 512",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/03-signup-03-goals.png"
+          }
+         },
+         {
+          "id": "changes-signup-3",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 6400, y: 0, w: 1280, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [try] Back left, “Create workspace” right (sticky: “move create workspace to right side”)\n• [consistency] “Step 2 of 2” uses the new larger black step label\n• [must] Square corners (global)"
+            }
+           ],
+           "FillColor": "#eaf7eeff"
+          },
+          "label": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [try] Back left, “Create workspace” right (sticky: “move create workspace to right side”)\n• [consistency] “Step 2 of 2” uses the new larger black step label\n• [must] Square corners (global)"
+         },
+         {
+          "id": "before-box-signup-4",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 8160, y: 0, w: 880, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Text"
+            }
+           ],
+           "FillColor": "#eef0f4ff"
+          },
+          "label": "Text"
+         },
+         {
+          "id": "before-lbl-signup-4",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 8180, y: 30.666666666666664, w: 840, h: 68.66666666666667",
+           "BlockClass": "DefaultTextBlockNew",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Cycle 1 (before) · reference only"
+            }
+           ]
+          },
+          "label": "Cycle 1 (before) · reference only"
+         },
+         {
+          "id": "before-img-signup-4",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 8240, y: 125, w: 720, h: 512",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/04-signup-04-workspace-created.png"
+          }
+         },
+         {
+          "id": "changes-signup-4",
+          "shapeType": "Block",
+          "properties": {
+           "BoundingBox": "x: 9120, y: 0, w: 1280, h: 660",
+           "BlockClass": "DefaultSquareBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [must] Checklist removed (“Connect a data source”, “Review AI vendors”)\n• [must] Two buttons: “Go to vendors” (secondary) + “Invite teammates” (primary CTA > new placeholder /workspace/:id/invite)\n• [must] Square corners (global)"
+            }
+           ],
+           "FillColor": "#eaf7eeff"
+          },
+          "label": "Changes in this cycle (vs cycle 1)\n• [try] Card vertically centred (sticky: “center modal in viewport”)\n• [must] Checklist removed (“Connect a data source”, “Review AI vendors”)\n• [must] Two buttons: “Go to vendors” (secondary) + “Invite teammates” (primary CTA > new placeholder /workspace/:id/invite)\n• [must] Square corners (global)"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

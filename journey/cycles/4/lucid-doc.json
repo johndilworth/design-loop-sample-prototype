@@ -1,0 +1,50 @@
+{
+  "cycle": 4,
+  "final": true,
+  "docId": "c95ea620-f506-4499-9d67-dc821b143297",
+  "title": "Design loop — Cycle 4 review (PR #3, final)",
+  "editUrl": "https://lucid.app/lucidchart/c95ea620-f506-4499-9d67-dc821b143297/edit",
+  "viewUrl": "https://lucid.app/lucidchart/c95ea620-f506-4499-9d67-dc821b143297/view",
+  "layout": "pages+before-after",
+  "pages": [
+    {
+      "index": 1,
+      "id": "p1",
+      "title": "1. Landing (home) · cycle 4",
+      "flow": "landing",
+      "frames": 1
+    },
+    {
+      "index": 2,
+      "id": "p2",
+      "title": "2. Get started (signup) · cycle 4",
+      "flow": "signup",
+      "frames": 5
+    },
+    {
+      "index": 3,
+      "id": "p3",
+      "title": "3. Vendors (vendor-approval) · cycle 4",
+      "flow": "vendor-approval",
+      "frames": 4
+    }
+  ],
+  "layoutNotes": "Same as cycle 3: per step column (x = i*2720) y 0..660 before panel (before-box/lbl/img-<flow>-<n>, cycle-3 image 720x512) + changes-<flow>-<n> green block (from cycles/4/changes.json = cycle-3 feedback.json + PR #3 body, reversals flagged); y 900..2584 review frame frame-<stepKey> 2240x1684 with hdr-<stepKey> and img-<stepKey> 1440x1024 at (+400,+260). Every cycle-4 step had a cycle-3 capture, so no 'New this cycle' panels.",
+  "createdAt": "2026-10-02T07:07:39Z",
+  "capturedCommit": "20c1782baf33a6481741e66991850248b93de4b9",
+  "pr": 3,
+  "branch": "cycle-3-feedback",
+  "deployUrl": "https://deploy-preview-3--design-loop-sample-prototype.netlify.app",
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-<flow>/",
+  "assetDeployId": "6abf574d333649811392cb2a",
+  "beforeAssetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-<flow>/",
+  "importPreflight": "report showed 20 errors + 30 warnings (truncated at the 50-finding limit): errors are the known intentional before-box vs before-img/before-lbl overlaps; warnings are text-fit/padding/clearance advisories; non-blocking",
+  "exports": [
+    "export/lucid-export-p1-landing.png",
+    "export/lucid-export-p2-signup.png",
+    "export/lucid-export-p3-vendor-approval.png",
+    "export/lucid-export-p3-detail-vendor-2.png"
+  ],
+  "exportCheck": "all 20 images (10 cycle-4 review shots + 10 cycle-3 before thumbnails) rendered in the page exports",
+  "harvest": "harvest/feedback.json: 10 frames mapped by frame-id, 0 feedback, 0 outside, 0 disagreements, 0 threads (harvested right after creation, before any review)"
+}

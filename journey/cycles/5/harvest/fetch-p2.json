@@ -1,0 +1,302 @@
+{
+ "_note": "Condensed from Lucid fetch(page_index=2) 2026-10-02 ~11:25 MDT via board-state.py; see board-state.json",
+ "pages": [
+  {
+   "pageId": "p2",
+   "pageTitle": "2. Get started (signup) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p2",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 0, y: -860, w: 4400, h: 200"
+     }
+    },
+    {
+     "id": "legend-box-p2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: -560, w: 2600, h: 360",
+      "FillColor": "#f4f6fbff"
+     }
+    },
+    {
+     "id": "legend-must-p2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2700, y: -530, w: 260, h: 300",
+      "FillColor": "#ff8a80ff"
+     }
+    },
+    {
+     "id": "legend-try-p2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3020, y: -530, w: 260, h: 300",
+      "FillColor": "#ffe066ff"
+     }
+    },
+    {
+     "id": "legend-maybe-p2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3340, y: -530, w: 260, h: 300",
+      "FillColor": "#a3e4ffff"
+     }
+    },
+    {
+     "id": "before-box-signup-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-signup-1",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 20, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-signup-1",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 80, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-signup-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 960, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-signup-01-create-account",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+      "FillColor": "#f2f3f5ff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "signup-01-create-account · /signup · Create account · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-signup-01-create-account",
+      "hdr-signup-01-create-account"
+     ]
+    },
+    {
+     "id": "hdr-signup-01-create-account",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 400, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-signup-01-create-account",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-signup-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2720, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-signup-2",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 2740, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-signup-2",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 2800, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-signup-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3680, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-signup-02-role",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-signup-02-role",
+      "hdr-signup-02-role"
+     ]
+    },
+    {
+     "id": "hdr-signup-02-role",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 3120, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-signup-02-role",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-signup-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 5440, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-signup-3",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 5460, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-signup-3",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 5520, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-signup-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 6400, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-signup-03-goals",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-signup-03-goals",
+      "hdr-signup-03-goals"
+     ]
+    },
+    {
+     "id": "hdr-signup-03-goals",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 5840, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-signup-03-goals",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-signup-4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 8160, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-signup-4",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 8180, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-signup-4",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 8240, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-signup-4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 9120, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-signup-04-workspace-created",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-signup-04-workspace-created",
+      "hdr-signup-04-workspace-created"
+     ]
+    },
+    {
+     "id": "hdr-signup-04-workspace-created",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 8560, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-signup-04-workspace-created",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024"
+     }
+    }
+   ]
+  }
+ ]
+}

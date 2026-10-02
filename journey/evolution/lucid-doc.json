@@ -1,0 +1,55 @@
+{
+  "docId": "01d8c4f0-95d2-4de7-b997-d9a83df20ccb",
+  "title": "Design loop — Evolution c1→c4",
+  "editUrl": "https://lucid.app/lucidchart/01d8c4f0-95d2-4de7-b997-d9a83df20ccb/edit",
+  "viewUrl": "https://lucid.app/lucidchart/01d8c4f0-95d2-4de7-b997-d9a83df20ccb/view",
+  "createdAt": "2026-10-02T07:11:50Z",
+  "pages": 1,
+  "page": "Evolution c1 > c4",
+  "rows": [
+    "home-00-landing",
+    "signup-01-create-account",
+    "signup-03-goals",
+    "vendor-02-detail",
+    "vendor-03-review"
+  ],
+  "columns": [
+    {
+      "cycle": 1,
+      "assetFolder": "design-loop-c1r-<flow>",
+      "feedbackApplied": 0
+    },
+    {
+      "cycle": 2,
+      "assetFolder": "design-loop-c2-<flow>",
+      "feedbackApplied": 11
+    },
+    {
+      "cycle": 3,
+      "assetFolder": "design-loop-c3-<flow>",
+      "feedbackApplied": 8,
+      "note": "7 changed + 1 no-op already satisfied"
+    },
+    {
+      "cycle": 4,
+      "assetFolder": "design-loop-c4-<flow>",
+      "feedbackApplied": 13,
+      "note": "2 are reversals of earlier cycles"
+    }
+  ],
+  "images": 18,
+  "placeholders": [
+    "home-00-landing cycle 1",
+    "home-00-landing cycle 2"
+  ],
+  "feedbackCountSource": "journey/cycles/{1,2,3}/harvest/feedback.json (11, 8, 13 stickies) resolved by PR #1, #2, #3 respectively (cycles/summary.json; PR #3 body table rows 1-13)",
+  "export": "export/lucid-export-evolution-c1-c4.png",
+  "spec": "lucid-spec.json (journey/lucid/build_evolution.py)",
+  "supersededScratchDocs": [
+    {
+      "docId": "1a17cb2c-fdef-4443-9c56-07b392ff695b",
+      "title": "[superseded scratch] Design loop — Evolution c1→c4 — cycle-4 header clipped, use 01d8c4f0",
+      "why": "cycle-4 column header line 'all 13 cycle-3 stickies, incl. 2 reversals' wrapped and the last line was clipped; re-imported with shorter text (not edited in place). Renamed, not trashed."
+    }
+  ]
+}

@@ -16,15 +16,15 @@ export default function SignUp() {
   return (
     <section className="card narrow">
       <h1>Create your account</h1>
-      <p className="muted">It only takes a minute. Probably.</p>
       <form onSubmit={submit} noValidate>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <label htmlFor="pw">Password</label>
         <input id="pw" type="password" value={pw} onChange={(e) => setPw(e.target.value)} />
         {err && <p className="error" role="alert">{err}</p>}
-        <label className="check"><input type="checkbox" defaultChecked /> Send me marketing emails</label>
-        <button className="btn primary" type="submit">Submit</button>
+        <div className="row">
+          <button className="btn primary" type="submit">Submit</button>
+        </div>
       </form>
     </section>
   )

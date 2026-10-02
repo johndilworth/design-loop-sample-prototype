@@ -1,0 +1,26 @@
+{
+  "cycle": 5,
+  "docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215",
+  "title": "Design loop — Cycle 5 review (PR #4)",
+  "editUrl": "https://lucid.app/lucidchart/80e68a74-a706-4fe1-b22f-4dfc5c5eb215/edit",
+  "viewUrl": "https://lucid.app/lucidchart/80e68a74-a706-4fe1-b22f-4dfc5c5eb215/view",
+  "layout": "pages+before-after",
+  "pages": [
+    {"index": 1, "id": "p1", "title": "1. Landing (home) · cycle 5", "flow": "landing", "frames": 1},
+    {"index": 2, "id": "p2", "title": "2. Get started (signup) · cycle 5", "flow": "signup", "frames": 4},
+    {"index": 3, "id": "p3", "title": "3. Vendors (vendor-approval) · cycle 5", "flow": "vendor-approval", "frames": 4},
+    {"index": 4, "id": "p4", "title": "4. Add vendor (vendor-add) · cycle 5", "flow": "vendor-add", "frames": 3}
+  ],
+  "layoutNotes": "Same as cycles 3-4: per step column (x = i*2720) y 0..660 before panel (cycle-4 image 720x512) + green changes-<flow>-<n> block from cycles/5/changes.json (REVERSAL lines for the merged invite step and the removed step labels); y 900..2584 review frame frame-<stepKey> 2240x1684 with hdr-/img-<stepKey>. signup-05-invite retired (signup page has 4 frames). vendor-add-01-list uses the cycle-4 vendor-01-list shot as its before panel (same screen, see before-urls.json); vendor-add-02-form and -03-added get 'New this cycle' panels.",
+  "createdAt": "2026-10-02T16:39:01Z",
+  "capturedCommit": "22cbecb67ae39079020007428e50a10eb37151e1",
+  "pr": 4,
+  "branch": "cycle-4-feedback",
+  "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c5-<flow>/",
+  "assetDeployId": "6abfdd3dcbb08b41d03ed4c3",
+  "beforeAssetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-<flow>/",
+  "importPreflight": "one create call; report 20 errors + 30 warnings (truncated at 50): errors are the known intentional before-box vs before-img/before-lbl overlaps; warnings are text-fit/padding/clearance advisories; non-blocking. No scratch docs.",
+  "exports": ["export/lucid-export-p1-landing.png", "export/lucid-export-p2-signup.png", "export/lucid-export-p3-vendor-approval.png", "export/lucid-export-p4-vendor-add.png"],
+  "exportCheck": "all 22 image shapes (12 cycle-5 review shots + 10 cycle-4 before thumbnails, 9 unique URLs) rendered in the 4 page exports"
+}

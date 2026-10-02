@@ -7,9 +7,24 @@ version: 1
 base_url: https://design-loop-sample-prototype.netlify.app
 viewport: { width: 1440, height: 1024 }
 flows:
+  # cycle 3: the landing page (home route '/') is its own flow so existing signup/vendor step keys stay stable
+  # and every stepKey stays unique (harvest maps frame-<stepKey> -> step). Its single step clicks the
+  # "Get started" CTA, which is where the signup flow begins.
+  - key: landing
+    name: Landing page (home) → Get started
+    start_url: /
+    steps:
+      - key: home-00-landing
+        expect: { route: /, h1: Transform your org with AI }
+        action: { click: { role: link, name: Get started } }
   - key: signup
-    name: Sign up → onboarding → workspace created
-    start_url: /signup
+    name: Landing → Get started → sign up → onboarding → workspace created + invite teammates
+    # cycle 3: the flow is entered from the landing page by clicking "Get started" (not by deep-linking /signup).
+    # `entry` runs before step 1 and is not captured as its own frame (the landing flow already captures '/').
+    start_url: /
+    entry:
+      expect: { route: /, h1: Transform your org with AI }
+      click: { role: link, name: Get started }
     steps:
       - key: signup-01-create-account
         expect: { route: /signup, h1: Create your account }
@@ -18,21 +33,39 @@ flows:
           - { fill: { role: textbox, name: Password }, value: correct-horse-9 }
         action: { click: { role: button, name: Submit } }
       - key: signup-02-role
-        expect: { route: /onboarding/role, h1: "What's your role?" }
-        prepare:
-          - { click: { role: radio, name: Product / design } }
-        action: { click: { role: button, name: Next } }
+        # cycle 4: heading "What's your role?" -> "Select your role"; "Step 1 of 2" label removed
+        expect: { route: /onboarding/role, h1: Select your role }
+        # cycle 2: no Next button — clicking a role saves it and advances immediately
+        action: { click: { role: radio, name: Product / Design } }
       - key: signup-03-goals
         expect: { route: /onboarding/goals, h1: Pick your AI goals }
         prepare:
-          - { check: { role: checkbox, name: Summarize documents } }
-          - { check: { role: checkbox, name: Vendor risk reviews } }
+          # cycle 2: goals are highlight-on-select toggle tiles (buttons, aria-pressed), not checkboxes
+          - { click: { role: button, name: Summarize documents } }
+          - { click: { role: button, name: Vendor risk reviews } }
+        # cycle 3: "Create workspace" is now the first (left) button and Back follows it; role+name locator unchanged
         action: { click: { role: button, name: Create workspace } }
+      # cycle 4: Workspace created + Invite teammates are ONE screen (end state of the flow). The step key
+      # signup-04-workspace-created is kept (harvest maps frame-<stepKey>); signup-05-invite is RETIRED
+      # (/workspace/:id/invite now redirects to /workspace/:id). The shot shows the filled invite field with
+      # "Invite" enabled; the cursor marks Invite (clicking it shows the "Invites sent to 2 teammates." toast).
       - key: signup-04-workspace-created
         expect: { route: "/workspace/:id", h1: Workspace created }
+        prepare:
+          - { fill: { role: textbox, name: Invite teammates }, value: "sam@example.com, priya@example.com" }
+        action: { click: { role: button, name: Invite } }
   - key: vendor-approval
-    name: Vendor list → vendor detail → review → approved
+    name: Vendor list → vendor detail → review → approve → list with toast
     start_url: /vendors
+    # Covers every vendor screen in src/App.jsx: /vendors, /vendors/:id, /vendors/:id/review.
+    # cycle 3: the "Success!" screen (/vendors/:id/approved) was removed; that route now redirects to /vendors.
+    # Approve sets the vendor's status (sessionStorage) and returns to /vendors with a lower-left toast
+    # "<vendor> was updated." The toast auto-dismisses after 3 s, but in capture mode (window.__DESIGN_LOOP_CAPTURE__,
+    # set by capture.mjs, or ?capture=1) it stays until dismissed, so step 4 always shows it.
+    # Other reachable paths land on already-captured screens: Reject opens a confirmation dialog (Cancel / Confirm reject)
+    # and Confirm returns to /vendors with "<vendor> was rejected."; the header "Vendors" nav, the landing "Vendors"
+    # button and WorkspaceReady "Go to vendors" all open /vendors.
+    # An unknown vendor id renders the generic NotFound screen (reachable only by typing a bad URL).
     steps:
       - key: vendor-01-list
         expect: { route: /vendors, h1: AI vendors }
@@ -47,5 +80,28 @@ flows:
           - { check: { role: checkbox, name: SOC 2 Type II on file } }
           - { fill: { role: textbox, name: Notes }, value: Pending PII confirmation from Marco. }
         action: { click: { role: button, name: Approve } }
+      # cycle 3: key kept stable (harvest maps frame-<stepKey>); the step is now the vendor LIST with the
+      # "Helix LLM Gateway was updated." toast and Helix's status chip showing Approved.
       - key: vendor-04-approved
-        expect: { route: "/vendors/:id/approved", h1: Success! }
+        expect: { route: /vendors, h1: AI vendors, toast: Helix LLM Gateway was updated. }
+  # cycle 4: new flow for the "Add vendor" screen (sticky 7pHzKpUvEyup). Separate browser context, so the added
+  # vendor (sessionStorage) never leaks into the vendor-approval flow.
+  - key: vendor-add
+    name: Vendor list → Add vendor → filled form → list with “added” toast
+    start_url: /vendors
+    steps:
+      - key: vendor-add-01-list
+        expect: { route: /vendors, h1: AI vendors }
+        action: { click: { role: link, name: Add vendor } }
+      - key: vendor-add-02-form
+        expect: { route: /vendors/new, h1: Add a vendor }
+        prepare:
+          - { fill: { role: textbox, name: Vendor name * }, value: Lumen Contract AI }
+          - { fill: { role: textbox, name: Category * }, value: Document analysis }
+          - { fill: { role: textbox, name: Model / service }, value: Contract clause extraction }
+          - { fill: { role: textbox, name: Business owner * }, value: Jordan P. }
+          - { select: { role: combobox, name: Risk tier * }, value: Medium }
+          - { fill: { role: spinbutton, name: Annual spend (USD) * }, value: 54000 }
+        action: { click: { role: button, name: Save vendor } }
+      - key: vendor-add-03-added
+        expect: { route: /vendors, h1: AI vendors, toast: Lumen Contract AI was added. }

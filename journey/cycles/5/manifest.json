@@ -1,0 +1,577 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-02T16:34:45.403Z",
+  "entries": [
+    {
+      "stepKey": "home-00-landing",
+      "flow": "landing",
+      "flowName": "Landing page (home) \u2192 Get started",
+      "cycle": 5,
+      "index": 1,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/",
+      "route": "/",
+      "title": "Home \u00b7 Northwind AI Ops",
+      "h1": "Transform your org with AI",
+      "clicked": {
+        "role": "link",
+        "name": "Get started",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(1) > div > a:nth-of-type(1)",
+        "bbox": {
+          "x": 194,
+          "y": 299,
+          "width": 141,
+          "height": 45
+        },
+        "click": {
+          "x": 265,
+          "y": 321
+        }
+      },
+      "textFingerprint": "a5c13bb26c857f3f",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/landing/raw/01-home-00-landing.png",
+      "timestamp": "2026-10-02T16:34:38.821Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/landing/annotated/01-home-00-landing.png",
+      "cursor": {
+        "tip": [
+          265,
+          321
+        ],
+        "paste": [
+          238,
+          291
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "signup-01-create-account",
+      "flow": "signup",
+      "flowName": "Landing \u2192 Get started \u2192 sign up \u2192 onboarding \u2192 workspace created + invite teammates",
+      "cycle": 5,
+      "index": 1,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/signup",
+      "route": "/signup",
+      "title": "Create account \u00b7 Northwind AI Ops",
+      "h1": "Create your account",
+      "clicked": {
+        "role": "button",
+        "name": "Submit",
+        "cssPath": "div#root > div > main > section > form > div > button",
+        "bbox": {
+          "x": 555,
+          "y": 645,
+          "width": 96,
+          "height": 42
+        },
+        "click": {
+          "x": 603,
+          "y": 666
+        }
+      },
+      "textFingerprint": "6479355a961fb321",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/signup/raw/01-signup-01-create-account.png",
+      "timestamp": "2026-10-02T16:34:40.158Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "entry": {
+        "from": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/",
+        "fromRoute": "/",
+        "click": {
+          "role": "link",
+          "name": "Get started"
+        },
+        "to": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/signup"
+      },
+      "annotated": "out/cycle-5/signup/annotated/01-signup-01-create-account.png",
+      "cursor": {
+        "tip": [
+          603,
+          666
+        ],
+        "paste": [
+          576,
+          636
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "signup-02-role",
+      "flow": "signup",
+      "flowName": "Landing \u2192 Get started \u2192 sign up \u2192 onboarding \u2192 workspace created + invite teammates",
+      "cycle": 5,
+      "index": 2,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/onboarding/role?ref=signup",
+      "route": "/onboarding/role",
+      "title": "Onboarding: role \u00b7 Northwind AI Ops",
+      "h1": "Select your role",
+      "clicked": {
+        "role": "radio",
+        "name": "Product / Design",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)",
+        "bbox": {
+          "x": 562,
+          "y": 516,
+          "width": 315,
+          "height": 48
+        },
+        "click": {
+          "x": 720,
+          "y": 540
+        }
+      },
+      "textFingerprint": "0dc8b98fb7a9c581",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/signup/raw/02-signup-02-role.png",
+      "timestamp": "2026-10-02T16:34:40.428Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/signup/annotated/02-signup-02-role.png",
+      "cursor": {
+        "tip": [
+          720,
+          540
+        ],
+        "paste": [
+          693,
+          510
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "signup-03-goals",
+      "flow": "signup",
+      "flowName": "Landing \u2192 Get started \u2192 sign up \u2192 onboarding \u2192 workspace created + invite teammates",
+      "cycle": 5,
+      "index": 3,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/onboarding/goals",
+      "route": "/onboarding/goals",
+      "title": "Onboarding: goals \u00b7 Northwind AI Ops",
+      "h1": "Pick your AI goals",
+      "clicked": {
+        "role": "button",
+        "name": "Create workspace",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(2) > button:nth-of-type(1)",
+        "bbox": {
+          "x": 235,
+          "y": 643,
+          "width": 186,
+          "height": 42
+        },
+        "click": {
+          "x": 328,
+          "y": 664
+        }
+      },
+      "textFingerprint": "da8feeef175a42b5",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/signup/raw/03-signup-03-goals.png",
+      "timestamp": "2026-10-02T16:34:40.759Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/signup/annotated/03-signup-03-goals.png",
+      "cursor": {
+        "tip": [
+          328,
+          664
+        ],
+        "paste": [
+          301,
+          634
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "signup-04-workspace-created",
+      "flow": "signup",
+      "flowName": "Landing \u2192 Get started \u2192 sign up \u2192 onboarding \u2192 workspace created + invite teammates",
+      "cycle": 5,
+      "index": 4,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/workspace/ws-7781",
+      "route": "/workspace/:id",
+      "title": "Workspace created \u00b7 Northwind AI Ops",
+      "h1": "Workspace created",
+      "clicked": {
+        "role": "button",
+        "name": "Invite",
+        "cssPath": "div#root > div > main > section > form > div:nth-of-type(1) > button",
+        "bbox": {
+          "x": 501,
+          "y": 717,
+          "width": 96,
+          "height": 45
+        },
+        "click": {
+          "x": 549,
+          "y": 740
+        }
+      },
+      "textFingerprint": "5659a51499f8d650",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/signup/raw/04-signup-04-workspace-created.png",
+      "timestamp": "2026-10-02T16:34:41.028Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/signup/annotated/04-signup-04-workspace-created.png",
+      "cursor": {
+        "tip": [
+          549,
+          740
+        ],
+        "paste": [
+          522,
+          710
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-01-list",
+      "flow": "vendor-approval",
+      "flowName": "Vendor list \u2192 vendor detail \u2192 review \u2192 approve \u2192 list with toast",
+      "cycle": 5,
+      "index": 1,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors",
+      "route": "/vendors",
+      "title": "Vendors \u00b7 Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": {
+        "role": "link",
+        "name": "View Helix LLM Gateway",
+        "cssPath": "div#root > div > main > section > table > tbody > tr:nth-of-type(2) > td:nth-of-type(5) > a",
+        "bbox": {
+          "x": 1157,
+          "y": 339,
+          "width": 32,
+          "height": 18
+        },
+        "click": {
+          "x": 1173,
+          "y": 348
+        }
+      },
+      "textFingerprint": "2dcbd49af9ec585f",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-approval/raw/01-vendor-01-list.png",
+      "timestamp": "2026-10-02T16:34:42.462Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-approval/annotated/01-vendor-01-list.png",
+      "cursor": {
+        "tip": [
+          1173,
+          348
+        ],
+        "paste": [
+          1146,
+          318
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-02-detail",
+      "flow": "vendor-approval",
+      "flowName": "Vendor list \u2192 vendor detail \u2192 review \u2192 approve \u2192 list with toast",
+      "cycle": 5,
+      "index": 2,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors/v-2177",
+      "route": "/vendors/:id",
+      "title": "Vendor: Helix LLM Gateway \u00b7 Northwind AI Ops",
+      "h1": "Helix LLM Gateway",
+      "clicked": {
+        "role": "link",
+        "name": "Proceed",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(3) > a",
+        "bbox": {
+          "x": 235,
+          "y": 684,
+          "width": 105,
+          "height": 45
+        },
+        "click": {
+          "x": 288,
+          "y": 706
+        }
+      },
+      "textFingerprint": "8fc90716b46e4af1",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-approval/raw/02-vendor-02-detail.png",
+      "timestamp": "2026-10-02T16:34:42.754Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-approval/annotated/02-vendor-02-detail.png",
+      "cursor": {
+        "tip": [
+          288,
+          706
+        ],
+        "paste": [
+          261,
+          676
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-03-review",
+      "flow": "vendor-approval",
+      "flowName": "Vendor list \u2192 vendor detail \u2192 review \u2192 approve \u2192 list with toast",
+      "cycle": 5,
+      "index": 3,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors/v-2177/review",
+      "route": "/vendors/:id/review",
+      "title": "Review: Helix LLM Gateway \u00b7 Northwind AI Ops",
+      "h1": "Review Helix LLM Gateway",
+      "clicked": {
+        "role": "button",
+        "name": "Approve",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)",
+        "bbox": {
+          "x": 343,
+          "y": 563,
+          "width": 105,
+          "height": 42
+        },
+        "click": {
+          "x": 396,
+          "y": 584
+        }
+      },
+      "textFingerprint": "c6edd8a4c876bfaf",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-approval/raw/03-vendor-03-review.png",
+      "timestamp": "2026-10-02T16:34:43.077Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-approval/annotated/03-vendor-03-review.png",
+      "cursor": {
+        "tip": [
+          396,
+          584
+        ],
+        "paste": [
+          369,
+          554
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-04-approved",
+      "flow": "vendor-approval",
+      "flowName": "Vendor list \u2192 vendor detail \u2192 review \u2192 approve \u2192 list with toast",
+      "cycle": 5,
+      "index": 4,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors",
+      "route": "/vendors",
+      "title": "Vendors \u00b7 Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": null,
+      "textFingerprint": "c696633c3790613e",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-approval/raw/04-vendor-04-approved.png",
+      "timestamp": "2026-10-02T16:34:43.314Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-approval/annotated/04-vendor-04-approved.png",
+      "cursor": null
+    },
+    {
+      "stepKey": "vendor-add-01-list",
+      "flow": "vendor-add",
+      "flowName": "Vendor list \u2192 Add vendor \u2192 filled form \u2192 list with \u201cadded\u201d toast",
+      "cycle": 5,
+      "index": 1,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors",
+      "route": "/vendors",
+      "title": "Vendors \u00b7 Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": {
+        "role": "link",
+        "name": "Add vendor",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(1) > a",
+        "bbox": {
+          "x": 1114,
+          "y": 120,
+          "width": 132,
+          "height": 45
+        },
+        "click": {
+          "x": 1180,
+          "y": 142
+        }
+      },
+      "textFingerprint": "2dcbd49af9ec585f",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-add/raw/01-vendor-add-01-list.png",
+      "timestamp": "2026-10-02T16:34:44.842Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-add/annotated/01-vendor-add-01-list.png",
+      "cursor": {
+        "tip": [
+          1180,
+          142
+        ],
+        "paste": [
+          1153,
+          112
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-add-02-form",
+      "flow": "vendor-add",
+      "flowName": "Vendor list \u2192 Add vendor \u2192 filled form \u2192 list with \u201cadded\u201d toast",
+      "cycle": 5,
+      "index": 2,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors/new",
+      "route": "/vendors/new",
+      "title": "Add vendor \u00b7 Northwind AI Ops",
+      "h1": "Add a vendor",
+      "clicked": {
+        "role": "button",
+        "name": "Save vendor",
+        "cssPath": "div#root > div > main > section > form > div:nth-of-type(2) > button",
+        "bbox": {
+          "x": 235,
+          "y": 604,
+          "width": 141,
+          "height": 45
+        },
+        "click": {
+          "x": 306,
+          "y": 626
+        }
+      },
+      "textFingerprint": "d5f4dccc174afe0e",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-add/raw/02-vendor-add-02-form.png",
+      "timestamp": "2026-10-02T16:34:45.148Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-add/annotated/02-vendor-add-02-form.png",
+      "cursor": {
+        "tip": [
+          306,
+          626
+        ],
+        "paste": [
+          279,
+          596
+        ],
+        "scale": "3x",
+        "clamped": false
+      }
+    },
+    {
+      "stepKey": "vendor-add-03-added",
+      "flow": "vendor-add",
+      "flowName": "Vendor list \u2192 Add vendor \u2192 filled form \u2192 list with \u201cadded\u201d toast",
+      "cycle": 5,
+      "index": 3,
+      "url": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app/vendors",
+      "route": "/vendors",
+      "title": "Vendors \u00b7 Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": null,
+      "textFingerprint": "8f1fbfef5c4d8916",
+      "fingerprintSource": "sha256(visible h1-h6,label,legend,th,button,a,[role=radio] text)[:16]",
+      "screenshot": "out/cycle-5/vendor-add/raw/03-vendor-add-03-added.png",
+      "timestamp": "2026-10-02T16:34:45.381Z",
+      "commit": "22cbecb67ae39079020007428e50a10eb37151e1",
+      "deployUrl": "https://deploy-preview-4--design-loop-sample-prototype.netlify.app",
+      "pr": 4,
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "warnings": [],
+      "annotated": "out/cycle-5/vendor-add/annotated/03-vendor-add-03-added.png",
+      "cursor": null
+    }
+  ]
+}

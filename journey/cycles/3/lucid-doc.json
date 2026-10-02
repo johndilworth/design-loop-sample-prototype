@@ -1,0 +1,55 @@
+{
+  "cycle": 3,
+  "docId": "934e442a-203d-441c-b216-e0340808aa6b",
+  "title": "Design loop — Cycle 3 review (PR #2)",
+  "editUrl": "https://lucid.app/lucidchart/934e442a-203d-441c-b216-e0340808aa6b/edit",
+  "viewUrl": "https://lucid.app/lucidchart/934e442a-203d-441c-b216-e0340808aa6b/view",
+  "layout": "pages+before-after",
+  "pages": [
+    {
+      "index": 1,
+      "id": "p1",
+      "title": "1. Landing (home) · cycle 3",
+      "flow": "landing",
+      "frames": 1
+    },
+    {
+      "index": 2,
+      "id": "p2",
+      "title": "2. Get started (signup) · cycle 3",
+      "flow": "signup",
+      "frames": 5
+    },
+    {
+      "index": 3,
+      "id": "p3",
+      "title": "3. Vendors (vendor-approval) · cycle 3",
+      "flow": "vendor-approval",
+      "frames": 4
+    }
+  ],
+  "layoutNotes": "Per step column (x = i*2720): y 0..660 = before panel (before-box/lbl/img-<flow>-<n>, cycle-2 image 720x512; steps with no cycle-2 capture (home-00-landing, signup-05-invite) get a before-box labelled 'New this cycle') at x+0..880 and changes-<flow>-<n> block at x+960..2240; y 900..2584 = review frame frame-<stepKey> 2240x1684 with hdr-<stepKey> (22pt/16pt, y+40, h200) and img-<stepKey> 1440x1024 at (+400,+260). Legend/title above y=0.",
+  "createdAt": "2026-10-02T06:10:49Z",
+  "capturedCommit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+  "pr": 2,
+  "branch": "cycle-2-feedback",
+  "deployUrl": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app",
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-<flow>/",
+  "assetDeployId": "6abf48f015427613c3c86eb9",
+  "beforeAssetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-<flow>/",
+  "supersededScratchDocs": [
+    {
+      "docId": "ba119a18-3dd6-4b6c-9644-d1c8c87807e6",
+      "title": "[superseded scratch] Design loop — Cycle 3 review (PR #2) — header overflow, use 934e442a",
+      "why": "first import used 30pt/22pt step headers in a 150px box; on signup-04 the 3rd line hid behind the screenshot. A lucid_edit_item test on hdr-signup-04-workspace-created showed edit_item text is plain (HTML rendered literally), so the doc was re-imported with build_spec 22pt/16pt headers instead. Renamed, not trashed."
+    }
+  ],
+  "exports": [
+    "export/lucid-export-p1-landing.png",
+    "export/lucid-export-p2-signup.png",
+    "export/lucid-export-p3-vendor-approval.png",
+    "export/lucid-export-p2-detail-hdr-signup-1.png",
+    "export/lucid-export-p2-detail-hdr-signup-4.png"
+  ],
+  "harvest": "harvest/feedback.json: 10 frames mapped by frame-id, 0 feedback, 0 outside, 0 disagreements, 0 threads"
+}
