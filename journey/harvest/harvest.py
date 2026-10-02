@@ -12,10 +12,19 @@ The Lucid connector is called by the agent (MCP), not by this script. Steps:
 Frame containment: uses the fetch field `childrenIds` on nodes with shapeType "Frame" /
 BlockClass "SparkFrameBlock" (primary), and independently recomputes containment from
 `BoundingBox` (fallback / cross-check). Disagreements are reported per item.
+
+Nested parents: Lucid may parent a sticky to the screenshot IMAGE (`img-<stepKey>`, itself a child of the
+frame) instead of the frame. childrenIds containment is therefore resolved transitively up to the frame
+(`containment.via` names the intermediate parent), so such stickies count as in-frame without a
+disagreement warning.
+
+Ignored generated items (cycle >= 2 before/after layout): ids starting with `before-` (previous-cycle reference
+panel: box/label/image, or a frame whose id starts with `before-`) and `changes-` ('Changes in this cycle' block).
+Stickies placed on a before- panel are NOT in a review frame; they land in `outsideFrames` (with bestOverlap).
 """
 import argparse, json, re, sys, datetime
 
-GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-', 'row-title-')  # ids we create on import
+GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-', 'row-title-', 'before-', 'changes-')  # ids we create on import
 FEEDBACK_CLASSES = {'StickiesStickyNoteBlock': 'sticky', 'TextBlock': 'text', 'DefaultTextBlockNew': 'text',
                     'LucidCardBlock': 'card', 'SparkCalloutSquareBlock': 'callout'}
 FRAME_CLASSES = {'SparkFrameBlock'}
@@ -85,7 +94,8 @@ def main():
                 n = norm(it, page)
                 items[n['id']] = n
 
-    frames = [n for n in items.values() if n['blockClass'] in FRAME_CLASSES or n['shapeType'] == 'Frame']
+    frames = [n for n in items.values() if (n['blockClass'] in FRAME_CLASSES or n['shapeType'] == 'Frame')
+              and not (n['id'] or '').startswith('before-')]
     def step_for_frame(f):
         if f['id'].startswith('frame-') and f['id'][6:] in steps:
             return f['id'][6:], 'frame-id'
@@ -96,14 +106,24 @@ def main():
         sk, how = step_for_frame(f)
         frame_info[f['id']] = {'frameId': f['id'], 'frameTitle': f['text'], 'stepKey': sk, 'matchedBy': how, 'pageId': f['pageId'],
                                'bbox': f['bbox'], 'childrenIds': f['childrenIds'] or []}
-    parent_by_children = {c: fid for fid, fi in frame_info.items() for c in fi['childrenIds']}
+    # direct parent of every item that appears in any childrenIds list (frames, images, groups ...)
+    direct_parent = {c: n['id'] for n in items.values() for c in (n['childrenIds'] or [])}
+    def frame_ancestor(item_id):
+        """Walk childrenIds parents up to a review frame -> (frameId, via-parent-or-None)."""
+        seen, cur, via = set(), item_id, None
+        while cur in direct_parent and cur not in seen:
+            seen.add(cur); par = direct_parent[cur]
+            if par in frame_info:
+                return par, via
+            via = par; cur = par
+        return None, None
 
     groups = {fid: [] for fid in frame_info}
     outside, disagreements = [], []
     for n in items.values():
         if n['blockClass'] not in FEEDBACK_CLASSES or (n['id'] or '').startswith(GENERATED_PREFIXES):
             continue
-        by_child = parent_by_children.get(n['id'])
+        by_child, via = frame_ancestor(n['id'])
         ratios = {fid: overlap_ratio(n['bbox'], fi['bbox']) for fid, fi in frame_info.items() if n['bbox'] and fi['bbox']}
         best = max(ratios, key=ratios.get) if ratios else None
         if best and ratios[best] <= 0: best = None
@@ -113,7 +133,7 @@ def main():
         fb = {'itemId': n['id'], 'kind': FEEDBACK_CLASSES[n['blockClass']], 'text': n['text'],
               'priority': (m.group(1).lower() if m else pr_color),
               'prioritySource': ('text' if m else 'color' if pr_color else None), 'fill': n['fill'], 'bbox': n['bbox'],
-              'containment': {'childrenIds': by_child, 'bbox': by_bbox,
+              'containment': {'childrenIds': by_child, 'via': via, 'bbox': by_bbox,
                               'bestOverlap': {'frameId': best, 'ratio': round(ratios[best], 3)} if best else None}}
         assigned = by_child or by_bbox
         if by_child != by_bbox:
