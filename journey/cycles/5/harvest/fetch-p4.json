@@ -1,0 +1,211 @@
+{
+ "_note": "Condensed from Lucid fetch(page_index=4) 2026-10-02 ~11:25 MDT via board-state.py; see board-state.json",
+ "pages": [
+  {
+   "pageId": "p4",
+   "pageTitle": "4. Add vendor (vendor-add) · cycle 5",
+   "items": [
+    {
+     "id": "doc-title-p4",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 0, y: -860, w: 4400, h: 200"
+     }
+    },
+    {
+     "id": "legend-box-p4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: -560, w: 2600, h: 360",
+      "FillColor": "#f4f6fbff"
+     }
+    },
+    {
+     "id": "legend-must-p4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2700, y: -530, w: 260, h: 300",
+      "FillColor": "#ff8a80ff"
+     }
+    },
+    {
+     "id": "legend-try-p4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3020, y: -530, w: 260, h: 300",
+      "FillColor": "#ffe066ff"
+     }
+    },
+    {
+     "id": "legend-maybe-p4",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3340, y: -530, w: 260, h: 300",
+      "FillColor": "#a3e4ffff"
+     }
+    },
+    {
+     "id": "before-box-vendor-add-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 0, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "before-lbl-vendor-add-1",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 20, y: 20, w: 840, h: 90"
+     }
+    },
+    {
+     "id": "before-img-vendor-add-1",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 80, y: 125, w: 720, h: 512"
+     }
+    },
+    {
+     "id": "changes-vendor-add-1",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 960, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-add-01-list",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-add-01-list · /vendors · Vendors · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-add-01-list",
+      "hdr-vendor-add-01-list"
+     ]
+    },
+    {
+     "id": "hdr-vendor-add-01-list",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 400, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-add-01-list",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-vendor-add-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 2720, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "changes-vendor-add-2",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 3680, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-add-02-form",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-add-02-form · /vendors/new · Add vendor · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-add-02-form",
+      "hdr-vendor-add-02-form"
+     ]
+    },
+    {
+     "id": "hdr-vendor-add-02-form",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 3120, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-add-02-form",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024"
+     }
+    },
+    {
+     "id": "before-box-vendor-add-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 5440, y: 0, w: 880, h: 660",
+      "FillColor": "#eef0f4ff"
+     }
+    },
+    {
+     "id": "changes-vendor-add-3",
+     "properties": {
+      "BlockClass": "DefaultSquareBlock",
+      "BoundingBox": "x: 6400, y: 0, w: 1280, h: 660",
+      "FillColor": "#eaf7eeff"
+     }
+    },
+    {
+     "id": "frame-vendor-add-03-added",
+     "properties": {
+      "BlockClass": "SparkFrameBlock",
+      "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+      "FillColor": "#ffffffff",
+      "TextAreas": [
+       {
+        "key": "FrameTitle",
+        "text": "vendor-add-03-added · /vendors · Vendors · Northwind AI Ops"
+       }
+      ]
+     },
+     "shapeType": "Frame",
+     "childrenIds": [
+      "img-vendor-add-03-added",
+      "hdr-vendor-add-03-added"
+     ]
+    },
+    {
+     "id": "hdr-vendor-add-03-added",
+     "properties": {
+      "BlockClass": "DefaultTextBlockNew",
+      "BoundingBox": "x: 5840, y: 940, w: 1440, h: 200"
+     }
+    },
+    {
+     "id": "img-vendor-add-03-added",
+     "properties": {
+      "BlockClass": "UserImage2Block",
+      "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024"
+     }
+    }
+   ]
+  }
+ ]
+}
