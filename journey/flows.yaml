@@ -87,7 +87,7 @@ flows:
   # cycle 4: new flow for the "Add vendor" screen (sticky 7pHzKpUvEyup). Separate browser context, so the added
   # vendor (sessionStorage) never leaks into the vendor-approval flow.
   - key: vendor-add
-    name: Vendor list → Add vendor → filled form → list with "added" toast
+    name: Vendor list → Add vendor → filled form → list with “added” toast
     start_url: /vendors
     steps:
       - key: vendor-add-01-list

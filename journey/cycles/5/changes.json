@@ -1,0 +1,55 @@
+{
+  "source": "journey/cycles/4/harvest/feedback.json (7 stickies, Lucid c95ea620) + PR #4 body (head 22cbecb). Sticky numbers = rows of the PR #4 sticky->change table. before-urls.json = cycle-4 asset-urls + vendor-add-01-list -> cycle-4 vendor-01-list (same screen).",
+  "flows": {
+    "signup": {
+      "default": [
+        "No screen-specific sticky in cycle 4.",
+        "No visible change on this screen."
+      ]
+    },
+    "vendor-approval": {
+      "default": [
+        "No screen-specific sticky in cycle 4.",
+        "No visible change on this screen."
+      ]
+    }
+  },
+  "steps": {
+    "home-00-landing": [
+      "[try] Testimonials section “What teams say”: 4 clearly fictional sample quotes, below the value props, before the CTA band (#1)",
+      "Spacing tightened so the page still fits 1440×1024"
+    ],
+    "signup-02-role": [
+      "[try] “Step 1 of 2” label removed (#2); goals “Step 2 of 2” removed too",
+      "REVERSAL: cycle-1 Mdyz4eFNSGvL had enlarged this step label",
+      "[try] Heading now “Select your role” (#3)"
+    ],
+    "signup-03-goals": [
+      "“Step 2 of 2” label removed (decision on #2: remove both labels)",
+      "REVERSAL: cycle-1 Mdyz4eFNSGvL step-label sticky"
+    ],
+    "signup-04-workspace-created": [
+      "[must] Workspace created + Invite teammates are ONE screen (#4); signup-05-invite retired, /workspace/:id/invite redirects here",
+      "[must] Open email field (comma-separated), Invite disabled until valid, Back -> Skip to /vendors (#5)",
+      "REVERSAL: cycle-2 JHyzLmCvGX~a separate invite step merged back"
+    ],
+    "vendor-01-list": [
+      "[must] “Add vendor” button in the list header (#6); see page 4 for the new flow"
+    ],
+    "vendor-02-detail": [
+      "[try] Back is now an arrow icon-only button, aria-label “Back to vendors” (#7)"
+    ],
+    "vendor-add-01-list": [
+      "[must] New “Add vendor” primary button (#6)",
+      "Opens /vendors/new"
+    ],
+    "vendor-add-02-form": [
+      "[must] New screen: add-vendor form (#6)",
+      "Name, category, model, owner, risk tier, annual spend; Save disabled until required fields are filled"
+    ],
+    "vendor-add-03-added": [
+      "[must] Saving returns to the list with toast “<name> was added.” (#6)",
+      "New vendor listed as Pending review (session only)"
+    ]
+  }
+}

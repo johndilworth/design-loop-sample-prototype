@@ -1,5 +1,5 @@
 {
-  "_note": "Cross-cycle summary of the design-feedback loop, computed 2026-10-02 ~00:40 MDT from journey/cycles/{1,2,3}/harvest/feedback.json, journey/cycles/{1,2,3}/manifest.json (screens = manifest entries for that cycle) and the PR #1 / PR #2 bodies (gh pr view). 'resolved' = harvested items listed in the following PR's sticky->change table. Both PRs are OPEN (not merged). Updated 2026-10-02 ~01:20 MDT with cycle 4 (final, PR #3 preview @20c1782) and the PR #3 body; all three PRs still OPEN.",
+  "_note": "Cross-cycle summary of the design-feedback loop, computed 2026-10-02 ~00:40 MDT from journey/cycles/{1,2,3}/harvest/feedback.json, journey/cycles/{1,2,3}/manifest.json (screens = manifest entries for that cycle) and the PR #1 / PR #2 bodies (gh pr view). 'resolved' = harvested items listed in the following PR's sticky->change table. Both PRs are OPEN (not merged). Updated 2026-10-02 ~01:20 MDT with cycle 4 (final, PR #3 preview @20c1782) and the PR #3 body; updated ~10:40 MDT with the cycle-4 harvest, PR #4 and the cycle-5 capture. All four PRs OPEN.",
   "cycles": [
     {"cycle": 1, "luciddoc": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5", "capturedCommit": "77283a9", "screensCaptured": 8, "flows": {"signup": 4, "vendor-approval": 4},
      "feedbackItems": 11, "byPriority": {"must": 5, "try": 6, "maybe": 0}, "byFlow": {"signup": 11, "vendor-approval": 0}, "outsideFrames": 0, "commentThreads": 0,
@@ -14,8 +14,11 @@
      "resolvedNote": "PR #3 (head 20c1782) maps all 13 stickies; 2 are reversals of earlier cycles (Create workspace back to the LEFT; ASCII background home-only)."},
     {"cycle": 4, "final": true, "luciddoc": "c95ea620-f506-4499-9d67-dc821b143297", "capturedCommit": "20c1782", "screensCaptured": 10, "flows": {"landing": 1, "signup": 5, "vendor-approval": 4},
      "feedbackItems": 7, "byPriority": {"must": 3, "try": 4, "maybe": 0}, "byFlow": {"landing": 1, "signup": 4, "vendor-approval": 2}, "outsideFrames": 0, "commentThreads": 0,
-     "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "Re-harvested 2026-10-02 ~10:15 MDT after review (first harvest at 01:15 MDT was pre-review, 0 items). Not yet addressed by any PR."}
+     "followingPR": 4, "resolvedByFollowingPR": 7, "resolvedBreakdown": {"implemented": 7, "noOpAlreadySatisfied": 0}, "unresolved": 0, "resolvedNote": "Re-harvested 2026-10-02 ~10:15 MDT after review (first harvest at 01:15 MDT was pre-review, 0 items). PR #4 (head 22cbecb) implements all 7; 2 reversals (separate invite step from cycle 2 merged back; step label from cycle 1 removed). signup-05-invite retired."},
+    {"cycle": 5, "luciddoc": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215", "capturedCommit": "22cbecb", "screensCaptured": 12, "flows": {"landing": 1, "signup": 4, "vendor-approval": 4, "vendor-add": 3},
+     "feedbackItems": null, "byPriority": null, "outsideFrames": null, "commentThreads": null,
+     "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "Captured from PR #4 preview 2026-10-02 ~10:35 MDT; awaiting review (not harvested yet)."}
   ],
-  "totals": {"feedbackItems": 39, "byPriority": {"must": 14, "try": 25, "maybe": 0}, "screensCaptured": 36, "resolvedOfCycles1and2": "19/19", "resolvedOfCycles1to3": "32/32", "reversals": 2},
+  "totals": {"feedbackItems": 39, "byPriority": {"must": 14, "try": 25, "maybe": 0}, "screensCaptured": 48, "resolvedOfCycles1and2": "19/19", "resolvedOfCycles1to3": "32/32", "resolvedOfCycles1to4": "39/39", "reversals": 4},
   "evolutionDoc": "01d8c4f0-95d2-4de7-b997-d9a83df20ccb"
 }
