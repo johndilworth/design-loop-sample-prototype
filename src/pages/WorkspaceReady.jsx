@@ -7,13 +7,9 @@ export default function WorkspaceReady() {
     <section className="card">
       <h1>Workspace created</h1>
       <p>Your workspace <code>{workspaceId}</code> has been provisioned successfully.</p>
-      <ul className="checklist">
-        <li>Invite teammates</li>
-        <li>Connect a data source</li>
-        <li>Review AI vendors</li>
-      </ul>
       <div className="row">
-        <Link className="btn primary" to="/vendors">Go to vendors</Link>
+        <Link className="btn" to="/vendors">Go to vendors</Link>
+        <Link className="btn primary" to={`/workspace/${workspaceId}/invite`}>Invite teammates</Link>
       </div>
     </section>
   )

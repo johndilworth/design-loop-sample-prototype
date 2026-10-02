@@ -1,0 +1,36 @@
+{
+  "source": "journey/cycles/1/harvest/feedback.json (11 stickies, Lucid 9a9f5f0a) + PR #1 body (head 5461dff)",
+  "flows": {
+    "vendor-approval": {
+      "default": [
+        "No changes this cycle (no cycle-1 feedback on this flow).",
+        "Side effect only: global square corners (from signup feedback) also apply here."
+      ]
+    }
+  },
+  "steps": {
+    "signup-01-create-account": [
+      "[try] Card vertically centred in viewport (sticky: “center modal in viewport”)",
+      "[must] Removed subhead “It only takes a minute. Probably.” (sticky: “Remove the text ... headline is sufficient”)",
+      "[must] Square corners on buttons/fields/cards, all pages (from signup-02 sticky)"
+    ],
+    "signup-02-role": [
+      "[try] “Step 1” > “Step 1 of 2”, 16px semibold black (sticky: “Step 1 text is small...”)",
+      "[try] Card vertically centred (sticky: “center modal in viewport”)",
+      "[must] “Product / design” > “Product / Design” (sticky: “Capitalize design”)",
+      "[must] Rounded corners removed everywhere (sticky: “Remove rounded corners... Apply to all pages”)"
+    ],
+    "signup-03-goals": [
+      "[try] Card vertically centred (sticky: “center modal in viewport”)",
+      "[try] Back left, “Create workspace” right (sticky: “move create workspace to right side”)",
+      "[consistency] “Step 2 of 2” uses the new larger black step label",
+      "[must] Square corners (global)"
+    ],
+    "signup-04-workspace-created": [
+      "[try] Card vertically centred (sticky: “center modal in viewport”)",
+      "[must] Checklist removed (“Connect a data source”, “Review AI vendors”)",
+      "[must] Two buttons: “Go to vendors” (secondary) + “Invite teammates” (primary CTA > new placeholder /workspace/:id/invite)",
+      "[must] Square corners (global)"
+    ]
+  }
+}

@@ -8,8 +8,15 @@ Usage:
         [--layout pages|rows] [--out /tmp/spec-cycle-1.json]
   Images: https://journey-assets-ai-xform.netlify.app/<asset-prefix>-<flow>/<annotated filename>
   layout=pages -> one Lucid page per flow (default); layout=rows -> flows stacked as rows on one page.
+
+Before/after (cycle >= 2):
+  --before-urls journey/cycles/1/asset-urls.json   {stepKey: url} of the previous cycle's annotated shots
+  --changes journey/cycles/2/changes.json          {"steps": {stepKey: [lines]}, "flows": {flow: {"default": [lines]}}}
+  Adds, ABOVE each review frame (outside it), a 'Cycle N-1 (before)' panel (ids before-box/before-lbl/before-img-<flow>-<n>,
+  half-size 720x512 image) and a 'Changes in this cycle' text block (id changes-<flow>-<n>). These are plain shapes, not
+  frames, and their id prefixes are ignored by harvest. Frames move down by BEFORE_ROW px.
 """
-import argparse, json, os
+import argparse, json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 ap = argparse.ArgumentParser()
 ap.add_argument('--cycle', type=int, default=1)
@@ -19,6 +26,8 @@ ap.add_argument('--asset-host', default='https://journey-assets-ai-xform.netlify
 ap.add_argument('--layout', choices=['pages', 'rows'], default='pages')
 ap.add_argument('--frame-type', default='sparkFrame')
 ap.add_argument('--manifest', default=os.path.join(HERE, '..', 'manifest.json'))
+ap.add_argument('--before-urls', default=None); ap.add_argument('--changes', default=None)
+ap.add_argument('--title-suffix', default='')
 ap.add_argument('--out', default=os.path.join(os.environ.get('LUCID_OUT', '/tmp'), 'spec-cycle.json'))
 a = ap.parse_args()
 CYCLE = a.cycle
@@ -32,6 +41,10 @@ MX, MTOP, MBOT = 400, 260, 400
 FW, FH = MX * 2 + IW, MTOP + IH + MBOT          # 2240 x 1684
 GAP = 480                                        # horizontal gap between frames
 ROW_GAP = 1600                                   # vertical gap between flow rows (layout=rows)
+BEFORE = json.load(open(a.before_urls)) if a.before_urls else None
+CHANGES = json.load(open(a.changes)) if a.changes else None
+BW, BH = IW // 2, IH // 2                        # before thumbnail 720 x 512
+BEFORE_ROW = 900 if (BEFORE or CHANGES) else 0   # before panel 0..660, then 240 gap, then the frame
 LEGEND_TEXT = ('Leave feedback as sticky notes INSIDE the screen\'s frame. '
                '<span style="color:#C62828"><b>Red = must</b></span>, '
                '<span style="color:#9A7B00"><b>Yellow = try</b></span>, '
@@ -43,7 +56,7 @@ def header_shapes(pid, y0, subtitle):
     """Doc title + legend block placed above y0 (top of first frame row)."""
     return [
         {'id': f'doc-title-{pid}', 'type': 'text', 'boundingBox': {'x': 0, 'y': y0 - 860, 'w': 4400, 'h': 200},
-         'text': f'<p style="font-size:40pt"><b>Northwind AI Ops · Design loop · Cycle {CYCLE} review</b><br>'
+         'text': f'<p style="font-size:40pt"><b>Northwind AI Ops · Design loop · Cycle {CYCLE} review{esc(a.title_suffix)}</b><br>'
                  f'<span style="font-size:20pt">{esc(subtitle)}</span></p>'},
         {'id': f'legend-box-{pid}', 'type': 'rectangle', 'boundingBox': {'x': 0, 'y': y0 - 560, 'w': 2600, 'h': 360},
          'style': {'fill': {'type': 'color', 'color': '#F4F6FB'}, 'stroke': {'color': '#3A4FD8', 'width': 3, 'style': 'solid'}},
@@ -66,7 +79,21 @@ def flow_shapes(flow, y0, shapes, lines):
         shapes.append({'id': f'row-title-{flow}', 'type': 'text', 'boundingBox': {'x': 0, 'y': y0 - 200, 'w': 3000, 'h': 120},
                        'text': f'<p style="font-size:32pt;text-align:left"><b>{esc(steps[0]["flowName"].replace("→", ">"))}</b></p>'})
     for i, e in enumerate(steps):
-        fx, fy = i * (FW + GAP), y0
+        fx, fy = i * (FW + GAP), y0 + BEFORE_ROW
+        if BEFORE and BEFORE.get(e['stepKey']):
+            shapes.append({'id': f'before-box-{flow}-{i+1}', 'type': 'rectangle', 'boundingBox': {'x': fx, 'y': y0, 'w': 880, 'h': 660},
+                           'style': {'fill': {'type': 'color', 'color': '#EEF0F4'}, 'stroke': {'color': '#8A90A0', 'width': 2, 'style': 'dashed'}}})
+            shapes.append({'id': f'before-lbl-{flow}-{i+1}', 'type': 'text', 'boundingBox': {'x': fx + 20, 'y': y0 + 20, 'w': 840, 'h': 90},
+                           'text': f'<p style="font-size:20pt;text-align:left"><b>Cycle {CYCLE-1} (before) · reference only</b></p>'})
+            shapes.append({'id': f'before-img-{flow}-{i+1}', 'type': 'image', 'boundingBox': {'x': fx + 80, 'y': y0 + 125, 'w': BW, 'h': BH},
+                           'image': {'type': 'image', 'url': BEFORE[e['stepKey']]},
+                           'stroke': {'color': '#C9CED8', 'width': 1, 'style': 'solid'}})
+        if CHANGES:
+            lines_ = CHANGES.get('steps', {}).get(e['stepKey']) or CHANGES.get('flows', {}).get(flow, {}).get('default') or ['No changes this cycle']
+            body = '<br>'.join('• ' + esc(t) for t in lines_)
+            shapes.append({'id': f'changes-{flow}-{i+1}', 'type': 'rectangle', 'boundingBox': {'x': fx + 960, 'y': y0, 'w': FW - 960, 'h': 660},
+                           'style': {'fill': {'type': 'color', 'color': '#EAF7EE'}, 'stroke': {'color': '#2E7D32', 'width': 2, 'style': 'solid'}},
+                           'text': f'<p style="font-size:20pt;text-align:left"><b>Changes in this cycle</b> (vs cycle {CYCLE-1})<br>{body}</p>'})
         fid = f'frame-{e["stepKey"]}'
         label = f'{e["stepKey"]} · {e["route"]} · {e["title"]}'
         fr = {'id': fid, 'type': a.frame_type, 'boundingBox': {'x': fx, 'y': fy, 'w': FW, 'h': FH},
@@ -106,6 +133,11 @@ else:
     for r, flow in enumerate(flow_keys):
         counts[flow] = len(flow_shapes(flow, r * (FH + ROW_GAP), shapes, lines))
     pages.append({'id': 'p1', 'title': f'Cycle {CYCLE} review', 'shapes': shapes, 'lines': lines})
+# HTML attributes use single quotes so the import JSON has no escaped quotes (easier to pass through the connector)
+for pg in pages:
+    for sh in pg['shapes']:
+        if isinstance(sh.get('text'), str):
+            sh['text'] = re.sub(r'(\w+)="([^"]*)"', r"\1='\2'", sh['text'])
 doc = {'version': 1, 'pages': pages}
 s = json.dumps(doc, separators=(',', ':'), ensure_ascii=False)
 open(a.out, 'w').write(s)

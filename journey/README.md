@@ -30,8 +30,26 @@ Click targets are located by ARIA role + accessible name.
 ## Harvest findings (connector, Oct 2026)
 - `fetch` returns frames as nodes with `"shapeType": "Frame"`, `properties.BlockClass: "SparkFrameBlock"`, and **`childrenIds`** listing the items inside. Items placed geometrically inside a frame (no `container_id`) were auto-parented too.
 - Items not in any frame appear under `standaloneClusters` with **`itemId` / `text`** keys (frame children use `id` / `label`) — harvest handles both.
+- A sticky dropped onto the screenshot can be parented to the **image** (`img-<stepKey>`), not the frame. Harvest resolves
+  childrenIds transitively up to the frame (`containment.via`), so these count as in-frame with no disagreement
+  (cycle 1 re-harvest: 6 former disagreements → 0, same 11 assignments).
 - A sticky straddling a frame edge was **not** a child; bbox overlap was 0.467. Harvest reports it under `outsideFrames` with `bestOverlap` so a human can decide.
 - Comments: `list_document_threads` → `{threadId, created, status}`; `list_document_thread_comments` → `{threadId, userId, userName, comment, created, assignees}`. **No anchor/shape id** in either, and there is no create-thread tool (only `post_document_thread_comment` on an existing thread). Comments go to `comments.unanchored`.
+
+## Before/after layout (cycle ≥ 2)
+```bash
+COMMIT_SHA=<PR head sha> node journey/capture.mjs --cycle 2 --base-url https://deploy-preview-1--design-loop-sample-prototype.netlify.app
+python3 journey/annotate.py --cycle 2
+python3 journey/lucid/build_spec.py --cycle 2 --asset-prefix design-loop-c2 --layout pages \
+  --before-urls journey/cycles/1/asset-urls.json --changes journey/cycles/2/changes.json \
+  --title-suffix ' (PR #1)' --out journey/cycles/2/lucid-spec.json
+```
+- Above each review frame (outside it, y 0..660; frame moves to y=900): a dashed grey **before panel**
+  (`before-box/lbl/img-<flow>-<n>`, previous-cycle image at 720×512, label "Cycle N-1 (before) · reference only")
+  and a green **"Changes in this cycle"** block (`changes-<flow>-<n>`, text from `changes.json`; flows without changes use
+  `flows.<flow>.default`). These are plain shapes, never frames, so harvest ignores them by id prefix.
+- HTML attributes in shape text use single quotes so the import JSON contains no escaped quotes.
+- Lucid preflight flags before-box/before-img "overlap" as errors; it is intentional (background panel) and non-blocking.
 
 ## Harvest usage
 See the docstring in `harvest/harvest.py`. Sample input/output: `harvest/sample-fetch-cycle-1.json`, `harvest/sample-feedback-cycle-1.json`.

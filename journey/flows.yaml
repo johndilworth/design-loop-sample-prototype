@@ -8,7 +8,7 @@ base_url: https://design-loop-sample-prototype.netlify.app
 viewport: { width: 1440, height: 1024 }
 flows:
   - key: signup
-    name: Sign up → onboarding → workspace created
+    name: Sign up → onboarding → workspace created → invite teammates
     start_url: /signup
     steps:
       - key: signup-01-create-account
@@ -19,17 +19,20 @@ flows:
         action: { click: { role: button, name: Submit } }
       - key: signup-02-role
         expect: { route: /onboarding/role, h1: "What's your role?" }
-        prepare:
-          - { click: { role: radio, name: Product / design } }
-        action: { click: { role: button, name: Next } }
+        # cycle 2: no Next button — clicking a role saves it and advances immediately
+        action: { click: { role: radio, name: Product / Design } }
       - key: signup-03-goals
         expect: { route: /onboarding/goals, h1: Pick your AI goals }
         prepare:
-          - { check: { role: checkbox, name: Summarize documents } }
-          - { check: { role: checkbox, name: Vendor risk reviews } }
+          # cycle 2: goals are highlight-on-select toggle tiles (buttons, aria-pressed), not checkboxes
+          - { click: { role: button, name: Summarize documents } }
+          - { click: { role: button, name: Vendor risk reviews } }
         action: { click: { role: button, name: Create workspace } }
       - key: signup-04-workspace-created
         expect: { route: "/workspace/:id", h1: Workspace created }
+        action: { click: { role: link, name: Invite teammates } }
+      - key: signup-05-invite
+        expect: { route: "/workspace/:id/invite", h1: Invite teammates }
   - key: vendor-approval
     name: Vendor list → vendor detail → review → approved
     start_url: /vendors

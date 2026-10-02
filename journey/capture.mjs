@@ -62,7 +62,10 @@ const browser = await chromium.launch({ headless: true })
 const entries = []
 const flows = spec.flows.filter((f) => !args.flow || f.key === args.flow)
 for (const flow of flows) {
-  const context = await browser.newContext({ viewport: spec.viewport, deviceScaleFactor: 1 })
+  // reducedMotion + capture flag: the animated ASCII background renders one deterministic static frame,
+  // so screenshots are stable across runs but still show the texture.
+  const context = await browser.newContext({ viewport: spec.viewport, deviceScaleFactor: 1, reducedMotion: 'reduce' })
+  await context.addInitScript(() => { window.__DESIGN_LOOP_CAPTURE__ = true })
   const page = await context.newPage()
   await page.goto(baseUrl + flow.start_url, { waitUntil: 'networkidle' })
   const dir = path.join(outRoot, `cycle-${cycle}`, flow.key, 'raw')
