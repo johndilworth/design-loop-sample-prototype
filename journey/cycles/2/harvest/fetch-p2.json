@@ -1,5 +1,5 @@
 {
- "_note": "Condensed transcription of the Lucid connector fetch(id=d56b0edf-53e9-4933-a64b-a2be6c500d0d, page_index=2) response taken 2026-10-01 ~23:30 MDT. Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor of rectangles, frame childrenIds, ImageUrl); omits styling/ZOrder/diagramGroupId and the real per-cluster split of standalone items. No sticky notes, cards, callouts or free text were present.",
+ "_note": "Condensed transcription of the Lucid connector fetch(id=d56b0edf-53e9-4933-a64b-a2be6c500d0d, page_index=2) response taken 2026-10-01 ~23:30 MDT. Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor of rectangles, frame childrenIds, ImageUrl); omits styling/ZOrder/diagramGroupId and the real per-cluster split of standalone items. No sticky notes, cards, callouts or free text were present. Re-fetched 2026-10-01 ~23:45 MDT: identical (no reviewer items on page 2).",
  "document_id": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
  "page_id": "p2",
  "page_index": 2,

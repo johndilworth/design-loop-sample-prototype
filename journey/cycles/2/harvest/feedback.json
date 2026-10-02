@@ -1,7 +1,7 @@
 {
   "docId": "d56b0edf-53e9-4933-a64b-a2be6c500d0d",
   "cycle": 2,
-  "harvestedAt": "2026-10-02T05:28:33.496667+00:00",
+  "harvestedAt": "2026-10-02T05:40:35.800730+00:00",
   "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
   "frames": [
     {
@@ -22,7 +22,68 @@
       },
       "commit": "5461dffb543948bcd79c8a6e4d84f033d2befef8",
       "screenshot": "out/cycle-2/signup/annotated/01-signup-01-create-account.png",
-      "feedback": []
+      "feedback": [
+        {
+          "itemId": "BJyzmk9RLurV",
+          "kind": "sticky",
+          "text": "Increase header height — and generate a modern logo for Northwind AI ops",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 162.61479815736175,
+            "y": 1204.831329494119,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-01-create-account",
+            "via": null,
+            "bbox": "frame-signup-01-create-account",
+            "bestOverlap": {
+              "frameId": "frame-signup-01-create-account",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Global topbar: increase header height (e.g. padding 16px->24-28px / min-height ~72px) and replace the plain-text 'Northwind AI Ops' brand with a new modern logo mark (SVG asset + wordmark) — applies to every page",
+          "files": [
+            "src/App.jsx:21-22 (header.topbar / Link.brand)",
+            "src/index.css:5,7 (.topbar, .topbar .brand)",
+            "src/index.css:14 (.content.centered — centring below a taller topbar)",
+            "new asset e.g. src/assets/logo.svg"
+          ]
+        },
+        {
+          "itemId": ".JyzE3ny0uEU",
+          "kind": "sticky",
+          "text": "remove checkbox for \"send me marketing emails\"",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1250.6030209435808,
+            "y": 1823.7308431239926,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-01-create-account",
+            "via": "img-signup-01-create-account",
+            "bbox": "frame-signup-01-create-account",
+            "bestOverlap": {
+              "frameId": "frame-signup-01-create-account",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Remove the 'Send me marketing emails' checkbox (label.check) from the signup form",
+          "files": [
+            "src/pages/SignUp.jsx:25",
+            "src/index.css:24 (.check — delete if unused elsewhere)"
+          ]
+        }
+      ]
     },
     {
       "frameId": "frame-signup-02-role",
@@ -42,7 +103,69 @@
       },
       "commit": "5461dffb543948bcd79c8a6e4d84f033d2befef8",
       "screenshot": "out/cycle-2/signup/annotated/02-signup-02-role.png",
-      "feedback": []
+      "feedback": [
+        {
+          "itemId": "yIyzTSSVgdNA",
+          "kind": "sticky",
+          "text": "Add a stylistic ascii type shader animation to background gray that appears on all screens to give more life and style to the whole screen. ",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 4637.0,
+            "y": 1948.0,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-02-role",
+            "via": null,
+            "bbox": "frame-signup-02-role",
+            "bestOverlap": {
+              "frameId": "frame-signup-02-role",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Global: add a subtle animated ASCII-style shader/character-field background over the gray (#f5f6f8) body on all screens (canvas/CSS layer behind .shell, pointer-events:none, honour prefers-reduced-motion, keep cards readable)",
+          "files": [
+            "src/App.jsx (div.shell — mount background component)",
+            "src/index.css:4 (body background)",
+            "new component e.g. src/components/AsciiBackground.jsx",
+            "journey/capture.mjs (freeze/disable animation for deterministic screenshots)"
+          ]
+        },
+        {
+          "itemId": "6FyzJYLYLCmY",
+          "kind": "sticky",
+          "text": "Because you can only select one option, remove the \"next\" button, and move to next screen immediately on selection.",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 3518.841943233871,
+            "y": 1822.8734273537175,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-02-role",
+            "via": "img-signup-02-role",
+            "bbox": "frame-signup-02-role",
+            "bestOverlap": {
+              "frameId": "frame-signup-02-role",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Role step: remove the 'Next' button; clicking a role sets it and immediately navigates to /onboarding/goals; update flow so the role radio click is the advancing action",
+          "files": [
+            "src/pages/OnboardingRole.jsx:15 (onClick setRole -> also nav)",
+            "src/pages/OnboardingRole.jsx:18-20 (div.row / Next button)",
+            "journey/flows.yaml:20-24 (signup-02-role prepare/action: click radio 'Product / Design' becomes the action)"
+          ]
+        }
+      ]
     },
     {
       "frameId": "frame-signup-03-goals",
@@ -62,7 +185,97 @@
       },
       "commit": "5461dffb543948bcd79c8a6e4d84f033d2befef8",
       "screenshot": "out/cycle-2/signup/annotated/03-signup-03-goals.png",
-      "feedback": []
+      "feedback": [
+        {
+          "itemId": "lEyzEL_XVLR1",
+          "kind": "sticky",
+          "text": "Match selection style of previous screen. No checkbox, only select to highlight",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 5663.76251856024,
+            "y": 1784.5442678367303,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-03-goals",
+            "via": null,
+            "bbox": "frame-signup-03-goals",
+            "bestOverlap": {
+              "frameId": "frame-signup-03-goals",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Goals step: drop the checkboxes; make each goal a toggle tile styled like the role choices (.choice / .choice.on highlight, aria-pressed), keeping multi-select",
+          "files": [
+            "src/pages/OnboardingGoals.jsx:15-19 (label.choice > input checkbox)",
+            "src/index.css:31-33 (.choices/.choice/.choice.on)",
+            "journey/flows.yaml:25-29 (signup-03-goals prepare uses check: checkbox -> click: button)"
+          ]
+        },
+        {
+          "itemId": "OGyzDpcA.Ky~",
+          "kind": "sticky",
+          "text": "Move \"create workspace\" button back to right",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6655.9682723911565,
+            "y": 1853.9202019778218,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-03-goals",
+            "via": "img-signup-03-goals",
+            "bbox": "frame-signup-03-goals",
+            "bestOverlap": {
+              "frameId": "frame-signup-03-goals",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Keep/ensure 'Create workspace' is right-aligned (row.split, Back left) — cycle-2 screenshot already shows it on the right, so likely no-op unless reviewer means something else (see ambiguity)",
+          "files": [
+            "src/pages/OnboardingGoals.jsx:20-23 (div.row.split)",
+            "src/index.css:30 (.row.split)"
+          ]
+        },
+        {
+          "itemId": "6GyzCIFQw2EB",
+          "kind": "sticky",
+          "text": "Make back button a secondary button — gray, but still a rectangle and not text only. follow pattern on \"Go to Vendors\"",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6067.114447020651,
+            "y": 1867.3738043149333,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-03-goals",
+            "via": "img-signup-03-goals",
+            "bbox": "frame-signup-03-goals",
+            "bestOverlap": {
+              "frameId": "frame-signup-03-goals",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Goals step: make 'Back' a secondary button — drop .ghost so it renders as the bordered gray/white rectangle like 'Go to vendors' (.btn)",
+          "files": [
+            "src/pages/OnboardingGoals.jsx:21 (btn ghost -> btn)",
+            "src/index.css:25,28 (.btn / .btn.ghost)",
+            "src/pages/WorkspaceReady.jsx:10 (reference pattern 'Go to vendors')"
+          ]
+        }
+      ]
     },
     {
       "frameId": "frame-signup-04-workspace-created",
@@ -78,7 +291,38 @@
       "clicked": null,
       "commit": "5461dffb543948bcd79c8a6e4d84f033d2befef8",
       "screenshot": "out/cycle-2/signup/annotated/04-signup-04-workspace-created.png",
-      "feedback": []
+      "feedback": [
+        {
+          "itemId": "JHyzLmCvGX~a",
+          "kind": "sticky",
+          "text": "Add invite teammates screen to next cycle flow so it can be reviewed.",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 9968.951194159261,
+            "y": 1721.2411889309137,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-04-workspace-created",
+            "via": null,
+            "bbox": "frame-signup-04-workspace-created",
+            "bestOverlap": {
+              "frameId": "frame-signup-04-workspace-created",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Journey config: extend the signup flow with a 5th step — click 'Invite teammates' on workspace-created, then capture /workspace/:id/invite (signup-05-invite) so the placeholder screen is reviewed next cycle",
+          "files": [
+            "journey/flows.yaml:31-32 (signup-04-workspace-created: add action click link 'Invite teammates'; add step signup-05-invite expect route /workspace/:id/invite, h1 'Invite teammates')",
+            "src/pages/InviteTeammates.jsx",
+            "src/App.jsx:37 (route /workspace/:workspaceId/invite)"
+          ]
+        }
+      ]
     },
     {
       "frameId": "frame-vendor-01-list",
@@ -162,5 +406,12 @@
   "comments": {
     "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
     "unanchored": []
-  }
+  },
+  "notes": [
+    "Harvested 2026-10-01 ~23:45 MDT. 8 reviewer stickies, all on page 1 (signup); page 2 (vendor-approval) has none; 0 comment threads; 0 outside frames; 0 non-sticky reviewer additions.",
+    "Sticky authors not exposed by the fetch response (author=null).",
+    "Ambiguous: OGyzDpcA.Ky~ asks to move 'Create workspace' back to the right, but the cycle-2 capture (commit 5461dff) already has Back left / Create workspace right.",
+    "Ambiguous: BJyzmk9RLurV requests a generated logo — needs a direction/approval; yIyzTSSVgdNA (try) is a global animated background — scope/perf/a11y and screenshot determinism to confirm.",
+    "File paths/line numbers from grep on branch cycle-1-feedback @ d5e8484."
+  ]
 }
