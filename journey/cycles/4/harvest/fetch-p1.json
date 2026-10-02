@@ -1,11 +1,15 @@
 {
- "_note": "Condensed transcription of the Lucid connector fetch(id=c95ea620-f506-4499-9d67-dc821b143297, page_index=1) response taken 2026-10-02 ~01:15 MDT (metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, frame childrenIds / childContainers itemIds, ImageUrl) for frames, screenshots and step headers; omits styling/ZOrder/text of generated items. The response contained ONLY generated ids (listed in _omittedGeneratedIds plus the frames/img/hdr kept here): no stickies or other reviewer items. Page 1 (single frame, no connectors) came back in the childContainers form.",
+ "_note": "Condensed transcription of the Lucid connector fetch(id=c95ea620-f506-4499-9d67-dc821b143297, page_index=1) response taken 2026-10-02 ~10:15 MDT (re-harvest after review; metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id/itemId, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor, frame childrenIds / childContainers itemIds, ImageUrl) for frames, screenshots and every non-generated item; omits styling/ZOrder, hdr- step-header blocks (still listed in frame childrenIds) and generated standalone items (_omittedGeneratedIds; no reviewer item attached to any). Sticky texts are verbatim (incl. typos). Raw response size ~11k chars. Page 1 came back in the childContainers variant (frame as data.containers.childContainers[] with itemIds; sticky keyed by itemId).",
  "_omittedGeneratedIds": [
-  "legend-*-p1",
+  "legend-maybe-p1",
+  "legend-try-p1",
+  "legend-must-p1",
   "doc-title-p1",
   "legend-box-p1",
-  "before-lbl/box/img-landing-1..1",
-  "changes-landing-1..1"
+  "before-img-landing-1",
+  "before-box-landing-1",
+  "before-lbl-landing-1",
+  "changes-landing-1"
  ],
  "document_id": "c95ea620-f506-4499-9d67-dc821b143297",
  "page_id": "p1",
@@ -42,17 +46,35 @@
           }
          },
          {
-          "id": "hdr-home-00-landing",
-          "shapeType": "Text",
+          "itemId": ".qHzXcD.h-sH",
           "properties": {
-           "BoundingBox": "x: 400, y: 940, w: 1440, h: 200",
-           "BlockClass": "DefaultTextBlockNew"
-          }
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 596.4863523573149, y: 2315.5732009925414, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Add testimonials section below the initial content - make up 3 - 5 customer testimonials to demonstrate the value."
+            }
+           ]
+          },
+          "text": "Add testimonials section below the initial content - make up 3 - 5 customer testimonials to demonstrate the value."
          }
         ]
        }
       ],
       "containers": {
+       "itemIds": [
+        "legend-maybe-p1",
+        "before-img-landing-1",
+        "changes-landing-1",
+        "legend-must-p1",
+        "before-box-landing-1",
+        "doc-title-p1",
+        "legend-try-p1",
+        "before-lbl-landing-1",
+        "legend-box-p1"
+       ],
        "childContainers": [
         {
          "containerId": "frame-home-00-landing",
@@ -68,8 +90,9 @@
           ]
          },
          "itemIds": [
+          "img-home-00-landing",
           "hdr-home-00-landing",
-          "img-home-00-landing"
+          ".qHzXcD.h-sH"
          ]
         }
        ]

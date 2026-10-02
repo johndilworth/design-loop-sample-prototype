@@ -44,13 +44,7 @@
               "frameId": "frame-home-00-landing",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Add a testimonials section to the landing page: a TESTIMONIALS const with 3-5 invented customer quotes (quote, name, title, company), rendered as a grid of figure/blockquote cards inside section.landing after .value-props and before .cta-band (\"below the initial content\"); dark-theme card styles matching .value-prop. Keep CTA names unchanged so the landing flow locator still works.",
-          "files": [
-            "src/pages/Home.jsx:4-8 (new TESTIMONIALS const next to VALUE_PROPS), :31-32 (insert <section className=\"testimonials\"> between .value-props and .cta-band)",
-            "src/index.css (new .testimonials / .testimonial styles near .value-prop)"
-          ]
+          }
         }
       ]
     },
@@ -114,14 +108,7 @@
               "frameId": "frame-signup-02-role",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Remove the 'Step 1 of 2' step label from the role screen (and, for consistency, the matching 'Step 2 of 2' on goals unless the reviewer wants it kept - see notes). Drop .step-label CSS if unused afterwards.",
-          "files": [
-            "src/pages/OnboardingRole.jsx:18 (<p className=\"step-label\">Step 1 of 2</p>)",
-            "src/pages/OnboardingGoals.jsx:17 (Step 2 of 2, consistency)",
-            "src/index.css:46 (.step-label, remove if unused)"
-          ]
+          }
         },
         {
           "itemId": "0nHzJ4WIy9Gy",
@@ -144,13 +131,7 @@
               "frameId": "frame-signup-02-role",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Change the role h1 from \"What's your role?\" to \"Select your role\"; update the capture flow expectation to match.",
-          "files": [
-            "src/pages/OnboardingRole.jsx:19 (h1)",
-            "journey/flows.yaml (signup-02-role expect.h1 \"What's your role?\" -> \"Select your role\")"
-          ]
+          }
         }
       ]
     },
@@ -214,15 +195,7 @@
               "frameId": "frame-signup-04-workspace-created",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Merge 'Workspace created' and 'Invite teammates' into one screen at /workspace/:id: confirmation copy + the inline invite form (see 4gHzFAPqK41A) + Skip / Go to vendors. Extract the form into a component (e.g. src/components/InviteForm.jsx) used by WorkspaceReady; make /workspace/:id/invite a <Navigate> redirect to /workspace/:id (same pattern as the removed /vendors/:id/approved). Update flows.yaml: drop the signup-04 'click Invite teammates' action and either retire signup-05-invite or keep its key for the merged end state (as done for vendor-04-approved).",
-          "files": [
-            "src/pages/WorkspaceReady.jsx:6-14 (add invite form; replace 'Invite teammates' link)",
-            "src/pages/InviteTeammates.jsx (fold into new src/components/InviteForm.jsx)",
-            "src/App.jsx:41 (route /workspace/:workspaceId/invite -> <Navigate to=\"..\" replace />)",
-            "journey/flows.yaml (signup-04-workspace-created action, signup-05-invite step)"
-          ]
+          }
         }
       ]
     },
@@ -262,15 +235,7 @@
               "frameId": "frame-signup-05-invite",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Replace the 'coming soon' copy with a real invite form: labelled textarea/input 'Invite teammates' (helper text 'Enter email addresses separated by commas'), a primary 'Invite' button disabled until the field contains at least one valid-looking email (parse on commas, trim), and rename 'Back' to 'Skip' keeping the same target (/workspace/:id). On Invite show a toast (reuse src/components/Toast.jsx) e.g. 'Invites sent to N teammates'. Fix the reviewer typo ('separted'). Note: if xmHzu66hJeD9 merges the screens, Skip needs a new target (see notes).",
-          "files": [
-            "src/pages/InviteTeammates.jsx:8-14 (form, Invite button, Back->Skip)",
-            "src/components/Toast.jsx (reuse for confirmation)",
-            "src/index.css:50 (add input[type=text]/textarea already styled; .help text style)",
-            "journey/flows.yaml (signup-05-invite: optional prepare fill + expect)"
-          ]
+          }
         }
       ]
     },
@@ -314,16 +279,7 @@
               "frameId": "frame-vendor-01-list",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Add an 'Add vendor' primary button on the vendor list header linking to a new route /vendors/new with a form (name, category, model/service, business owner, risk tier select, annual spend). Save to sessionStorage (extend vendorState.js with addVendor/allVendors merging static data + added vendors), then return to /vendors with a toast '<name> was added.' (same router-state toast mechanism). Register /vendors/new BEFORE /vendors/:id in App.jsx. Add a capture step (e.g. vendor-05-add or a new 'vendor-add' flow) in flows.yaml so the new screen gets reviewed next cycle.",
-          "files": [
-            "src/pages/VendorList.jsx:21-22 (header row + 'Add vendor' Link)",
-            "src/pages/VendorNew.jsx (new form page)",
-            "src/App.jsx:46-47 (route /vendors/new before /vendors/:id)",
-            "src/vendorState.js / src/data.js (persist + list added vendors; VendorList/VendorDetail use merged list)",
-            "journey/flows.yaml (new step/flow for the form)"
-          ]
+          }
         }
       ]
     },
@@ -367,13 +323,7 @@
               "frameId": "frame-vendor-02-detail",
               "ratio": 1.0
             }
-          },
-          "author": null,
-          "proposedChange": "Replace the '← Back' text link on the vendor record with a square icon button (inline SVG left arrow, .btn icon-only style, aria-label 'Back to vendors', optional title tooltip) linking to /vendors.",
-          "files": [
-            "src/pages/VendorDetail.jsx:20 (<Link className=\"back-link\">← Back</Link>)",
-            "src/index.css:111 (.back-link -> .btn.icon square icon button)"
-          ]
+          }
         }
       ]
     },
@@ -419,20 +369,5 @@
   "comments": {
     "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
     "unanchored": []
-  },
-  "nonStickyAdditions": [],
-  "notes": [
-    "Harvested 2026-10-02 ~10:15 MDT from Lucid doc c95ea620 (Cycle 4 review - final, PR #3 preview @ 20c1782). 7 reviewer stickies: landing 1, signup 4 (signup-02 x2, signup-04 x1, signup-05 x1), vendor-approval 2 (vendor-01, vendor-02). 0 outside frames; 0 containment disagreements; 0 comment threads; 0 non-sticky reviewer additions. Supersedes the 01:15 MDT harvest (0 feedback, taken before review).",
-    "Priorities from sticky fill colour (no text prefixes): #e81313ff -> must (3); #ffe342ff -> try (4); no blue (maybe 0).",
-    "Page 1 came back in the childContainers variant (frame under data.containers.childContainers with itemIds; sticky keyed by itemId); pages 2-3 in flowcharts format (Frame nodes with childrenIds). All 7 stickies are direct frame children; bbox cross-check agrees (overlap 1.0).",
-    "Sticky authors not exposed by the fetch response (author=null).",
-    "CONFLICT: xmHzu66hJeD9 (must, signup-04: combine Workspace created with Invite teammates) vs 4gHzFAPqK41A (must, signup-05: redesign the Invite screen, Back->Skip 'should go to the same place'). Skip currently returns to /workspace/:id; once merged it has no 'same place' to go. Proposed reading: build the invite form once and embed it in the merged /workspace/:id screen; Skip = dismiss the invite panel / go to /vendors. Needs confirmation.",
-    "REVERSAL (partial): xmHzu66hJeD9 undoes the separate invite step requested in cycle 2 JHyzLmCvGX~a ('Add invite teammates screen to next cycle flow') and changes cycle-1 sfyzWg6vLH39 / 0fyz9jkxq~zm (Invite teammates as a CTA button next to Go to vendors on Workspace created).",
-    "AMBIGUOUS / partial reversal: joHzYx~c2o1S removes 'Step 1 of 2' on role, but goals still says 'Step 2 of 2'; unclear whether both labels go. Cycle-1 Mdyz4eFNSGvL asked to make the step text larger/more legible (kept it), so removal reverses that direction.",
-    "AMBIGUOUS: 0oHzCYfI-6KV 'icon button with a back arrow' - icon-only or icon + 'Back' label? Proposed icon-only with aria-label. Consistent with cycle-2 6GyzCIFQw2EB (back as a real button, not text-only).",
-    "AMBIGUOUS: .qHzXcD.h-sH 'below the initial content' - below the hero or below the value props? Proposed after value props, before the CTA band. Testimonials are fabricated by request (prototype content).",
-    "SCOPE: 7pHzKpUvEyup (must) adds a new screen (/vendors/new) plus a new capture step; no backend - session-only persistence like vendor status.",
-    "Flow impact: 0nHzJ4WIy9Gy changes the signup-02 h1 asserted in journey/flows.yaml; xmHzu66hJeD9 removes the signup-04 -> signup-05 click; 7pHzKpUvEyup needs a new step.",
-    "File paths/line numbers from branch cycle-3-feedback @ 6b5b476 (app code = PR #3 head 20c1782)."
-  ]
+  }
 }

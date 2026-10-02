@@ -13,9 +13,9 @@
      "nonStickyReviewerAdditions": 4, "followingPR": 3, "resolvedByFollowingPR": 13, "resolvedBreakdown": {"implemented": 13, "noOpAlreadySatisfied": 0}, "unresolved": 0,
      "resolvedNote": "PR #3 (head 20c1782) maps all 13 stickies; 2 are reversals of earlier cycles (Create workspace back to the LEFT; ASCII background home-only)."},
     {"cycle": 4, "final": true, "luciddoc": "c95ea620-f506-4499-9d67-dc821b143297", "capturedCommit": "20c1782", "screensCaptured": 10, "flows": {"landing": 1, "signup": 5, "vendor-approval": 4},
-     "feedbackItems": 0, "byPriority": {"must": 0, "try": 0, "maybe": 0}, "byFlow": {"landing": 0, "signup": 0, "vendor-approval": 0}, "outsideFrames": 0, "commentThreads": 0,
-     "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "Final state; harvested immediately after creation (no review yet)."}
+     "feedbackItems": 7, "byPriority": {"must": 3, "try": 4, "maybe": 0}, "byFlow": {"landing": 1, "signup": 4, "vendor-approval": 2}, "outsideFrames": 0, "commentThreads": 0,
+     "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "Re-harvested 2026-10-02 ~10:15 MDT after review (first harvest at 01:15 MDT was pre-review, 0 items). Not yet addressed by any PR."}
   ],
-  "totals": {"feedbackItems": 32, "byPriority": {"must": 11, "try": 21, "maybe": 0}, "screensCaptured": 36, "resolvedOfCycles1and2": "19/19", "resolvedOfCycles1to3": "32/32", "reversals": 2},
+  "totals": {"feedbackItems": 39, "byPriority": {"must": 14, "try": 25, "maybe": 0}, "screensCaptured": 36, "resolvedOfCycles1and2": "19/19", "resolvedOfCycles1to3": "32/32", "reversals": 2},
   "evolutionDoc": "01d8c4f0-95d2-4de7-b997-d9a83df20ccb"
 }
