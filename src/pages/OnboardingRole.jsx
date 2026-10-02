@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useTitle from '../useTitle'
-const roles = ['Executive sponsor', 'Product / design', 'Engineering', 'Operations', 'Other']
+const roles = ['Executive sponsor', 'Product / Design', 'Engineering', 'Operations', 'Other']
 export default function OnboardingRole() {
   useTitle('Onboarding: role')
   const nav = useNavigate()
   const [role, setRole] = useState('')
   return (
     <section className="card">
-      <p className="muted">Step 1</p>
+      <p className="step-label">Step 1 of 2</p>
       <h1>What's your role?</h1>
       <div className="choices" role="radiogroup" aria-label="Role">
         {roles.map((r) => (

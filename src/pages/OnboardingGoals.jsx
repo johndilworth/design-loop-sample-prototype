@@ -9,7 +9,7 @@ export default function OnboardingGoals() {
   const toggle = (g) => setPicked((p) => (p.includes(g) ? p.filter((x) => x !== g) : [...p, g]))
   return (
     <section className="card">
-      <p className="muted">Step 2 of 2</p>
+      <p className="step-label">Step 2 of 2</p>
       <h1>Pick your AI goals</h1>
       <p>Select all that apply. You can't change these later.</p>
       <div className="choices">
@@ -17,7 +17,7 @@ export default function OnboardingGoals() {
           <label key={g} className="choice"><input type="checkbox" checked={picked.includes(g)} onChange={() => toggle(g)} /> {g}</label>
         ))}
       </div>
-      <div className="row">
+      <div className="row split">
         <button className="btn ghost" type="button" onClick={() => nav(-1)}>Back</button>
         <button className="btn primary" type="button" onClick={() => nav('/workspace/ws-7781')}>Create workspace</button>
       </div>
