@@ -16,7 +16,6 @@ export default function SignUp() {
   return (
     <section className="card narrow">
       <h1>Create your account</h1>
-      <p className="muted">It only takes a minute. Probably.</p>
       <form onSubmit={submit} noValidate>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />

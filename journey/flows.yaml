@@ -20,7 +20,7 @@ flows:
       - key: signup-02-role
         expect: { route: /onboarding/role, h1: "What's your role?" }
         prepare:
-          - { click: { role: radio, name: Product / design } }
+          - { click: { role: radio, name: Product / Design } }
         action: { click: { role: button, name: Next } }
       - key: signup-03-goals
         expect: { route: /onboarding/goals, h1: Pick your AI goals }
