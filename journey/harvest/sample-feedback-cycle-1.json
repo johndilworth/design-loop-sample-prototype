@@ -1,0 +1,214 @@
+{
+  "docId": "39ce5d6c-d3d5-4581-ae5b-488f6a55566b",
+  "cycle": 1,
+  "harvestedAt": "2026-10-02T04:25:12.821489+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-vendor-01-list",
+      "frameTitle": "vendor-01-list · /vendors · Vendors · Northwind AI Ops",
+      "stepKey": "vendor-01-list",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors",
+      "url": "https://design-loop-sample.netlify.app/vendors",
+      "title": "Vendors · Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": {
+        "role": "link",
+        "name": "View Helix LLM Gateway",
+        "cssPath": "div#root > div > main > section > table > tbody > tr:nth-of-type(2) > td:nth-of-type(5) > a"
+      },
+      "commit": "6d3c676e12abd3eb134cf56e48a20daf0d732c8a",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/01-vendor-01-list.png",
+      "feedback": [
+        {
+          "itemId": "JFxzKETciDGQ",
+          "kind": "sticky",
+          "text": "TEST must: sort vendors by risk (High first) and say what the sort is",
+          "priority": "must",
+          "fill": "#ffe066ff",
+          "bbox": {
+            "x": 1880.0,
+            "y": 400.0,
+            "w": 300.0,
+            "h": 300.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-01-list",
+            "bbox": "frame-vendor-01-list",
+            "bestOverlap": {
+              "frameId": "frame-vendor-01-list",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-02-detail",
+      "frameTitle": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-02-detail",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id",
+      "url": "https://design-loop-sample.netlify.app/vendors/v-2177",
+      "title": "Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Helix LLM Gateway",
+      "clicked": {
+        "role": "link",
+        "name": "Proceed",
+        "cssPath": "div#root > div > main > section > div > a"
+      },
+      "commit": "6d3c676e12abd3eb134cf56e48a20daf0d732c8a",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/02-vendor-02-detail.png",
+      "feedback": [
+        {
+          "itemId": "XFxz4evyyMgP",
+          "kind": "text",
+          "text": "TEST try: 'Proceed' is vague - rename to 'Start review'",
+          "priority": "try",
+          "fill": "#ffffffff",
+          "bbox": {
+            "x": 3200.0,
+            "y": 1321.0,
+            "w": 900.0,
+            "h": 138.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-02-detail",
+            "bbox": "frame-vendor-02-detail",
+            "bestOverlap": {
+              "frameId": "frame-vendor-02-detail",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-03-review",
+      "frameTitle": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-03-review",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/review",
+      "url": "https://design-loop-sample.netlify.app/vendors/v-2177/review",
+      "title": "Review: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Review Helix LLM Gateway",
+      "clicked": {
+        "role": "button",
+        "name": "Approve",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)"
+      },
+      "commit": "6d3c676e12abd3eb134cf56e48a20daf0d732c8a",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/03-vendor-03-review.png",
+      "feedback": [
+        {
+          "itemId": "WFxzNstx9p8u",
+          "kind": "sticky",
+          "text": "TEST must: Approve and Reject are both red. Make Approve primary, Reject secondary.",
+          "priority": "must",
+          "fill": "#ffe066ff",
+          "bbox": {
+            "x": 7320.0,
+            "y": 600.0,
+            "w": 300.0,
+            "h": 300.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-03-review",
+            "bbox": "frame-vendor-03-review",
+            "bestOverlap": {
+              "frameId": "frame-vendor-03-review",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-04-approved",
+      "frameTitle": "vendor-04-approved · /vendors/:id/approved · Vendor approved · Northwind AI Ops",
+      "stepKey": "vendor-04-approved",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/approved",
+      "url": "https://design-loop-sample.netlify.app/vendors/v-2177/approved",
+      "title": "Vendor approved · Northwind AI Ops",
+      "h1": "Success!",
+      "clicked": null,
+      "commit": "6d3c676e12abd3eb134cf56e48a20daf0d732c8a",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/04-vendor-04-approved.png",
+      "feedback": [
+        {
+          "itemId": "2FxzfLqTvnIZ",
+          "kind": "sticky",
+          "text": "TEST maybe: 'Success!' h1 is generic - say 'Helix LLM Gateway approved'",
+          "priority": "maybe",
+          "fill": "#ffb3c7ff",
+          "bbox": {
+            "x": 8600.0,
+            "y": 1350.0,
+            "w": 300.0,
+            "h": 300.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-04-approved",
+            "bbox": "frame-vendor-04-approved",
+            "bestOverlap": {
+              "frameId": "frame-vendor-04-approved",
+              "ratio": 1.0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [
+    {
+      "itemId": "aGxzEaaUwI2m",
+      "kind": "sticky",
+      "text": "TEST straddle: table needs a search/filter",
+      "priority": null,
+      "fill": "#c3f0c8ff",
+      "bbox": {
+        "x": 2100.0,
+        "y": 1000.0,
+        "w": 300.0,
+        "h": 300.0
+      },
+      "containment": {
+        "childrenIds": null,
+        "bbox": null,
+        "bestOverlap": {
+          "frameId": "frame-vendor-01-list",
+          "ratio": 0.467
+        }
+      }
+    },
+    {
+      "itemId": "1FxznSc_Ztr4",
+      "kind": "sticky",
+      "text": "TEST outside: overall flow needs a progress indicator",
+      "priority": null,
+      "fill": "#a3e4ffff",
+      "bbox": {
+        "x": 4900.0,
+        "y": 1900.0,
+        "w": 300.0,
+        "h": 300.0
+      },
+      "containment": {
+        "childrenIds": null,
+        "bbox": null,
+        "bestOverlap": null
+      }
+    }
+  ],
+  "containmentDisagreements": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

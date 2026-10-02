@@ -1,8 +1,17 @@
-# React + Vite
+# design-loop-sample-prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Small Vite + React prototype ("Northwind AI Ops") used to exercise a design-feedback loop:
+capture flows → Lucid journey map with frames → reviewer stickies → harvest → PRs → repeat.
 
-Currently, two official plugins are available:
+Flows (see `journey/flows.yaml`):
+- **signup**: `/signup` → `/onboarding/role` → `/onboarding/goals` → `/workspace/:id`
+- **vendor-approval**: `/vendors` → `/vendors/:id` → `/vendors/:id/review` → `/vendors/:id/approved`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The copy and UX are deliberately imperfect (vague errors, "Submit"/"Proceed"/"OK" buttons, both review
+buttons red, pre-checked marketing opt-in, "Step 1" vs "Step 2 of 2", generic "Success!") so feedback has something to fix.
+
+```bash
+npm install && npm run dev      # local
+npm run build                   # dist/ (Netlify: netlify.toml, SPA redirect)
+```
+Deployed: https://design-loop-sample.netlify.app
