@@ -1,0 +1,51 @@
+# Flow definitions for the design-feedback loop.
+# Each step = one screen. `expect` identifies the screen (no data-* attributes needed).
+# `prepare` actions run before the screenshot (so the shot shows filled state);
+# `action` is the single advancing click that gets the 3x cursor overlay.
+# Locators are role + accessible name (Playwright getByRole semantics).
+version: 1
+base_url: https://design-loop-sample.netlify.app
+viewport: { width: 1440, height: 1024 }
+flows:
+  - key: signup
+    name: Sign up → onboarding → workspace created
+    start_url: /signup
+    steps:
+      - key: signup-01-create-account
+        expect: { route: /signup, h1: Create your account }
+        prepare:
+          - { fill: { role: textbox, name: Email }, value: jordan@example.com }
+          - { fill: { role: textbox, name: Password }, value: correct-horse-9 }
+        action: { click: { role: button, name: Submit } }
+      - key: signup-02-role
+        expect: { route: /onboarding/role, h1: "What's your role?" }
+        prepare:
+          - { click: { role: radio, name: Product / design } }
+        action: { click: { role: button, name: Next } }
+      - key: signup-03-goals
+        expect: { route: /onboarding/goals, h1: Pick your AI goals }
+        prepare:
+          - { check: { role: checkbox, name: Summarize documents } }
+          - { check: { role: checkbox, name: Vendor risk reviews } }
+        action: { click: { role: button, name: Create workspace } }
+      - key: signup-04-workspace-created
+        expect: { route: "/workspace/:id", h1: Workspace created }
+  - key: vendor-approval
+    name: Vendor list → vendor detail → review → approved
+    start_url: /vendors
+    steps:
+      - key: vendor-01-list
+        expect: { route: /vendors, h1: AI vendors }
+        action: { click: { role: link, name: View Helix LLM Gateway } }
+      - key: vendor-02-detail
+        expect: { route: "/vendors/:id", h1: Helix LLM Gateway }
+        action: { click: { role: link, name: Proceed } }
+      - key: vendor-03-review
+        expect: { route: "/vendors/:id/review", h1: Review Helix LLM Gateway }
+        prepare:
+          - { check: { role: checkbox, name: DPA signed } }
+          - { check: { role: checkbox, name: SOC 2 Type II on file } }
+          - { fill: { role: textbox, name: Notes }, value: Pending PII confirmation from Marco. }
+        action: { click: { role: button, name: Approve } }
+      - key: vendor-04-approved
+        expect: { route: "/vendors/:id/approved", h1: Success! }
