@@ -3,6 +3,7 @@
 // Usage: node journey/capture.mjs [--cycle 1] [--base-url URL] [--flow key[,key]] [--out journey/out] [--pr N]
 // A flow may define `entry: { expect: {h1}, click: {role,name} }`: run on start_url before step 1 (not captured),
 // e.g. the signup flow starts on '/' and clicks "Get started". It is recorded on step 1 as `entry`.
+// A step may set `expect.toast` (text of a role=status toast that must be visible in the shot).
 import { chromium } from 'playwright'
 import YAML from 'yaml'
 import fs from 'node:fs'
@@ -100,6 +101,12 @@ for (const flow of flows) {
     const route = routeTemplate(url)
     const info = await screenInfo(page)
     const warnings = []
+    // cycle 3: `expect.toast` = text of a toast that must be visible (role=status live region) when the shot is taken.
+    // The app keeps toasts up in capture mode (window.__DESIGN_LOOP_CAPTURE__), so there is no 3 s auto-dismiss race.
+    if (step.expect?.toast) {
+      const t = page.getByRole('status').getByText(step.expect.toast, { exact: true })
+      try { await t.waitFor({ state: 'visible', timeout: 5000 }) } catch { warnings.push(`toast "${step.expect.toast}" not visible`) }
+    }
     if (step.expect?.route && step.expect.route !== route) warnings.push(`route ${route} != expected ${step.expect.route}`)
     let clicked = null
     if (step.action?.click) {

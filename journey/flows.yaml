@@ -42,6 +42,7 @@ flows:
           # cycle 2: goals are highlight-on-select toggle tiles (buttons, aria-pressed), not checkboxes
           - { click: { role: button, name: Summarize documents } }
           - { click: { role: button, name: Vendor risk reviews } }
+        # cycle 3: "Create workspace" is now the first (left) button and Back follows it; role+name locator unchanged
         action: { click: { role: button, name: Create workspace } }
       - key: signup-04-workspace-created
         expect: { route: "/workspace/:id", h1: Workspace created }
@@ -49,11 +50,16 @@ flows:
       - key: signup-05-invite
         expect: { route: "/workspace/:id/invite", h1: Invite teammates }
   - key: vendor-approval
-    name: Vendor list → vendor detail → review → approved
+    name: Vendor list → vendor detail → review → approve → list with toast
     start_url: /vendors
-    # Covers every vendor route in src/App.jsx: /vendors, /vendors/:id, /vendors/:id/review, /vendors/:id/approved.
-    # Other reachable paths land on already-captured screens: Reject and "OK" return to /vendors; the header
-    # "Vendors" nav, the landing "Vendors" button and WorkspaceReady "Go to vendors" all open /vendors.
+    # Covers every vendor screen in src/App.jsx: /vendors, /vendors/:id, /vendors/:id/review.
+    # cycle 3: the "Success!" screen (/vendors/:id/approved) was removed; that route now redirects to /vendors.
+    # Approve sets the vendor's status (sessionStorage) and returns to /vendors with a lower-left toast
+    # "<vendor> was updated." The toast auto-dismisses after 3 s, but in capture mode (window.__DESIGN_LOOP_CAPTURE__,
+    # set by capture.mjs, or ?capture=1) it stays until dismissed, so step 4 always shows it.
+    # Other reachable paths land on already-captured screens: Reject opens a confirmation dialog (Cancel / Confirm reject)
+    # and Confirm returns to /vendors with "<vendor> was rejected."; the header "Vendors" nav, the landing "Vendors"
+    # button and WorkspaceReady "Go to vendors" all open /vendors.
     # An unknown vendor id renders the generic NotFound screen (reachable only by typing a bad URL).
     steps:
       - key: vendor-01-list
@@ -69,5 +75,7 @@ flows:
           - { check: { role: checkbox, name: SOC 2 Type II on file } }
           - { fill: { role: textbox, name: Notes }, value: Pending PII confirmation from Marco. }
         action: { click: { role: button, name: Approve } }
+      # cycle 3: key kept stable (harvest maps frame-<stepKey>); the step is now the vendor LIST with the
+      # "Helix LLM Gateway was updated." toast and Helix's status chip showing Approved.
       - key: vendor-04-approved
-        expect: { route: "/vendors/:id/approved", h1: Success! }
+        expect: { route: /vendors, h1: AI vendors, toast: Helix LLM Gateway was updated. }

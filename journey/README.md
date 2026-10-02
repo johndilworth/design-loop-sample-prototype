@@ -78,3 +78,10 @@ python3 journey/lucid/build_spec.py --cycle 3 --asset-prefix design-loop-c3 --la
 - `lucid_edit_item` `text` is plain text: HTML is rendered literally. Fix generated text by re-importing, not by editing.
 - `harvest.py`: the connector returns a page whose single frame has no connectors as `data.containers.childContainers[]`
   (`containerId` + `itemIds`) instead of a `Frame` node with `childrenIds`; both forms are handled.
+
+## Cycle 3 feedback changes affecting capture (PR #3)
+- The vendor "Success!" screen is gone: `vendor-04-approved` (key kept stable) is now `/vendors` with the toast
+  "Helix LLM Gateway was updated." `/vendors/:id/approved` redirects to `/vendors`.
+- Steps may set `expect.toast` (text of a `role=status` toast that must be visible; otherwise a warning is recorded).
+  Toasts auto-dismiss after 3 s, except in capture mode (`window.__DESIGN_LOOP_CAPTURE__` / `?capture=1`), where they stay up.
+- The ASCII background now exists only on `/` (still frozen to one static frame in capture mode / reduced motion).

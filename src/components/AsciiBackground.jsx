@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
+import { isCaptureMode } from '../captureMode'
 
-// Subtle animated ASCII "shader" behind every screen (cycle-2 feedback).
+// Subtle animated ASCII "shader" behind the home page only (cycle-2 feedback; home-only since cycle 3).
 // - Plain <canvas>, no dependencies; ~12 fps; pauses while the tab is hidden.
 // - Static single frame when the user prefers reduced motion, or during journey capture
 //   (window.__DESIGN_LOOP_CAPTURE__ set by journey/capture.mjs, or ?capture=1 in the URL),
@@ -13,11 +14,7 @@ const STATIC_T = 7.25 // deterministic time used for the frozen frame
 
 function isFrozen() {
   if (typeof window === 'undefined') return true
-  if (window.__DESIGN_LOOP_CAPTURE__) return true
-  if (new URLSearchParams(window.location.search).get('capture') === '1') {
-    window.__DESIGN_LOOP_CAPTURE__ = true // survive client-side navigation
-    return true
-  }
+  if (isCaptureMode()) return true
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
 }
 
@@ -39,9 +36,9 @@ export default function AsciiBackground() {
 
     const draw = (t) => {
       ctx.clearRect(0, 0, w, h)
-      ctx.font = '13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+      ctx.font = "13px 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
       ctx.textBaseline = 'top'
-      ctx.fillStyle = '#1d2330'
+      ctx.fillStyle = '#8f9bff' // light glyphs on the dark theme (cycle 3)
       const cols = Math.ceil(w / CELL_W), rows = Math.ceil(h / CELL_H)
       const cx = cols * 0.7, cy = rows * 0.35
       for (let y = 0; y < rows; y++) {
@@ -52,7 +49,7 @@ export default function AsciiBackground() {
           v = (v + 4) / 8 // 0..1
           const i = Math.floor(Math.pow(v, 1.4) * CHARS.length)
           if (i <= 0) continue
-          ctx.globalAlpha = 0.05 + v * 0.11
+          ctx.globalAlpha = 0.04 + v * 0.12
           ctx.fillText(CHARS[Math.min(i, CHARS.length - 1)], x * CELL_W, y * CELL_H)
         }
       }

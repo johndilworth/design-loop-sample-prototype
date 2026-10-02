@@ -1,4 +1,4 @@
-import { Routes, Route, Link, NavLink, useLocation } from 'react-router-dom'
+import { Routes, Route, Link, NavLink, Navigate, useLocation } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import SignUp from './pages/SignUp.jsx'
 import OnboardingRole from './pages/OnboardingRole.jsx'
@@ -8,19 +8,20 @@ import InviteTeammates from './pages/InviteTeammates.jsx'
 import VendorList from './pages/VendorList.jsx'
 import VendorDetail from './pages/VendorDetail.jsx'
 import VendorReview from './pages/VendorReview.jsx'
-import VendorApproved from './pages/VendorApproved.jsx'
 import NotFound from './pages/NotFound.jsx'
 import AsciiBackground from './components/AsciiBackground.jsx'
 import logoUrl from './assets/logo.svg'
 
-// Signup/onboarding screens get a vertically centred card.
-const CENTERED = /^\/(signup|onboarding\/|workspace\/)/
+// Landing + signup/onboarding screens get vertically centred content (cycle-3: '/' added).
+const CENTERED = /^\/($|signup|onboarding\/|workspace\/)/
 
 export default function App() {
   const { pathname } = useLocation()
+  const isHome = pathname === '/'
   return (
     <>
-    <AsciiBackground />
+    {/* cycle-3 feedback: the animated ASCII background is home-only (cycle 2 had it on every screen). */}
+    {isHome && <AsciiBackground />}
     <div className="shell">
       <header className="topbar">
         <Link to="/" className="brand">
@@ -32,7 +33,7 @@ export default function App() {
           <NavLink to="/signup">Sign up</NavLink>
         </nav>
       </header>
-      <main className={'content' + (CENTERED.test(pathname) ? ' centered' : '')}>
+      <main className={'content' + (CENTERED.test(pathname) ? ' centered' : '') + (isHome ? ' home' : '')}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
@@ -43,7 +44,8 @@ export default function App() {
           <Route path="/vendors" element={<VendorList />} />
           <Route path="/vendors/:id" element={<VendorDetail />} />
           <Route path="/vendors/:id/review" element={<VendorReview />} />
-          <Route path="/vendors/:id/approved" element={<VendorApproved />} />
+          {/* cycle-3 feedback: the "Success!" screen is gone; Approve returns to the list with a toast. */}
+          <Route path="/vendors/:id/approved" element={<Navigate to="/vendors" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

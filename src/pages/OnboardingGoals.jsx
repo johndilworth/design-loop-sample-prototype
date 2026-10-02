@@ -24,9 +24,10 @@ export default function OnboardingGoals() {
           return <button key={g} type="button" aria-pressed={on} className={'choice' + (on ? ' on' : '')} onClick={() => toggle(g)}>{g}</button>
         })}
       </div>
-      <div className="row split">
-        <button className="btn" type="button" onClick={() => nav('/onboarding/role')}>Back</button>
+      {/* cycle-3 feedback: primary action first, on the left (reverses cycle 1/2 "move to the right"). */}
+      <div className="row">
         <button className="btn primary" type="button" onClick={() => nav('/workspace/ws-7781')}>Create workspace</button>
+        <button className="btn" type="button" onClick={() => nav('/onboarding/role')}>Back</button>
       </div>
     </section>
   )
