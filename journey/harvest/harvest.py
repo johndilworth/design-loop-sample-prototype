@@ -35,6 +35,11 @@ Board-format feedback (R6): stickies with a purple/violet fill (hue 260-320 deg,
 text starts with `Board:` are about the review board itself. They never enter `frames`/`outsideFrames`; they go to
 `boardFeedback` with the review frame they sit in (if any) and the nearest generated board elements. The harvest
 is read-only: it never recolours or edits anything in Lucid.
+
+Empty stickies (R8): a sticky with no text (only the reviewer attribution line) is "needs intent". It gets no priority,
+never enters `frames[].feedback` / `outsideFrames` / `boardFeedback`, and is listed in `needsIntent` with its frame/stepKey,
+fill (colorPriority shown for information only) and author, so the agent asks the reviewer instead of guessing.
+The attribution TextArea (`ReadonlyAttributionText`) is never treated as feedback text.
 """
 import argparse, json, re, sys, datetime
 
@@ -42,6 +47,8 @@ GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-'
 FEEDBACK_CLASSES = {'StickiesStickyNoteBlock': 'sticky', 'TextBlock': 'text', 'DefaultTextBlockNew': 'text',
                     'LucidCardBlock': 'card', 'SparkCalloutSquareBlock': 'callout'}
 FRAME_CLASSES = {'SparkFrameBlock'}
+ATTRIB_KEY = 'ReadonlyAttributionText'
+LABEL_AUTHOR_RE = re.compile(r'(?:^|;)\s{2,}([^;\n]+?)\s*$')
 def priority_from_fill(fill):
     """Legend on the board: Red = must, Yellow = try, Blue = maybe (by hue of the sticky fill)."""
     import colorsys
@@ -105,14 +112,24 @@ def walk(o):
 def norm(item, page):
     p = item['properties']
     tas = p.get('TextAreas') or []
-    text = '\n'.join(t.get('text', '') for t in tas if t.get('text')) or item.get('label') or item.get('text') or ''
+    # The sticky author line (ReadonlyAttributionText, e.g. "  John Dilworth") is not feedback text (R8). The node `label`
+    # is "<text>;   <author>", so it is only used when there is no TextArea and the author suffix is stripped.
+    author = next((t.get('text', '').strip() for t in tas if t.get('key') == ATTRIB_KEY), None) or None
+    text = '\n'.join(t.get('text', '') for t in tas if t.get('text') and t.get('key') != ATTRIB_KEY)
+    if not text and not any(t.get('key') == 'Text' for t in tas):
+        text = item.get('label') or item.get('text') or ''
+        if author and text.rstrip().endswith(author):
+            text = text.rstrip()[:-len(author)].rstrip().rstrip(';')
+        elif p.get('BlockClass') == 'StickiesStickyNoteBlock':
+            m = LABEL_AUTHOR_RE.search(text)   # connector label form "<text>;   <author>" (semicolon + 3 spaces)
+            if m: author, text = m.group(1).strip(), text[:m.start()]
     # Oct 2026 connector variant: a page whose only frame has no connectors comes back with the frame under
     # data.containers.childContainers[] as {containerId, label, properties, itemIds} instead of a Frame node with childrenIds.
     return {'id': item.get('id') or item.get('itemId') or item.get('containerId'), 'blockClass': p.get('BlockClass'),
             'shapeType': item.get('shapeType') or ('Frame' if item.get('containerId') and p.get('BlockClass') in FRAME_CLASSES else None),
             'text': text, 'bbox': parse_bbox(p.get('BoundingBox')), 'fill': p.get('FillColor'),
             'childrenIds': item.get('childrenIds') or (item.get('itemIds') if item.get('containerId') else None),
-            'pageId': page.get('pageId'), 'pageTitle': page.get('pageTitle')}
+            'pageId': page.get('pageId'), 'pageTitle': page.get('pageTitle'), 'author': author}
 
 def overlap_ratio(a, f):
     ix = max(0, min(a['x'] + a['w'], f['x'] + f['w']) - max(a['x'], f['x']))
@@ -166,7 +183,7 @@ def main():
     before_imgs = [n for n in items.values() if (n['id'] or '').startswith('before-img-') and n['bbox']]
     board_elems = [n for n in items.values() if (n['id'] or '').startswith(GENERATED_PREFIXES) and n['bbox']]
     groups = {fid: [] for fid in frame_info}
-    outside, disagreements, board, conflicts = [], [], [], []
+    outside, disagreements, board, conflicts, needs_intent = [], [], [], [], []
     for n in items.values():
         if n['blockClass'] not in FEEDBACK_CLASSES or (n['id'] or '').startswith(GENERATED_PREFIXES):
             continue
@@ -180,6 +197,13 @@ def main():
         containment = {'childrenIds': by_child, 'via': via, 'bbox': by_bbox,
                        'bestOverlap': {'frameId': best, 'ratio': round(ratios[best], 3)} if best else None}
         assigned = by_child or by_bbox
+        if kind == 'sticky' and not n['text'].strip():   # R8: empty sticky = needs intent, never a priority item
+            needs_intent.append({'itemId': n['id'], 'kind': kind, 'pageId': n['pageId'], 'frameId': assigned,
+                                 'stepKey': frame_info[assigned]['stepKey'] if assigned else None, 'fill': n['fill'],
+                                 'colorPriority': priority_from_fill(n['fill']), 'boardColor': is_board_fill(n['fill']),
+                                 'author': n.get('author'), 'bbox': n['bbox'], 'containment': containment,
+                                 'note': 'empty sticky (no text): ask the reviewer what they meant; no priority, not implemented'})
+            continue
         if BOARD_RE.match(n['text']) or (kind == 'sticky' and is_board_fill(n['fill'])):
             near = sorted(((edge_distance(n['bbox'], o['bbox']), o['id']) for o in board_elems
                            if n['bbox'] and o['pageId'] == n['pageId'] and o['id'] != assigned), key=lambda t: t[0])[:3]
@@ -215,6 +239,7 @@ def main():
         'priorityRule': 'start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour',
         'priorityConflicts': conflicts,
         'boardFeedback': board,
+        'needsIntent': needs_intent,
         'comments': {'note': 'list_document_threads returns only threadId/created/status and comments carry no shape anchor; '
                              'comments cannot be mapped to frames via the connector', 'unanchored': threads},
     }
@@ -229,7 +254,7 @@ def main():
     json.dump(out, open(a.out, 'w'), indent=2, ensure_ascii=False)
     on_before = sum(1 for v in groups.values() for x in v if x.get('onBeforePanel'))
     print(f"frames={len(frame_info)} feedback_in_frames={sum(len(v) for v in groups.values())} outside={len(outside)} "
-          f"board={len(board)} onBeforePanel={on_before} priorityConflicts={len(conflicts)} "
+          f"board={len(board)} needsIntent={len(needs_intent)} onBeforePanel={on_before} priorityConflicts={len(conflicts)} "
           f"disagreements={len(disagreements)} threads={len(threads)} -> {a.out}")
 
 if __name__ == '__main__':
