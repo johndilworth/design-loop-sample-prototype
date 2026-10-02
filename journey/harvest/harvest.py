@@ -128,7 +128,8 @@ def main():
         if n['blockClass'] not in FEEDBACK_CLASSES or (n['id'] or '').startswith(GENERATED_PREFIXES):
             continue
         by_child, via = frame_ancestor(n['id'])
-        ratios = {fid: overlap_ratio(n['bbox'], fi['bbox']) for fid, fi in frame_info.items() if n['bbox'] and fi['bbox']}
+        ratios = {fid: overlap_ratio(n['bbox'], fi['bbox']) for fid, fi in frame_info.items()
+                  if n['bbox'] and fi['bbox'] and fi['pageId'] == n['pageId']}  # pages share a coordinate space
         best = max(ratios, key=ratios.get) if ratios else None
         if best and ratios[best] <= 0: best = None
         by_bbox = best if best and ratios[best] >= a.min_overlap else None
