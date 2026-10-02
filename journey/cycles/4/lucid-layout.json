@@ -1,0 +1,23 @@
+{
+  "layout": "pages",
+  "frame": {
+    "w": 2240,
+    "h": 1684,
+    "margin_x": 400,
+    "margin_top": 260,
+    "margin_bottom": 400,
+    "gap": 480,
+    "row_gap": 1600
+  },
+  "pages": [
+    "1. Landing (home) \u00b7 cycle 4",
+    "2. Get started (signup) \u00b7 cycle 4",
+    "3. Vendors (vendor-approval) \u00b7 cycle 4"
+  ],
+  "framesPerFlow": {
+    "landing": 1,
+    "signup": 5,
+    "vendor-approval": 4
+  },
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-<flow>/"
+}

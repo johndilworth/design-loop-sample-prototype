@@ -1,0 +1,685 @@
+{
+  "docId": "934e442a-203d-441c-b216-e0340808aa6b",
+  "cycle": 3,
+  "harvestedAt": "2026-10-02T06:32:46.014368+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-home-00-landing",
+      "pageId": "p1",
+      "frameTitle": "home-00-landing · / · Home · Northwind AI Ops",
+      "stepKey": "home-00-landing",
+      "matchedBy": "frame-id",
+      "flow": "landing",
+      "route": "/",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/",
+      "title": "Home · Northwind AI Ops",
+      "h1": "Transform your org with AI",
+      "clicked": {
+        "role": "link",
+        "name": "Get started",
+        "cssPath": "div#root > div > main > section > div > a:nth-of-type(1)"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/landing/annotated/01-home-00-landing.png",
+      "feedback": [
+        {
+          "itemId": "nizz1ZXPytq0",
+          "kind": "sticky",
+          "text": "Extend this page with more marketing copy,",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1892.4209397978161,
+            "y": 1975.8180559390398,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-00-landing",
+            "via": null,
+            "bbox": "frame-home-00-landing",
+            "bestOverlap": {
+              "frameId": "frame-home-00-landing",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Extend the landing page with more marketing copy below the hero (e.g. 3 value-prop sections + short how-it-works + secondary CTA); replace the placeholder lede.",
+          "files": [
+            "src/pages/Home.jsx:7-12 (h1, .lede, CTA row)",
+            "src/index.css (new landing section styles)"
+          ]
+        },
+        {
+          "itemId": ".hzzTiBTlHum",
+          "kind": "sticky",
+          "text": "Add a subtle animation on background only visible on home page",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1892.4209397978161,
+            "y": 1702.1627076459918,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-00-landing",
+            "via": null,
+            "bbox": "frame-home-00-landing",
+            "bestOverlap": {
+              "frameId": "frame-home-00-landing",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Make the ASCII background animation home-only: render/animate <AsciiBackground /> only on '/' (other routes get no animation, or a static frame); keep capture/reduced-motion freeze.",
+          "files": [
+            "src/App.jsx:23 (<AsciiBackground /> mounted globally)",
+            "src/components/AsciiBackground.jsx",
+            "src/index.css:15 (.ascii-bg)"
+          ]
+        },
+        {
+          "itemId": "hgzzvVqr-fVg",
+          "kind": "sticky",
+          "text": "Needs to be centered on page vertically like other screens. ",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#fe7070ff",
+          "bbox": {
+            "x": 110.44191218714695,
+            "y": 1228.359337910777,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-00-landing",
+            "via": null,
+            "bbox": "frame-home-00-landing",
+            "bestOverlap": {
+              "frameId": "frame-home-00-landing",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Vertically centre the landing hero like the signup/onboarding cards: include '/' in the CENTERED route regex and centre the Home <section> (wrap it in .card or extend the `.content.centered > .card` rule to the hero).",
+          "files": [
+            "src/App.jsx:17 (CENTERED regex), :35 (main className)",
+            "src/index.css:20-21 (.content.centered / > .card)",
+            "src/pages/Home.jsx:6-13 (hero <section>)"
+          ]
+        },
+        {
+          "itemId": "Ngzz6tFQn6xc",
+          "kind": "sticky",
+          "text": "Because this is a home page, make it more exciting — use the full page in dark mode - and use a more stylistic font, suggesting something with a bit more tech interest like JetBrains Mono\n ",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 110.44191218714695,
+            "y": 1527.8463652353294,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-home-00-landing",
+            "via": null,
+            "bbox": "frame-home-00-landing",
+            "bestOverlap": {
+              "frameId": "frame-home-00-landing",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Landing page only: full-bleed dark theme (dark page background behind hero, light text, ASCII field re-tinted for dark) and JetBrains Mono (Google Fonts, linked block OhzzCAGaaBBI) for the hero/heading type.",
+          "files": [
+            "src/pages/Home.jsx:6-13",
+            "src/index.css:4 (body font/background), :22-23 (h1, .lede)",
+            "index.html (add Google Fonts <link> for JetBrains Mono)",
+            "src/components/AsciiBackground.jsx (glyph colour on dark)",
+            "src/App.jsx:35 (route-based class e.g. .home on main/shell)"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-signup-01-create-account",
+      "pageId": "p2",
+      "frameTitle": "signup-01-create-account · /signup · Create account · Northwind AI Ops",
+      "stepKey": "signup-01-create-account",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/signup",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/signup",
+      "title": "Create account · Northwind AI Ops",
+      "h1": "Create your account",
+      "clicked": {
+        "role": "button",
+        "name": "Submit",
+        "cssPath": "div#root > div > main > section > form > div > button"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/signup/annotated/01-signup-01-create-account.png",
+      "feedback": [
+        {
+          "itemId": "Gizz18rcnGsN",
+          "kind": "sticky",
+          "text": "update fonts with Jet Brains Mono across site.",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 779.8864376251863,
+            "y": 2240.3472573688564,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-01-create-account",
+            "via": null,
+            "bbox": "frame-signup-01-create-account",
+            "bestOverlap": {
+              "frameId": "frame-signup-01-create-account",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Site-wide font: switch the base font-family to JetBrains Mono (Google Fonts link + body font-family with monospace fallback), check widths of buttons/inputs/choices.",
+          "files": [
+            "src/index.css:4 (body font-family Inter, ...)",
+            "index.html (Google Fonts <link>)",
+            "src/index.css:10 (.topbar .brand-word)"
+          ]
+        },
+        {
+          "itemId": "Xizz5g6Q3MKC",
+          "kind": "sticky",
+          "text": "convert design to dark mode",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 1030.6312974995699,
+            "y": 2276.745704769977,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-01-create-account",
+            "via": null,
+            "bbox": "frame-signup-01-create-account",
+            "bestOverlap": {
+              "frameId": "frame-signup-01-create-account",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Convert the signup design (and likely site-wide) to dark mode: dark page/card/input colours, light text, re-tint ASCII background and logo contrast; verify WCAG contrast.",
+          "files": [
+            "src/index.css:4 (body bg/color), :26 (.card), :29 (inputs), :31-34 (.btn), :38-39 (.choice), :42-44 (.table)",
+            "src/components/AsciiBackground.jsx (glyph colour)",
+            "src/pages/SignUp.jsx"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-signup-02-role",
+      "pageId": "p2",
+      "frameTitle": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops",
+      "stepKey": "signup-02-role",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/onboarding/role",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/onboarding/role?ref=signup",
+      "title": "Onboarding: role · Northwind AI Ops",
+      "h1": "What's your role?",
+      "clicked": {
+        "role": "radio",
+        "name": "Product / Design",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/signup/annotated/02-signup-02-role.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-signup-03-goals",
+      "pageId": "p2",
+      "frameTitle": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops",
+      "stepKey": "signup-03-goals",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/onboarding/goals",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/onboarding/goals",
+      "title": "Onboarding: goals · Northwind AI Ops",
+      "h1": "Pick your AI goals",
+      "clicked": {
+        "role": "button",
+        "name": "Create workspace",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(2) > button:nth-of-type(2)"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/signup/annotated/03-signup-03-goals.png",
+      "feedback": [
+        {
+          "itemId": "-izzTvyQTlYS",
+          "kind": "sticky",
+          "text": "Move Create Workspace button to left side",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6742.35946755342,
+            "y": 1884.8004044750105,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-signup-03-goals",
+            "via": "img-signup-03-goals",
+            "bbox": "frame-signup-03-goals",
+            "bestOverlap": {
+              "frameId": "frame-signup-03-goals",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Goals step: put 'Create workspace' on the left (e.g. primary first, Back after it / `.row` instead of `.row.split`). Reverses the cycle-1 'move to right side' change.",
+          "files": [
+            "src/pages/OnboardingGoals.jsx:27-29 (Back / Create workspace row)",
+            "src/index.css:35-36 (.row, .row.split)"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-signup-04-workspace-created",
+      "pageId": "p2",
+      "frameTitle": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops",
+      "stepKey": "signup-04-workspace-created",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/workspace/:id",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/workspace/ws-7781",
+      "title": "Workspace created · Northwind AI Ops",
+      "h1": "Workspace created",
+      "clicked": {
+        "role": "link",
+        "name": "Invite teammates",
+        "cssPath": "div#root > div > main > section > div > a:nth-of-type(2)"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/signup/annotated/04-signup-04-workspace-created.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-signup-05-invite",
+      "pageId": "p2",
+      "frameTitle": "signup-05-invite · /workspace/:id/invite · Invite teammates · Northwind AI Ops",
+      "stepKey": "signup-05-invite",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/workspace/:id/invite",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/workspace/ws-7781/invite",
+      "title": "Invite teammates · Northwind AI Ops",
+      "h1": "Invite teammates",
+      "clicked": null,
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/signup/annotated/05-signup-05-invite.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-vendor-01-list",
+      "pageId": "p3",
+      "frameTitle": "vendor-01-list · /vendors · Vendors · Northwind AI Ops",
+      "stepKey": "vendor-01-list",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/vendors",
+      "title": "Vendors · Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": {
+        "role": "link",
+        "name": "View Helix LLM Gateway",
+        "cssPath": "div#root > div > main > section > table > tbody > tr:nth-of-type(2) > td:nth-of-type(5) > a"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/vendor-approval/annotated/01-vendor-01-list.png",
+      "feedback": [
+        {
+          "itemId": "0jzzjCJwNxoF",
+          "kind": "sticky",
+          "text": "update fonts through system",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 165.38924213047392,
+            "y": 1438.3507966265302,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-01-list",
+            "via": null,
+            "bbox": "frame-vendor-01-list",
+            "bestOverlap": {
+              "frameId": "frame-vendor-01-list",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Same as Gizz18rcnGsN: apply the new (JetBrains Mono) font through the whole design system, vendor pages included (one global body font change).",
+          "files": [
+            "src/index.css:4 (body font-family)",
+            "index.html (Google Fonts <link>)"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-02-detail",
+      "pageId": "p3",
+      "frameTitle": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-02-detail",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/vendors/v-2177",
+      "title": "Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Helix LLM Gateway",
+      "clicked": {
+        "role": "link",
+        "name": "Proceed",
+        "cssPath": "div#root > div > main > section > div > a"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/vendor-approval/annotated/02-vendor-02-detail.png",
+      "feedback": [
+        {
+          "itemId": "qkzzC0jnKDv0",
+          "kind": "sticky",
+          "text": "Improve design of these cards, so it's not just looking like a table. \n\nMake this look like a sheet of paper, or something with a slick design\n\nAdd dashboard type graphics for Annual spend and make the \"status\" a chip, or flag  instead of only in the table view. ",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 3616.4784628064162,
+            "y": 1630.394451182764,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-02-detail",
+            "via": "img-vendor-02-detail",
+            "bbox": "frame-vendor-02-detail",
+            "bestOverlap": {
+              "frameId": "frame-vendor-02-detail",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Redesign vendor detail facts from a plain table-like <dl> into a 'paper sheet' card layout with a dashboard-style Annual spend graphic (stat tile / bar or gauge) and Status (and Risk) shown as a chip/flag near the h1.",
+          "files": [
+            "src/pages/VendorDetail.jsx:11-25 (dl.facts, Annual spend :18, Status :20)",
+            "src/index.css:26 (.card), :45-48 (.pill, .facts)",
+            "src/data.js:2-5 (spend is a string '$120,000 / yr' -> add numeric value for the graphic)"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-03-review",
+      "pageId": "p3",
+      "frameTitle": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-03-review",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/review",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/vendors/v-2177/review",
+      "title": "Review: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Review Helix LLM Gateway",
+      "clicked": {
+        "role": "button",
+        "name": "Approve",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)"
+      },
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/vendor-approval/annotated/03-vendor-03-review.png",
+      "feedback": [
+        {
+          "itemId": "fmzzhZDSxa-.",
+          "kind": "sticky",
+          "text": "make the \"Approve\" button green",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 6001.993950695631,
+            "y": 1808.3484817730632,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-03-review",
+            "via": "img-vendor-03-review",
+            "bbox": "frame-vendor-03-review",
+            "bestOverlap": {
+              "frameId": "frame-vendor-03-review",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Make the Approve button green (new .btn.success, e.g. #1d7a3d); keep Reject red (.btn.danger).",
+          "files": [
+            "src/pages/VendorReview.jsx:28 (Approve uses btn danger)",
+            "src/index.css:33 (.btn.danger; add .btn.success)"
+          ]
+        },
+        {
+          "itemId": "zmzzom9vzuNV",
+          "kind": "sticky",
+          "text": "Add a modal after \"Reject\" that requires a second confirmation before rejection finalizes.",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 6248.818723846715,
+            "y": 1899.349534500484,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-03-review",
+            "via": "img-vendor-03-review",
+            "bbox": "frame-vendor-03-review",
+            "bestOverlap": {
+              "frameId": "frame-vendor-03-review",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Clicking Reject opens a confirmation modal (dialog: 'Reject <vendor>?' Cancel / Confirm reject); only Confirm finalises and navigates.",
+          "files": [
+            "src/pages/VendorReview.jsx:27 (Reject -> nav('/vendors') immediately)",
+            "src/index.css (modal/dialog styles)"
+          ]
+        }
+      ]
+    },
+    {
+      "frameId": "frame-vendor-04-approved",
+      "pageId": "p3",
+      "frameTitle": "vendor-04-approved · /vendors/:id/approved · Vendor approved · Northwind AI Ops",
+      "stepKey": "vendor-04-approved",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/approved",
+      "url": "https://deploy-preview-2--design-loop-sample-prototype.netlify.app/vendors/v-2177/approved",
+      "title": "Vendor approved · Northwind AI Ops",
+      "h1": "Success!",
+      "clicked": null,
+      "commit": "2649ac4274f40c0fb6893257aa018f35e82b92d7",
+      "screenshot": "out/cycle-3/vendor-approval/annotated/04-vendor-04-approved.png",
+      "feedback": [
+        {
+          "itemId": "cnzz-v1AdaeP",
+          "kind": "sticky",
+          "text": "Remove this screen - instead of landing on this page, return to vendor page, and show a Growl type button in the lower left corner. ",
+          "priority": "must",
+          "prioritySource": "color",
+          "fill": "#e81313ff",
+          "bbox": {
+            "x": 8645.878264727753,
+            "y": 1554.2356381249083,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-04-approved",
+            "via": "img-vendor-04-approved",
+            "bbox": "frame-vendor-04-approved",
+            "bestOverlap": {
+              "frameId": "frame-vendor-04-approved",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "Drop the /vendors/:id/approved screen: Approve updates status and returns to the vendor page with a lower-left toast ('Helix LLM Gateway was updated.', as mocked on the board); redirect the old route.",
+          "files": [
+            "src/pages/VendorReview.jsx:28 (Approve navigate target)",
+            "src/pages/VendorApproved.jsx (remove or redirect)",
+            "src/App.jsx:11,46 (VendorApproved import + route)",
+            "src/pages/VendorList.jsx or src/pages/VendorDetail.jsx (toast host)",
+            "src/data.js (status update)",
+            "journey/flows.yaml (vendor-04-approved step)"
+          ]
+        },
+        {
+          "itemId": "Bozz1D.OTSx8",
+          "kind": "sticky",
+          "text": "Growl message like this should have an x button to dismiss, or it should remove itself after 3 seconds.",
+          "priority": "try",
+          "prioritySource": "color",
+          "fill": "#ffe342ff",
+          "bbox": {
+            "x": 8939.040764947631,
+            "y": 1950.1633113165099,
+            "w": 160.0,
+            "h": 160.0
+          },
+          "containment": {
+            "childrenIds": "frame-vendor-04-approved",
+            "via": "img-vendor-04-approved",
+            "bbox": "frame-vendor-04-approved",
+            "bestOverlap": {
+              "frameId": "frame-vendor-04-approved",
+              "ratio": 1.0
+            }
+          },
+          "author": null,
+          "proposedChange": "The toast ('growl') gets an × dismiss button and auto-dismisses after 3 s (aria-live=polite).",
+          "files": [
+            "new src/components/Toast.jsx (or inline)",
+            "src/index.css (toast styles, lower-left fixed)",
+            "host page from cnzz-v1AdaeP"
+          ]
+        }
+      ]
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  },
+  "nonStickyAdditions": [
+    {
+      "itemId": "OhzzCAGaaBBI",
+      "pageId": "p1",
+      "kind": "link-unfurl",
+      "blockClass": "LinkUnfurlBlock",
+      "text": "JetBrains Mono - Google Fonts; Google Fonts",
+      "link": "https://fonts.google.com/specimen/JetBrains+Mono?query=monospace",
+      "fill": "#ffffffff",
+      "containment": {
+        "childrenIds": "frame-home-00-landing",
+        "stepKey": "home-00-landing"
+      },
+      "relatedFeedback": "Ngzz6tFQn6xc",
+      "note": "Reference link for the font suggested in Ngzz6tFQn6xc; connected to it by line 4hzztkKAeLh2 (sticky -> link)."
+    },
+    {
+      "itemId": "4hzztkKAeLh2",
+      "pageId": "p1",
+      "kind": "connector",
+      "sourceId": "Ngzz6tFQn6xc",
+      "targetId": "OhzzCAGaaBBI",
+      "containment": {
+        "stepKey": "home-00-landing"
+      }
+    },
+    {
+      "itemId": "OnzzHAVCm9Fb",
+      "pageId": "p3",
+      "kind": "rectangle (mock toast)",
+      "blockClass": "SparkRectangleBlock",
+      "fill": "#000000ff",
+      "bbox": {
+        "x": 8582.08,
+        "y": 2093.92,
+        "w": 388.19,
+        "h": 64.1
+      },
+      "containment": {
+        "childrenIds": "frame-vendor-04-approved",
+        "via": "img-vendor-04-approved",
+        "stepKey": "vendor-04-approved"
+      },
+      "childrenIds": [
+        "1nzzm~zp7VUf"
+      ],
+      "relatedFeedback": [
+        "cnzz-v1AdaeP",
+        "Bozz1D.OTSx8"
+      ],
+      "note": "Reviewer-drawn mock of the requested growl/toast: black bar at the lower-left of the screenshot."
+    },
+    {
+      "itemId": "1nzzm~zp7VUf",
+      "pageId": "p3",
+      "kind": "text (mock toast copy)",
+      "blockClass": "AutoGrowTextBlock",
+      "text": "Helix LLM Gateway was updated.",
+      "textColor": "#ffffffff",
+      "containment": {
+        "parent": "OnzzHAVCm9Fb",
+        "stepKey": "vendor-04-approved"
+      },
+      "relatedFeedback": [
+        "cnzz-v1AdaeP",
+        "Bozz1D.OTSx8"
+      ],
+      "note": "Toast copy the reviewer wrote inside the mock (AutoGrowTextBlock is not a harvest FEEDBACK_CLASS, so harvest.py skips it)."
+    }
+  ],
+  "notes": [
+    "Harvested 2026-10-02 ~00:30 MDT from Lucid doc 934e442a (Cycle 3 review, PR #2 preview @ 2649ac4). 13 reviewer stickies: landing 4, signup 3 (signup-01 x2, signup-03 x1), vendor-approval 6 (vendor-01, -02, -03 x2, -04 x2). 0 outside frames; 0 comment threads; 4 non-sticky reviewer additions (link unfurl + connector on p1, mock toast rectangle + text on p3).",
+    "Priorities all from sticky fill colour (no text prefixes): #fe7070ff and #e81313ff -> must (4); #ffe342ff -> try (9); no blue.",
+    "harvest.py fix in this commit: BoundingBox cross-check is now scoped to the item's own page (all pages share one coordinate space, so stickies on p2/p3 matched p1 frames: 8 false disagreements before, 0 after). childrenIds assignment was already correct. Cycle-2 inputs re-run: identical result.",
+    "Page 1 was returned in the normal flowcharts format (not the childContainers variant), probably because the reviewer's connector line made it a flowchart.",
+    "Sticky authors not exposed by the fetch response (author=null).",
+    "Ambiguous: -izzTvyQTlYS 'Move Create Workspace button to left side' reverses cycle-1 IeyzBZmbGWGF ('move to right side', done in PR #1) and cycle-2 OGyzDpcA.Ky~ ('back to right').",
+    "Ambiguous: dark mode + JetBrains Mono scope. Landing sticky Ngzz6tFQn6xc says home page; Xizz5g6Q3MKC (signup-01) says 'convert design to dark mode'; Gizz18rcnGsN / 0jzzjCJwNxoF say fonts site-wide.",
+    "Ambiguous: .hzzTiBTlHum 'animation ... only visible on home page' conflicts with cycle-2 yIyzTSSVgdNA ('appears on all screens', done in PR #2).",
+    "Ambiguous: cnzz-v1AdaeP 'return to vendor page' could mean /vendors (list) or /vendors/:id (detail); 'Growl type button' read as a toast notification (per the reviewer's mock).",
+    "File paths/line numbers from grep on branch cycle-2-feedback @ b041c64."
+  ]
+}

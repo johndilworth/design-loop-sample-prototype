@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Northwind AI Ops">
+  <defs>
+    <linearGradient id="nw-g" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3a4fd8"/>
+      <stop offset="1" stop-color="#7c8cff"/>
+    </linearGradient>
+  </defs>
+  <!-- Square tile (square corners, matching the UI) -->
+  <rect width="40" height="40" fill="url(#nw-g)"/>
+  <!-- Geometric "N": two verticals joined by a diagonal -->
+  <path d="M10 30V10h5l10 12.2V10h5v20h-5L15 17.8V30z" fill="#fff"/>
+  <!-- North-pointing accent wedge in the top-right corner -->
+  <path d="M40 0v12L28 0z" fill="#12172a" fill-opacity=".35"/>
+</svg>

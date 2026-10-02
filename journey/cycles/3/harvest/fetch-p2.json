@@ -1,0 +1,252 @@
+{
+ "_note": "Condensed transcription of the Lucid connector fetch(id=934e442a-203d-441c-b216-e0340808aa6b, page_index=2) response taken 2026-10-02 ~00:30 MDT (metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, TextAreas text, FillColor, frame/image childrenIds, ImageUrl) for frames, screenshots and every non-generated item; omits styling/ZOrder, hdr- header text blocks and generated standalone items (listed in _omittedGeneratedIds; none had reviewer items attached). Sticky texts are verbatim.",
+ "_omittedGeneratedIds": [
+  "legend-*-p2",
+  "doc-title-p2",
+  "legend-box-p2",
+  "before-lbl/box/img-signup-1..4",
+  "before-box-signup-5",
+  "changes-signup-1..5"
+ ],
+ "document_id": "934e442a-203d-441c-b216-e0340808aa6b",
+ "page_id": "p2",
+ "page_index": 2,
+ "metadata": {
+  "page_count": 3,
+  "page_index": 2,
+  "page_region_counts": [
+   1,
+   1,
+   1
+  ]
+ },
+ "pages": [
+  {
+   "pageId": "p2",
+   "pageTitle": "2. Get started (signup) · cycle 3",
+   "pageIndex": 1,
+   "totalChunks": 1,
+   "requestedChunks": [
+    {
+     "chunkIndex": 0,
+     "data": {
+      "flowcharts": [
+       {
+        "diagramGroupId": "group_0",
+        "nodes": [
+         {
+          "id": "frame-signup-01-create-account",
+          "shapeType": "Frame",
+          "label": "signup-01-create-account · /signup · Create account · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-01-create-account",
+           "Xizz5g6Q3MKC",
+           "Gizz18rcnGsN",
+           "img-signup-01-create-account"
+          ],
+          "properties": {
+           "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-01-create-account · /signup · Create account · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "frame-signup-02-role",
+          "shapeType": "Frame",
+          "label": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops",
+          "childrenIds": [
+           "img-signup-02-role",
+           "hdr-signup-02-role"
+          ],
+          "properties": {
+           "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "frame-signup-03-goals",
+          "shapeType": "Frame",
+          "label": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-03-goals",
+           "img-signup-03-goals"
+          ],
+          "properties": {
+           "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "frame-signup-04-workspace-created",
+          "shapeType": "Frame",
+          "label": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-04-workspace-created",
+           "img-signup-04-workspace-created"
+          ],
+          "properties": {
+           "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "frame-signup-05-invite",
+          "shapeType": "Frame",
+          "label": "signup-05-invite · /workspace/:id/invite · Invite teammates · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-signup-05-invite",
+           "img-signup-05-invite"
+          ],
+          "properties": {
+           "BoundingBox": "x: 10880, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "signup-05-invite · /workspace/:id/invite · Invite teammates · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-signup-01-create-account",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/01-signup-01-create-account.png"
+          }
+         },
+         {
+          "id": "img-signup-02-role",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/02-signup-02-role.png"
+          }
+         },
+         {
+          "id": "img-signup-03-goals",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/03-signup-03-goals.png"
+          },
+          "childrenIds": [
+           "-izzTvyQTlYS"
+          ]
+         },
+         {
+          "id": "img-signup-04-workspace-created",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/04-signup-04-workspace-created.png"
+          }
+         },
+         {
+          "id": "img-signup-05-invite",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 11280, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/05-signup-05-invite.png"
+          }
+         },
+         {
+          "id": "-izzTvyQTlYS",
+          "shapeType": "Sticky note",
+          "label": "Move Create Workspace button to left side",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 6742.35946755342, y: 1884.8004044750105, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "Move Create Workspace button to left side"
+            }
+           ]
+          }
+         },
+         {
+          "id": "Gizz18rcnGsN",
+          "shapeType": "Sticky note",
+          "label": "update fonts with Jet Brains Mono across site.",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 779.8864376251863, y: 2240.3472573688564, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "update fonts with Jet Brains Mono across site."
+            }
+           ]
+          }
+         },
+         {
+          "id": "Xizz5g6Q3MKC",
+          "shapeType": "Sticky note",
+          "label": "convert design to dark mode",
+          "properties": {
+           "FillColor": "#ffe342ff",
+           "BoundingBox": "x: 1030.6312974995699, y: 2276.745704769977, w: 160, h: 160",
+           "BlockClass": "StickiesStickyNoteBlock",
+           "TextAreas": [
+            {
+             "key": "Text",
+             "text": "convert design to dark mode"
+            }
+           ]
+          }
+         }
+        ],
+        "edges": [
+         {
+          "id": "arrow-signup-1"
+         },
+         {
+          "id": "arrow-signup-2"
+         },
+         {
+          "id": "arrow-signup-3"
+         },
+         {
+          "id": "arrow-signup-4"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
