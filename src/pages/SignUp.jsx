@@ -22,8 +22,9 @@ export default function SignUp() {
         <label htmlFor="pw">Password</label>
         <input id="pw" type="password" value={pw} onChange={(e) => setPw(e.target.value)} />
         {err && <p className="error" role="alert">{err}</p>}
-        <label className="check"><input type="checkbox" defaultChecked /> Send me marketing emails</label>
-        <button className="btn primary" type="submit">Submit</button>
+        <div className="row">
+          <button className="btn primary" type="submit">Submit</button>
+        </div>
       </form>
     </section>
   )

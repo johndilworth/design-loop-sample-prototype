@@ -10,6 +10,8 @@ import VendorDetail from './pages/VendorDetail.jsx'
 import VendorReview from './pages/VendorReview.jsx'
 import VendorApproved from './pages/VendorApproved.jsx'
 import NotFound from './pages/NotFound.jsx'
+import AsciiBackground from './components/AsciiBackground.jsx'
+import logoUrl from './assets/logo.svg'
 
 // Signup/onboarding screens get a vertically centred card.
 const CENTERED = /^\/(signup|onboarding\/|workspace\/)/
@@ -17,9 +19,14 @@ const CENTERED = /^\/(signup|onboarding\/|workspace\/)/
 export default function App() {
   const { pathname } = useLocation()
   return (
+    <>
+    <AsciiBackground />
     <div className="shell">
       <header className="topbar">
-        <Link to="/" className="brand">Northwind AI Ops</Link>
+        <Link to="/" className="brand">
+          <img src={logoUrl} alt="" width="36" height="36" className="brand-mark" />
+          <span className="brand-word">Northwind <strong>AI Ops</strong></span>
+        </Link>
         <nav aria-label="Primary">
           <NavLink to="/vendors">Vendors</NavLink>
           <NavLink to="/signup">Sign up</NavLink>
@@ -41,5 +48,6 @@ export default function App() {
         </Routes>
       </main>
     </div>
+    </>
   )
 }
