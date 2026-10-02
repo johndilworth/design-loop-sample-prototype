@@ -4,7 +4,7 @@
 # `action` is the single advancing click that gets the 3x cursor overlay.
 # Locators are role + accessible name (Playwright getByRole semantics).
 version: 1
-base_url: https://design-loop-sample.netlify.app
+base_url: https://design-loop-sample-prototype.netlify.app
 viewport: { width: 1440, height: 1024 }
 flows:
   - key: signup

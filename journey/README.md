@@ -7,7 +7,7 @@ copy annotated PNGs to the journey-assets Netlify host (`design-loop-c<cycle>-<f
 
 ```bash
 npm ci && npx playwright install chromium
-node journey/capture.mjs --cycle 1 [--base-url https://deploy-preview-N--design-loop-sample.netlify.app] [--flow vendor-approval]
+node journey/capture.mjs --cycle 1 [--base-url https://deploy-preview-N--design-loop-sample-prototype.netlify.app] [--flow vendor-approval]
 python3 journey/annotate.py --cycle 1
 LUCID_OUT=/tmp python3 journey/lucid/build_spec.py   # -> /tmp/spec-sparkFrame.json for lucid_create_diagram_from_specification (use_assisted_layout=false)
 ```

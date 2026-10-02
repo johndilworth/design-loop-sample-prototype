@@ -14,4 +14,6 @@ buttons red, pre-checked marketing opt-in, "Step 1" vs "Step 2 of 2", generic "S
 npm install && npm run dev      # local
 npm run build                   # dist/ (Netlify: netlify.toml, SPA redirect)
 ```
-Deployed: https://design-loop-sample.netlify.app
+Deployed (canonical, Git-linked Netlify site with PR deploy previews): https://design-loop-sample-prototype.netlify.app
+
+PR deploy previews: `https://deploy-preview-<N>--design-loop-sample-prototype.netlify.app`
