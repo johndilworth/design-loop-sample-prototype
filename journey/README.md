@@ -85,3 +85,19 @@ python3 journey/lucid/build_spec.py --cycle 3 --asset-prefix design-loop-c3 --la
 - Steps may set `expect.toast` (text of a `role=status` toast that must be visible; otherwise a warning is recorded).
   Toasts auto-dismiss after 3 s, except in capture mode (`window.__DESIGN_LOOP_CAPTURE__` / `?capture=1`), where they stay up.
 - The ASCII background now exists only on `/` (still frozen to one static frame in capture mode / reduced motion).
+
+## Cycle 4 (final) + evolution page (PR #3 preview)
+```bash
+COMMIT_SHA=<PR #3 head sha> node journey/capture.mjs --cycle 4 --pr 3 --flow landing,signup,vendor-approval --base-url https://deploy-preview-3--design-loop-sample-prototype.netlify.app
+python3 journey/annotate.py --cycle 4
+python3 journey/lucid/build_spec.py --cycle 4 --asset-prefix design-loop-c4 --layout pages --flows landing,signup,vendor-approval \
+  --before-urls journey/cycles/3/asset-urls.json --changes journey/cycles/4/changes.json --title-suffix ' (PR #3, final)' \
+  --page-label 'landing=Landing (home)' --page-label 'signup=Get started (signup)' --page-label 'vendor-approval=Vendors (vendor-approval)' \
+  --out journey/cycles/4/lucid-spec.json
+python3 journey/lucid/build_evolution.py   # -> journey/evolution/lucid-spec.json (single page, rows = screens, columns = cycles 1-4)
+```
+- `cycles/4/changes.json` is built from cycle-3 `feedback.json` + the PR #3 sticky→change table; the two reversals
+  (Create workspace back to the left; ASCII background home-only) are labelled REVERSAL in the green blocks.
+- `lucid/build_evolution.py` reuses the hosted shots (`design-loop-c1r/c2/c3/c4-<flow>/` via `cycles/<N>/asset-urls.json`);
+  a screen missing from a cycle gets a dashed "Not captured" box. Column headers: cycle number + feedback items applied
+  by the PR that produced that build (0 / 11 / 8 / 13). Keep header lines ≤ ~36 chars at 20pt (longer lines wrapped and clipped).

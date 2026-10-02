@@ -1,0 +1,82 @@
+{
+ "_note": "Condensed transcription of the Lucid connector fetch(id=c95ea620-f506-4499-9d67-dc821b143297, page_index=1) response taken 2026-10-02 ~01:15 MDT (metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, frame childrenIds / childContainers itemIds, ImageUrl) for frames, screenshots and step headers; omits styling/ZOrder/text of generated items. The response contained ONLY generated ids (listed in _omittedGeneratedIds plus the frames/img/hdr kept here): no stickies or other reviewer items. Page 1 (single frame, no connectors) came back in the childContainers form.",
+ "_omittedGeneratedIds": [
+  "legend-*-p1",
+  "doc-title-p1",
+  "legend-box-p1",
+  "before-lbl/box/img-landing-1..1",
+  "changes-landing-1..1"
+ ],
+ "document_id": "c95ea620-f506-4499-9d67-dc821b143297",
+ "page_id": "p1",
+ "page_index": 1,
+ "metadata": {
+  "page_count": 3,
+  "page_index": 1,
+  "page_region_counts": [
+   1,
+   1,
+   1
+  ]
+ },
+ "pages": [
+  {
+   "pageId": "p1",
+   "pageTitle": "1. Landing (home) · cycle 4",
+   "pageIndex": 0,
+   "totalChunks": 1,
+   "requestedChunks": [
+    {
+     "chunkIndex": 0,
+     "data": {
+      "standaloneClusters": [
+       {
+        "cluster": [
+         {
+          "id": "img-home-00-landing",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-landing/01-home-00-landing.png"
+          }
+         },
+         {
+          "id": "hdr-home-00-landing",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 400, y: 940, w: 1440, h: 200",
+           "BlockClass": "DefaultTextBlockNew"
+          }
+         }
+        ]
+       }
+      ],
+      "containers": {
+       "childContainers": [
+        {
+         "containerId": "frame-home-00-landing",
+         "label": "home-00-landing · / · Home · Northwind AI Ops",
+         "properties": {
+          "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+          "BlockClass": "SparkFrameBlock",
+          "TextAreas": [
+           {
+            "key": "FrameTitle",
+            "text": "home-00-landing · / · Home · Northwind AI Ops"
+           }
+          ]
+         },
+         "itemIds": [
+          "hdr-home-00-landing",
+          "img-home-00-landing"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

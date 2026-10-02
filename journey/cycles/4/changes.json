@@ -1,0 +1,49 @@
+{
+  "source": "journey/cycles/3/harvest/feedback.json (13 stickies, Lucid 934e442a) + PR #3 body (head 20c1782). Sticky numbers = rows of the PR #3 sticky->change table.",
+  "flows": {
+    "signup": {
+      "default": [
+        "No screen-specific sticky in cycle 3.",
+        "Site-wide [try]: dark theme + JetBrains Mono (stickies #5/#6 on signup-01).",
+        "REVERSAL: ASCII background now only on the landing page (/), so it is gone here (sticky #4; reverses cycle-2 “appears on all screens”)."
+      ]
+    }
+  },
+  "steps": {
+    "home-00-landing": [
+      "[must] Landing content centred vertically like the other screens (#1 “Needs to be centered on page vertically”)",
+      "[try] More marketing copy: eyebrow, new lede, 3 value-prop sections, CTA band with a 2nd Get started (#2)",
+      "[try] Full-page dark mode + JetBrains Mono (#3; applied site-wide)",
+      "[try] Subtle ASCII background animation only on home (#4). REVERSAL of cycle-2 sticky yIyzTSSVgdNA (background on all screens)"
+    ],
+    "signup-01-create-account": [
+      "[try] JetBrains Mono across the site (#5 “update fonts with Jet Brains Mono across site.”)",
+      "[try] Whole-site dark theme via CSS variables; square corners kept (#6 “convert design to dark mode”)",
+      "ASCII background removed here (home-only now, see landing #4 reversal)"
+    ],
+    "signup-03-goals": [
+      "[try] Create workspace is now first/LEFT, Back after it (#7 “Move Create Workspace button to left side”)",
+      "REVERSAL: undoes cycle-1 IeyzBZmbGWGF (“move to right side”, PR #1) and cycle-2 OGyzDpcA.Ky~ (“back to right”, PR #2). Please confirm.",
+      "Global: dark theme + JetBrains Mono; no ASCII background"
+    ],
+    "vendor-01-list": [
+      "[try] JetBrains Mono through the system (#8 “update fonts through system”)",
+      "Status column now uses status chips; dark theme"
+    ],
+    "vendor-02-detail": [
+      "[must] Redesigned as a “sheet of paper” vendor record: accent rule, stacked-paper edge, perforation (#9)",
+      "Status + Risk chips under the vendor name; fields as labelled blocks",
+      "Annual spend dashboard panel: big figure, share-of-total meter, per-vendor spend bars",
+      "Proceed is now the primary button"
+    ],
+    "vendor-03-review": [
+      "[must] Approve button is green (.btn.success #1d7a3d); Reject stays red (#10)",
+      "[try] Reject now opens a confirmation dialog “Reject <vendor>?” with Cancel / Confirm reject (#11; not shown in this capture, which clicks Approve)"
+    ],
+    "vendor-04-approved": [
+      "[must] “Success!” screen removed: Approve returns to the vendor list /vendors with a lower-left toast “Helix LLM Gateway was updated.” (#12). Step key kept stable.",
+      "[try] Toast has an × dismiss button and auto-dismisses after 3 s (#13); kept visible in capture mode for this shot",
+      "Helix status chip now shows Approved"
+    ]
+  }
+}

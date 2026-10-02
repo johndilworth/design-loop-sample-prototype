@@ -1,5 +1,5 @@
 {
-  "_note": "Cross-cycle summary of the design-feedback loop, computed 2026-10-02 ~00:40 MDT from journey/cycles/{1,2,3}/harvest/feedback.json, journey/cycles/{1,2,3}/manifest.json (screens = manifest entries for that cycle) and the PR #1 / PR #2 bodies (gh pr view). 'resolved' = harvested items listed in the following PR's sticky->change table. Both PRs are OPEN (not merged).",
+  "_note": "Cross-cycle summary of the design-feedback loop, computed 2026-10-02 ~00:40 MDT from journey/cycles/{1,2,3}/harvest/feedback.json, journey/cycles/{1,2,3}/manifest.json (screens = manifest entries for that cycle) and the PR #1 / PR #2 bodies (gh pr view). 'resolved' = harvested items listed in the following PR's sticky->change table. Both PRs are OPEN (not merged). Updated 2026-10-02 ~01:20 MDT with cycle 4 (final, PR #3 preview @20c1782) and the PR #3 body; all three PRs still OPEN.",
   "cycles": [
     {"cycle": 1, "luciddoc": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5", "capturedCommit": "77283a9", "screensCaptured": 8, "flows": {"signup": 4, "vendor-approval": 4},
      "feedbackItems": 11, "byPriority": {"must": 5, "try": 6, "maybe": 0}, "byFlow": {"signup": 11, "vendor-approval": 0}, "outsideFrames": 0, "commentThreads": 0,
@@ -10,7 +10,12 @@
      "resolvedNote": "OGyzDpcA.Ky~ ('Move \"create workspace\" button back to right') was a no-op: already right-aligned."},
     {"cycle": 3, "luciddoc": "934e442a-203d-441c-b216-e0340808aa6b", "capturedCommit": "2649ac4", "screensCaptured": 10, "flows": {"landing": 1, "signup": 5, "vendor-approval": 4},
      "feedbackItems": 13, "byPriority": {"must": 4, "try": 9, "maybe": 0}, "byFlow": {"landing": 4, "signup": 3, "vendor-approval": 6}, "outsideFrames": 0, "commentThreads": 0,
-     "nonStickyReviewerAdditions": 4, "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "No cycle-3 PR yet."}
+     "nonStickyReviewerAdditions": 4, "followingPR": 3, "resolvedByFollowingPR": 13, "resolvedBreakdown": {"implemented": 13, "noOpAlreadySatisfied": 0}, "unresolved": 0,
+     "resolvedNote": "PR #3 (head 20c1782) maps all 13 stickies; 2 are reversals of earlier cycles (Create workspace back to the LEFT; ASCII background home-only)."},
+    {"cycle": 4, "final": true, "luciddoc": "c95ea620-f506-4499-9d67-dc821b143297", "capturedCommit": "20c1782", "screensCaptured": 10, "flows": {"landing": 1, "signup": 5, "vendor-approval": 4},
+     "feedbackItems": 0, "byPriority": {"must": 0, "try": 0, "maybe": 0}, "byFlow": {"landing": 0, "signup": 0, "vendor-approval": 0}, "outsideFrames": 0, "commentThreads": 0,
+     "followingPR": null, "resolvedByFollowingPR": null, "resolvedNote": "Final state; harvested immediately after creation (no review yet)."}
   ],
-  "totals": {"feedbackItems": 32, "byPriority": {"must": 11, "try": 21, "maybe": 0}, "screensCaptured": 26, "resolvedOfCycles1and2": "19/19"}
+  "totals": {"feedbackItems": 32, "byPriority": {"must": 11, "try": 21, "maybe": 0}, "screensCaptured": 36, "resolvedOfCycles1and2": "19/19", "resolvedOfCycles1to3": "32/32", "reversals": 2},
+  "evolutionDoc": "01d8c4f0-95d2-4de7-b997-d9a83df20ccb"
 }

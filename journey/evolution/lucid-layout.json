@@ -1,0 +1,71 @@
+{
+  "rows": [
+    "home-00-landing",
+    "signup-01-create-account",
+    "signup-03-goals",
+    "vendor-02-detail",
+    "vendor-03-review"
+  ],
+  "columns": [
+    {
+      "cycle": 1,
+      "source": "baseline \u00b7 main @ 77283a9",
+      "feedbackApplied": 0,
+      "note": "initial prototype, no feedback yet"
+    },
+    {
+      "cycle": 2,
+      "source": "PR #1 preview @ 5461dff",
+      "feedbackApplied": 11,
+      "note": "all 11 cycle-1 stickies"
+    },
+    {
+      "cycle": 3,
+      "source": "PR #2 preview @ 2649ac4",
+      "feedbackApplied": 8,
+      "note": "7 changed + 1 already satisfied"
+    },
+    {
+      "cycle": 4,
+      "source": "PR #3 preview @ 20c1782 (final)",
+      "feedbackApplied": 13,
+      "note": "all 13 stickies, 2 are reversals"
+    }
+  ],
+  "grid": {
+    "home-00-landing": {
+      "1": null,
+      "2": null,
+      "3": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-landing/01-home-00-landing.png",
+      "4": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-landing/01-home-00-landing.png"
+    },
+    "signup-01-create-account": {
+      "1": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/01-signup-01-create-account.png",
+      "2": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/01-signup-01-create-account.png",
+      "3": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/01-signup-01-create-account.png",
+      "4": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/01-signup-01-create-account.png"
+    },
+    "signup-03-goals": {
+      "1": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-signup/03-signup-03-goals.png",
+      "2": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-signup/03-signup-03-goals.png",
+      "3": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-signup/03-signup-03-goals.png",
+      "4": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-signup/03-signup-03-goals.png"
+    },
+    "vendor-02-detail": {
+      "1": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-vendor-approval/02-vendor-02-detail.png",
+      "2": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-vendor-approval/02-vendor-02-detail.png",
+      "3": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-vendor-approval/02-vendor-02-detail.png",
+      "4": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/02-vendor-02-detail.png"
+    },
+    "vendor-03-review": {
+      "1": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-vendor-approval/03-vendor-03-review.png",
+      "2": "https://journey-assets-ai-xform.netlify.app/design-loop-c2-vendor-approval/03-vendor-03-review.png",
+      "3": "https://journey-assets-ai-xform.netlify.app/design-loop-c3-vendor-approval/03-vendor-03-review.png",
+      "4": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/03-vendor-03-review.png"
+    }
+  },
+  "image": {
+    "w": 720,
+    "h": 512
+  }
+}

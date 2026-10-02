@@ -1,0 +1,189 @@
+{
+ "_note": "Condensed transcription of the Lucid connector fetch(id=c95ea620-f506-4499-9d67-dc821b143297, page_index=3) response taken 2026-10-02 ~01:15 MDT (metadata_only first: page_count=3, page_region_counts=[1,1,1]). Keeps the fields harvest.py reads (id, shapeType, BlockClass, BoundingBox, frame childrenIds / childContainers itemIds, ImageUrl) for frames, screenshots and step headers; omits styling/ZOrder/text of generated items. The response contained ONLY generated ids (listed in _omittedGeneratedIds plus the frames/img/hdr kept here): no stickies or other reviewer items.",
+ "_omittedGeneratedIds": [
+  "legend-*-p3",
+  "doc-title-p3",
+  "legend-box-p3",
+  "before-lbl/box/img-vendor-approval-1..4",
+  "changes-vendor-approval-1..4",
+  "arrow-vendor-approval-1..3"
+ ],
+ "document_id": "c95ea620-f506-4499-9d67-dc821b143297",
+ "page_id": "p3",
+ "page_index": 3,
+ "metadata": {
+  "page_count": 3,
+  "page_index": 3,
+  "page_region_counts": [
+   1,
+   1,
+   1
+  ]
+ },
+ "pages": [
+  {
+   "pageId": "p3",
+   "pageTitle": "3. Vendors (vendor-approval) · cycle 4",
+   "pageIndex": 2,
+   "totalChunks": 1,
+   "requestedChunks": [
+    {
+     "chunkIndex": 0,
+     "data": {
+      "flowcharts": [
+       {
+        "diagramGroupId": "group_0",
+        "nodes": [
+         {
+          "id": "frame-vendor-01-list",
+          "shapeType": "Frame",
+          "label": "vendor-01-list · /vendors · Vendors · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-vendor-01-list",
+           "img-vendor-01-list"
+          ],
+          "properties": {
+           "BoundingBox": "x: 0, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-01-list · /vendors · Vendors · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-01-list",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 400, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/01-vendor-01-list.png"
+          }
+         },
+         {
+          "id": "hdr-vendor-01-list",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 400, y: 940, w: 1440, h: 200",
+           "BlockClass": "DefaultTextBlockNew"
+          }
+         },
+         {
+          "id": "frame-vendor-02-detail",
+          "shapeType": "Frame",
+          "label": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-vendor-02-detail",
+           "img-vendor-02-detail"
+          ],
+          "properties": {
+           "BoundingBox": "x: 2720, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-02-detail",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/02-vendor-02-detail.png"
+          }
+         },
+         {
+          "id": "hdr-vendor-02-detail",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 3120, y: 940, w: 1440, h: 200",
+           "BlockClass": "DefaultTextBlockNew"
+          }
+         },
+         {
+          "id": "frame-vendor-03-review",
+          "shapeType": "Frame",
+          "label": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-vendor-03-review",
+           "img-vendor-03-review"
+          ],
+          "properties": {
+           "BoundingBox": "x: 5440, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-03-review",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/03-vendor-03-review.png"
+          }
+         },
+         {
+          "id": "hdr-vendor-03-review",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 5840, y: 940, w: 1440, h: 200",
+           "BlockClass": "DefaultTextBlockNew"
+          }
+         },
+         {
+          "id": "frame-vendor-04-approved",
+          "shapeType": "Frame",
+          "label": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops",
+          "childrenIds": [
+           "hdr-vendor-04-approved",
+           "img-vendor-04-approved"
+          ],
+          "properties": {
+           "BoundingBox": "x: 8160, y: 900, w: 2240, h: 1684",
+           "BlockClass": "SparkFrameBlock",
+           "TextAreas": [
+            {
+             "key": "FrameTitle",
+             "text": "vendor-04-approved · /vendors · Vendors · Northwind AI Ops"
+            }
+           ]
+          }
+         },
+         {
+          "id": "img-vendor-04-approved",
+          "shapeType": "User Image",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 1160, w: 1440, h: 1024",
+           "BlockClass": "UserImage2Block",
+           "ImageUrl": "https://journey-assets-ai-xform.netlify.app/design-loop-c4-vendor-approval/04-vendor-04-approved.png"
+          }
+         },
+         {
+          "id": "hdr-vendor-04-approved",
+          "shapeType": "Text",
+          "properties": {
+           "BoundingBox": "x: 8560, y: 940, w: 1440, h: 200",
+           "BlockClass": "DefaultTextBlockNew"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
