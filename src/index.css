@@ -43,11 +43,10 @@ h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 16px; letter-spacing: -0.0
 h2 { letter-spacing: -0.01em; }
 .lede { font-size: 18px; max-width: 760px; color: var(--muted); }
 .muted { color: var(--muted); font-size: 14px; }
-.step-label { color: var(--text); font-size: 15px; font-weight: 600; margin: 0; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0; padding: 32px 40px; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
 .card.narrow { max-width: 520px; margin: 0 auto; }
 form label, section > label { display: block; margin-top: 14px; font-size: 14px; font-weight: 600; }
-input[type=email], input[type=password], textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border-strong); background: var(--field); color: var(--text); border-radius: 0; font-size: 15px; margin-top: 6px; font-family: inherit; }
+input[type=email], input[type=password], input[type=text], input[type=number], select, textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border-strong); background: var(--field); color: var(--text); border-radius: 0; font-size: 15px; margin-top: 6px; font-family: inherit; }
 input::placeholder, textarea::placeholder { color: #8b93ab; }
 input[type=checkbox] { accent-color: var(--accent); width: 16px; height: 16px; }
 .check { display: flex; gap: 8px; align-items: center; font-weight: 400 !important; margin: 10px 0; }
@@ -91,7 +90,7 @@ legend { padding: 0 6px; color: var(--muted); font-size: 13px; text-transform: u
 .landing { width: 100%; }
 .eyebrow { color: var(--accent); font-size: 13px; text-transform: uppercase; letter-spacing: .14em; margin: 0; }
 .hero h1 { font-size: 46px; max-width: 900px; margin: 12px 0 16px; }
-.value-props { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.value-props { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
 .value-prop { background: var(--surface); border: 1px solid var(--border); padding: 22px 24px; }
 .value-prop h2 { font-size: 16px; margin: 10px 0 8px; }
 .value-prop p { color: var(--muted); font-size: 14px; margin: 0; }
@@ -108,7 +107,8 @@ legend { padding: 0 6px; color: var(--muted); font-size: 13px; text-transform: u
 .sheet-head { padding: 24px 40px 24px; border-bottom: 1px dashed var(--border-strong); }
 .sheet-kicker { margin: 16px 0 0; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
 .sheet-head h1 { margin: 6px 0 14px; }
-.back-link { font-size: 14px; }
+.btn.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; }
+.btn.icon-btn svg { display: block; }
 .sheet-body { display: grid; grid-template-columns: 1fr 1.15fr; gap: 32px; padding: 28px 40px 0; }
 .sheet > .row { padding: 0 40px; }
 .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 0; background: var(--border); border: 1px solid var(--border); align-self: start; }
@@ -143,3 +143,26 @@ legend { padding: 0 6px; color: var(--muted); font-size: 13px; text-transform: u
 .modal { background: var(--surface); border: 1px solid var(--border-strong); border-top: 4px solid var(--danger); padding: 28px 32px; max-width: 480px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,.6); }
 .modal h2 { margin: 0 0 8px; font-size: 20px; }
 .modal p { color: var(--muted); margin: 0; }
+
+/* Landing testimonials (cycle 4): below the value props, before the CTA band. */
+.testimonials { margin-top: 32px; }
+.section-label { font-size: 13px; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin: 0 0 12px; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+.sample-note { color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.testimonial { margin: 0; background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 16px 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
+.testimonial blockquote { margin: 0; font-size: 13px; line-height: 1.5; }
+.testimonial figcaption { font-size: 12px; color: var(--muted); display: grid; gap: 2px; }
+.testimonial figcaption strong { color: var(--text); font-size: 13px; }
+
+/* Combined workspace + invite screen (cycle 4). */
+.invite-form { margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--border-strong); }
+.invite-form h2 { font-size: 18px; margin: 0 0 4px; }
+.help { color: var(--muted); font-size: 13px; margin: 6px 0 0; }
+.btn:disabled, .btn[aria-disabled=true] { opacity: .45; cursor: not-allowed; }
+.btn.primary:disabled:hover { background: var(--primary); }
+
+/* Vendor list header + add-vendor form (cycle 4). */
+.page-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.form-grid .full { grid-column: 1 / -1; }
+select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }

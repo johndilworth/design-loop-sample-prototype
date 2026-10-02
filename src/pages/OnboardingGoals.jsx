@@ -14,7 +14,7 @@ export default function OnboardingGoals() {
   })
   return (
     <section className="card">
-      <p className="step-label">Step 2 of 2</p>
+      {/* cycle-4 feedback: step labels removed on both onboarding steps. */}
       <h1>Pick your AI goals</h1>
       <p>Select all that apply. You can't change these later.</p>
       {/* Highlight-on-select tiles (same look as the role step), multi-select via aria-pressed. */}

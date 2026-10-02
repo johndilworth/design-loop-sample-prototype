@@ -18,7 +18,7 @@ flows:
         expect: { route: /, h1: Transform your org with AI }
         action: { click: { role: link, name: Get started } }
   - key: signup
-    name: Landing → Get started → sign up → onboarding → workspace created → invite teammates
+    name: Landing → Get started → sign up → onboarding → workspace created + invite teammates
     # cycle 3: the flow is entered from the landing page by clicking "Get started" (not by deep-linking /signup).
     # `entry` runs before step 1 and is not captured as its own frame (the landing flow already captures '/').
     start_url: /
@@ -33,7 +33,8 @@ flows:
           - { fill: { role: textbox, name: Password }, value: correct-horse-9 }
         action: { click: { role: button, name: Submit } }
       - key: signup-02-role
-        expect: { route: /onboarding/role, h1: "What's your role?" }
+        # cycle 4: heading "What's your role?" -> "Select your role"; "Step 1 of 2" label removed
+        expect: { route: /onboarding/role, h1: Select your role }
         # cycle 2: no Next button — clicking a role saves it and advances immediately
         action: { click: { role: radio, name: Product / Design } }
       - key: signup-03-goals
@@ -44,11 +45,15 @@ flows:
           - { click: { role: button, name: Vendor risk reviews } }
         # cycle 3: "Create workspace" is now the first (left) button and Back follows it; role+name locator unchanged
         action: { click: { role: button, name: Create workspace } }
+      # cycle 4: Workspace created + Invite teammates are ONE screen (end state of the flow). The step key
+      # signup-04-workspace-created is kept (harvest maps frame-<stepKey>); signup-05-invite is RETIRED
+      # (/workspace/:id/invite now redirects to /workspace/:id). The shot shows the filled invite field with
+      # "Invite" enabled; the cursor marks Invite (clicking it shows the "Invites sent to 2 teammates." toast).
       - key: signup-04-workspace-created
         expect: { route: "/workspace/:id", h1: Workspace created }
-        action: { click: { role: link, name: Invite teammates } }
-      - key: signup-05-invite
-        expect: { route: "/workspace/:id/invite", h1: Invite teammates }
+        prepare:
+          - { fill: { role: textbox, name: Invite teammates }, value: "sam@example.com, priya@example.com" }
+        action: { click: { role: button, name: Invite } }
   - key: vendor-approval
     name: Vendor list → vendor detail → review → approve → list with toast
     start_url: /vendors
@@ -79,3 +84,24 @@ flows:
       # "Helix LLM Gateway was updated." toast and Helix's status chip showing Approved.
       - key: vendor-04-approved
         expect: { route: /vendors, h1: AI vendors, toast: Helix LLM Gateway was updated. }
+  # cycle 4: new flow for the "Add vendor" screen (sticky 7pHzKpUvEyup). Separate browser context, so the added
+  # vendor (sessionStorage) never leaks into the vendor-approval flow.
+  - key: vendor-add
+    name: Vendor list → Add vendor → filled form → list with "added" toast
+    start_url: /vendors
+    steps:
+      - key: vendor-add-01-list
+        expect: { route: /vendors, h1: AI vendors }
+        action: { click: { role: link, name: Add vendor } }
+      - key: vendor-add-02-form
+        expect: { route: /vendors/new, h1: Add a vendor }
+        prepare:
+          - { fill: { role: textbox, name: Vendor name * }, value: Lumen Contract AI }
+          - { fill: { role: textbox, name: Category * }, value: Document analysis }
+          - { fill: { role: textbox, name: Model / service }, value: Contract clause extraction }
+          - { fill: { role: textbox, name: Business owner * }, value: Jordan P. }
+          - { select: { role: combobox, name: Risk tier * }, value: Medium }
+          - { fill: { role: spinbutton, name: Annual spend (USD) * }, value: 54000 }
+        action: { click: { role: button, name: Save vendor } }
+      - key: vendor-add-03-added
+        expect: { route: /vendors, h1: AI vendors, toast: Lumen Contract AI was added. }

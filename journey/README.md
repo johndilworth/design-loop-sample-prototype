@@ -101,3 +101,12 @@ python3 journey/lucid/build_evolution.py   # -> journey/evolution/lucid-spec.jso
 - `lucid/build_evolution.py` reuses the hosted shots (`design-loop-c1r/c2/c3/c4-<flow>/` via `cycles/<N>/asset-urls.json`);
   a screen missing from a cycle gets a dashed "Not captured" box. Column headers: cycle number + feedback items applied
   by the PR that produced that build (0 / 11 / 8 / 13). Keep header lines ≤ ~36 chars at 20pt (longer lines wrapped and clipped).
+
+## Cycle 4 feedback changes affecting capture (PR #4)
+- `signup-04-workspace-created` is now the combined **Workspace created + Invite teammates** screen and the end of the signup flow
+  (prepare: fill the "Invite teammates" field; cursor on **Invite**). **`signup-05-invite` is retired**: `/workspace/:id/invite`
+  redirects to `/workspace/:id`. Skip goes to `/vendors`.
+- `signup-02-role` expects h1 "Select your role".
+- New flow **`vendor-add`**: `vendor-add-01-list` (click "Add vendor") → `vendor-add-02-form` (`/vendors/new`, filled) →
+  `vendor-add-03-added` (`/vendors` + toast "Lumen Contract AI was added."). Own browser context, so the added vendor stays out of vendor-approval.
+- `capture.mjs`: `prepare` supports `{ select: {role: combobox, name}, value }` (selectOption).

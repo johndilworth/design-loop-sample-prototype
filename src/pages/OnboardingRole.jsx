@@ -15,8 +15,8 @@ export default function OnboardingRole() {
   }
   return (
     <section className="card">
-      <p className="step-label">Step 1 of 2</p>
-      <h1>What's your role?</h1>
+      {/* cycle-4 feedback: no "Step 1 of 2" label (only two steps); more direct heading. */}
+      <h1>Select your role</h1>
       <div className="choices" role="radiogroup" aria-label="Role">
         {roles.map((r) => (
           <button key={r} type="button" role="radio" aria-checked={role === r} className={'choice' + (role === r ? ' on' : '')} onClick={() => pick(r)}>{r}</button>

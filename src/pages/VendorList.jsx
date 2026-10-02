@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import useTitle from '../useTitle'
-import { vendors, statusClass } from '../data'
-import { withStatus } from '../vendorState'
+import { statusClass } from '../data'
+import { withStatus, allVendors } from '../vendorState'
 import Toast from '../components/Toast'
 export default function VendorList() {
   useTitle('Vendors')
@@ -15,11 +15,17 @@ export default function VendorList() {
     if (location.state?.toast) nav(location.pathname, { replace: true, state: null })
   }, [location, nav])
   const dismiss = useCallback(() => setToast(''), [])
-  const rows = vendors.map(withStatus)
+  const rows = allVendors().map(withStatus)
   return (
     <section>
-      <h1>AI vendors</h1>
-      <p className="muted">{rows.length} vendors · sorted by nothing in particular</p>
+      {/* cycle-4 feedback: option to add a new vendor (opens /vendors/new). */}
+      <div className="page-head">
+        <div>
+          <h1>AI vendors</h1>
+          <p className="muted">{rows.length} vendors · sorted by nothing in particular</p>
+        </div>
+        <Link className="btn primary" to="/vendors/new">Add vendor</Link>
+      </div>
       <table className="table">
         <thead><tr><th>Name</th><th>Category</th><th>Risk</th><th>Status</th><th></th></tr></thead>
         <tbody>

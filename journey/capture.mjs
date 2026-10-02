@@ -93,6 +93,7 @@ for (const flow of flows) {
     for (const p of step.prepare || []) {
       if (p.fill) await loc(page, p.fill).fill(String(p.value))
       else if (p.check) await loc(page, p.check).check()
+      else if (p.select) await loc(page, p.select).selectOption(String(p.value)) // cycle 4: <select> fields
       else if (p.click) await loc(page, p.click).click()
     }
     await page.mouse.move(0, 0)

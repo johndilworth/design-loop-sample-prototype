@@ -4,9 +4,9 @@ import SignUp from './pages/SignUp.jsx'
 import OnboardingRole from './pages/OnboardingRole.jsx'
 import OnboardingGoals from './pages/OnboardingGoals.jsx'
 import WorkspaceReady from './pages/WorkspaceReady.jsx'
-import InviteTeammates from './pages/InviteTeammates.jsx'
 import VendorList from './pages/VendorList.jsx'
 import VendorDetail from './pages/VendorDetail.jsx'
+import VendorNew from './pages/VendorNew.jsx'
 import VendorReview from './pages/VendorReview.jsx'
 import NotFound from './pages/NotFound.jsx'
 import AsciiBackground from './components/AsciiBackground.jsx'
@@ -40,8 +40,10 @@ export default function App() {
           <Route path="/onboarding/role" element={<OnboardingRole />} />
           <Route path="/onboarding/goals" element={<OnboardingGoals />} />
           <Route path="/workspace/:workspaceId" element={<WorkspaceReady />} />
-          <Route path="/workspace/:workspaceId/invite" element={<InviteTeammates />} />
+          {/* cycle-4 feedback: invite is part of the workspace-created screen now. */}
+          <Route path="/workspace/:workspaceId/invite" element={<Navigate to=".." relative="path" replace />} />
           <Route path="/vendors" element={<VendorList />} />
+          <Route path="/vendors/new" element={<VendorNew />} />
           <Route path="/vendors/:id" element={<VendorDetail />} />
           <Route path="/vendors/:id/review" element={<VendorReview />} />
           {/* cycle-3 feedback: the "Success!" screen is gone; Approve returns to the list with a toast. */}

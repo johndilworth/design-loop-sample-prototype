@@ -1,13 +1,12 @@
 import { useCallback, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import useTitle from '../useTitle'
-import { findVendor } from '../data'
-import { setVendorStatus } from '../vendorState'
+import { setVendorStatus, findAnyVendor } from '../vendorState'
 import ConfirmDialog from '../components/ConfirmDialog'
 import NotFound from './NotFound'
 export default function VendorReview() {
   const { id } = useParams()
-  const v = findVendor(id)
+  const v = findAnyVendor(id)
   const nav = useNavigate()
   const [checks, setChecks] = useState({ dpa: false, soc2: false, pii: false })
   const [confirming, setConfirming] = useState(false)

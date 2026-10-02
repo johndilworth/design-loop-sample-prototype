@@ -7,6 +7,14 @@ const VALUE_PROPS = [
   { title: 'Spend and risk side by side', body: 'See annual spend, risk tier and review status for each vendor, so finance and security start from the same page.' },
 ]
 
+// cycle-4 feedback: testimonials below the value props. Clearly fictional sample quotes for the fictional Northwind app.
+const TESTIMONIALS = [
+  { quote: 'We cleared a backlog of 14 AI tool requests in two weeks, and security finally signs off from the same record as finance.', name: 'Avery Lin', role: 'Head of IT, Brightwater Logistics (sample)' },
+  { quote: 'Setting up a workspace around support triage took an afternoon. The team was using it the same day.', name: 'Rafael Ortiz', role: 'Support Operations Lead, Kestrel Health (sample)' },
+  { quote: 'Seeing spend next to risk tier changed our renewal conversations. We dropped two overlapping LLM gateways.', name: 'Mina Okafor', role: 'Finance Director, Juniper & Vale (sample)' },
+  { quote: 'Every approval has a who, a when and a why. Our auditors stopped asking for screenshots.', name: 'Tom Becker', role: 'Compliance Manager, Halden Bank (sample)' },
+]
+
 export default function Home() {
   useTitle('Home')
   return (
@@ -29,6 +37,17 @@ export default function Home() {
           </article>
         ))}
       </div>
+      <section className="testimonials" aria-labelledby="testimonials-h">
+        <h2 id="testimonials-h" className="section-label">What teams say <span className="sample-note">Sample quotes · fictional customers</span></h2>
+        <div className="testimonial-grid">
+          {TESTIMONIALS.map((t) => (
+            <figure className="testimonial" key={t.name}>
+              <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+              <figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
       <div className="cta-band">
         <div>
           <h2>Ready to set up your workspace?</h2>
