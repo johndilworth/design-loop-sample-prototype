@@ -27,9 +27,9 @@ shapes = [
              f'{11+8+13} feedback items applied across 3 PRs (#1, #2, #3; all still open).</span></p>'}]
 for j, (c, src, n, why) in enumerate(COLS):
     x = X0 + j * (IW + GX)
-    shapes.append({'id': f'evo-col-{c}', 'type': 'rectangle', 'boundingBox': {'x': x, 'y': 240, 'w': IW, 'h': HH},
-                   'style': {'fill': {'type': 'color', 'color': '#1F2A5A' if c == 4 else '#3A4FD8'}, 'stroke': {'color': '#1F2A5A', 'width': 2, 'style': 'solid'}, 'textColor': '#FFFFFF'},
-                   'text': f'<p style="font-size:30pt;text-align:center"><b>Cycle {c}</b><br><span style="font-size:20pt"><b>{n} feedback items applied</b><br>'
+    # board rule R4 (cycle 5 board feedback): plain text column headers, no filled chip / border
+    shapes.append({'id': f'evo-col-{c}', 'type': 'text', 'boundingBox': {'x': x, 'y': 240, 'w': IW, 'h': HH},
+                   'text': f'<p style="font-size:30pt;text-align:left"><b>Cycle {c}</b><br><span style="font-size:20pt"><b>{n} feedback items applied</b><br>'
                            f'{why}<br>{src}</span></p>'})
 for i, (key, label, route) in enumerate(ROWS):
     y = Y0 + i * (IH + GY)
@@ -42,8 +42,8 @@ for i, (key, label, route) in enumerate(ROWS):
             shapes.append({'id': sid, 'type': 'image', 'boundingBox': {'x': x, 'y': y, 'w': IW, 'h': IH},
                            'image': {'type': 'image', 'url': url}, 'stroke': {'color': '#C9CED8', 'width': 2, 'style': 'solid'}})
         else:
-            shapes.append({'id': sid, 'type': 'rectangle', 'boundingBox': {'x': x, 'y': y, 'w': IW, 'h': IH},
-                           'style': {'fill': {'type': 'color', 'color': '#EEF0F4'}, 'stroke': {'color': '#8A90A0', 'width': 2, 'style': 'dashed'}},
+            # R4: plain text placeholder, no dashed box
+            shapes.append({'id': sid, 'type': 'text', 'boundingBox': {'x': x, 'y': y, 'w': IW, 'h': IH},
                            'text': f'<p style="font-size:28pt;text-align:center"><b>Not captured</b><br><span style="font-size:18pt">'
                                    f'{key} was not part of the cycle {c} journey</span></p>'})
 for sh in shapes:

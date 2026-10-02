@@ -1,0 +1,22 @@
+{
+  "cycle": 5,
+  "version": "v2",
+  "docId": "89d26530-417e-44f0-ae5d-afa58a59fe83",
+  "title": "Design loop — Cycle 5 review (PR #4) v2",
+  "editUrl": "https://lucid.app/lucidchart/89d26530-417e-44f0-ae5d-afa58a59fe83/edit",
+  "viewUrl": "https://lucid.app/lucidchart/89d26530-417e-44f0-ae5d-afa58a59fe83/view",
+  "replaces": {"docId": "80e68a74-a706-4fe1-b22f-4dfc5c5eb215", "note": "v1 left untouched (holds the reviewer's 8 purple board-format stickies and hand edits, harvested in ../harvest/board-feedback.json). v2 is the review board for cycle 5 from now on; harvest v2 for app feedback."},
+  "layout": "pages; board rules R1-R7 (journey/cycles/5/harvest/board-feedback.json)",
+  "pages": [
+    {"index": 1, "id": "p1", "title": "1. Landing (home) · cycle 5", "flow": "landing", "frames": 1, "frameH": 3522},
+    {"index": 2, "id": "p2", "title": "2. Get started (signup) · cycle 5", "flow": "signup", "frames": 4, "frameH": 3684},
+    {"index": 3, "id": "p3", "title": "3. Vendors (vendor-approval) · cycle 5", "flow": "vendor-approval", "frames": 4, "frameH": 3414},
+    {"index": 4, "id": "p4", "title": "4. Add vendor (vendor-add) · cycle 5", "flow": "vendor-add", "frames": 3, "frameH": 3468}
+  ],
+  "images": "same hosted cycle-5 shots (design-loop-c5-<flow>/) and cycle-4 before thumbnails as v1; no new capture",
+  "createdAt": "2026-10-02T17:40:45Z",
+  "importPreflight": "one create (use_assisted_layout=false), 0 errors, 34 warnings - all text-fit advisories on explicit-size text (doc title, hdr captions, legend, before labels, long changes text); same font sizes rendered fine on v1. No scratch docs.",
+  "frameStyle": "fill #F2F3F5 + stroke width 0 took (exports show gray, borderless frames, title as plain text above the frame). Corner radius: Standard Import has no radius property for sparkFrame; not set (exported frames look square-cornered at export scale; not verifiable via fetch).",
+  "exports": ["export/v2-p1-landing.png", "export/v2-p2-signup.png", "export/v2-p3-vendor-approval.png", "export/v2-p4-vendor-add.png"],
+  "exportCheck": "all 22 image shapes (12 cycle-5 shots + 10 cycle-4 thumbnails) render; arrows run screenshot-centre to screenshot-centre"
+}

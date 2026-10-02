@@ -155,8 +155,10 @@
      "p2 (frame-signup-01 style only)"
     ],
     "rules": 7,
-    "file": "journey/cycles/5/harvest/board-feedback.json"
-   }
+    "file": "journey/cycles/5/harvest/board-feedback.json",
+    "applied": "R1-R7 applied 2026-10-02 ~11:45 MDT (build_spec.py, harvest.py, build_evolution.py R4, SKILL.md); v2 board 89d26530 replaces 80e68a74 for review"
+   },
+   "luciddocV2": "89d26530-417e-44f0-ae5d-afa58a59fe83"
   }
  ],
  "totals": {

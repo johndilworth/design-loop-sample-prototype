@@ -73,7 +73,7 @@ python3 journey/lucid/build_spec.py --cycle 3 --asset-prefix design-loop-c3 --la
   and clicks "Get started"; step 1 records it as `entry` and its frame header says "reached from / via link 'Get started'".
 - `capture.mjs`: `--pr N` (recorded per entry), `--flow a,b`; blocks `/.netlify/scripts/cdp` (the deploy-preview
   "Collaborate on this Deploy Preview" drawer appeared intermittently over screenshots).
-- `build_spec.py`: steps with no previous-cycle image get a dashed **"New this cycle"** before-box (same ids/prefix, ignored by harvest);
+- `build_spec.py` (until cycle 5 v1): steps with no previous-cycle image get a dashed **"New this cycle"** before-box (same ids/prefix, ignored by harvest; since v2 a plain text line);
   `--page-label flow=Label`; step header text is 22pt/16pt in a 200px box at frame y+40 (30pt/22pt overflowed behind the screenshot).
 - `lucid_edit_item` `text` is plain text: HTML is rendered literally. Fix generated text by re-importing, not by editing.
 - `harvest.py`: the connector returns a page whose single frame has no connectors as `data.containers.childContainers[]`
@@ -110,3 +110,17 @@ python3 journey/lucid/build_evolution.py   # -> journey/evolution/lucid-spec.jso
 - New flow **`vendor-add`**: `vendor-add-01-list` (click "Add vendor") → `vendor-add-02-form` (`/vendors/new`, filled) →
   `vendor-add-03-added` (`/vendors` + toast "Lumen Contract AI was added."). Own browser context, so the added vendor stays out of vendor-approval.
 - `capture.mjs`: `prepare` supports `{ select: {role: combobox, name}, value }` (selectOption).
+
+## Cycle 5 v2 board (board rules R1-R7 from the cycle 5 purple stickies)
+```bash
+python3 journey/lucid/build_spec.py --cycle 5 --asset-prefix design-loop-c5 --layout pages --flows landing,signup,vendor-approval,vendor-add \
+  --before-urls journey/cycles/5/before-urls.json --changes journey/cycles/5/changes.json --title-suffix ' (PR #4) v2' \
+  --page-label 'landing=Landing (home)' --page-label 'signup=Get started (signup)' --page-label 'vendor-approval=Vendors (vendor-approval)' \
+  --page-label 'vendor-add=Add vendor (vendor-add)' --out journey/cycles/5/v2/lucid-spec.json
+python3 journey/harvest/test_harvest.py   # harvest unit checks (v1 board: 8 purple / 0 app; synthetic keyword + before-panel cases)
+```
+- Board layout: gray (#F2F3F5) borderless frames, PAD 400 on all sides, inside each frame top-down: screenshot, 360 px gap,
+  title + description, "Changes in this cycle" text, previous-cycle label + 720x512 thumbnail; no boxes/fills around text;
+  arrows between screenshot centres; legend Do / Must do, Try, Consider, Board format (purple). Corner radius cannot be set via import.
+- Harvest: start-of-text keywords (Do:, Must do, Try:, Consider:) win over colour; purple / "Board:" notes go to `boardFeedback`;
+  stickies on a before-img thumbnail are flagged `onBeforePanel`.

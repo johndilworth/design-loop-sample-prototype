@@ -20,7 +20,21 @@ disagreement warning.
 
 Ignored generated items (cycle >= 2 before/after layout): ids starting with `before-` (previous-cycle reference
 panel: box/label/image, or a frame whose id starts with `before-`) and `changes-` ('Changes in this cycle' block).
-Stickies placed on a before- panel are NOT in a review frame; they land in `outsideFrames` (with bestOverlap).
+Stickies placed on a before- panel are NOT in a review frame on older boards (panel above the frame); they land in
+`outsideFrames` (with bestOverlap). Since the cycle 5 board rules (R3) the previous-cycle thumbnail sits INSIDE the
+review frame: a sticky whose bbox overlaps a `before-img-*` shape by >= 0.5 stays with that frame but gets
+`onBeforePanel: true` (R7), so the reviewer's intent (old screenshot vs current one) is confirmed before coding.
+
+Priority (R5): a sticky's TEXT wins over its colour. Only a keyword at the very start counts (case-insensitive):
+`Do:` / `Must do` / `Do or Must do` -> must, `Try:` -> try, `Consider:` -> maybe (an optional `test:` prefix is
+skipped). Otherwise the fill colour decides: red -> must, yellow -> try, blue -> maybe. Both are recorded
+(`textPriority`, `colorPriority`); a disagreement sets `priorityConflict: true` and is listed in `priorityConflicts`.
+Schema values stay must/try/maybe (display labels: Do / Must do, Try, Consider).
+
+Board-format feedback (R6): stickies with a purple/violet fill (hue 260-320 deg, e.g. #BA23F6) or any note whose
+text starts with `Board:` are about the review board itself. They never enter `frames`/`outsideFrames`; they go to
+`boardFeedback` with the review frame they sit in (if any) and the nearest generated board elements. The harvest
+is read-only: it never recolours or edits anything in Lucid.
 """
 import argparse, json, re, sys, datetime
 
@@ -42,7 +56,34 @@ def priority_from_fill(fill):
     if 180 <= h < 260: return 'maybe'
     return None
 
-PRIORITY_RE = re.compile(r'^\s*(?:test\s*[:\-]?\s*)?(must|try|maybe)\b\s*[:\-]?', re.I)
+PRIORITY_RE = re.compile(r'^\s*(?:test\s*[:\-]\s*)?(do\s+or\s+must\s+do\b|must\s+do\b|do\s*:|try\s*:|consider\s*:)', re.I)
+KEYWORD_PRIORITY = {'do': 'must', 'must do': 'must', 'do or must do': 'must', 'try': 'try', 'consider': 'maybe'}
+BOARD_RE = re.compile(r'^\s*board\s*:', re.I)
+
+def text_priority(text):
+    m = PRIORITY_RE.match(text or '')
+    if not m: return None
+    return KEYWORD_PRIORITY[re.sub(r'\s+', ' ', m.group(1).rstrip(': ').lower()).strip()]
+
+def is_board_fill(fill):
+    """Purple / violet sticky fill (board-format feedback), e.g. #BA23F6 (hue ~283 deg)."""
+    import colorsys
+    m = re.match(r'#?([0-9a-f]{6})', (fill or '').lower())
+    if not m: return False
+    r, g, b = (int(m.group(1)[i:i+2], 16) / 255 for i in (0, 2, 4))
+    h, l, sat = colorsys.rgb_to_hls(r, g, b)
+    return sat >= 0.25 and 260 <= h * 360 < 320
+
+def edge_distance(a, b):
+    dx = max(0, max(a['x'], b['x']) - min(a['x'] + a['w'], b['x'] + b['w']))
+    dy = max(0, max(a['y'], b['y']) - min(a['y'] + a['h'], b['y'] + b['h']))
+    return (dx * dx + dy * dy) ** .5
+
+ELEMENT_KINDS = (('frame-', 'frame'), ('hdr-', 'frame title/description'), ('img-', 'screenshot'), ('before-', 'before panel'),
+                 ('changes-', 'changes text'), ('legend-', 'legend'), ('doc-title', 'page header'), ('arrow-', 'arrow'),
+                 ('row-title-', 'row title'))
+def element_kind(i):
+    return next((k for p, k in ELEMENT_KINDS if (i or '').startswith(p)), 'other')
 
 def parse_bbox(s):
     if isinstance(s, dict):
@@ -122,8 +163,10 @@ def main():
             via = par; cur = par
         return None, None
 
+    before_imgs = [n for n in items.values() if (n['id'] or '').startswith('before-img-') and n['bbox']]
+    board_elems = [n for n in items.values() if (n['id'] or '').startswith(GENERATED_PREFIXES) and n['bbox']]
     groups = {fid: [] for fid in frame_info}
-    outside, disagreements = [], []
+    outside, disagreements, board, conflicts = [], [], [], []
     for n in items.values():
         if n['blockClass'] not in FEEDBACK_CLASSES or (n['id'] or '').startswith(GENERATED_PREFIXES):
             continue
@@ -133,14 +176,33 @@ def main():
         best = max(ratios, key=ratios.get) if ratios else None
         if best and ratios[best] <= 0: best = None
         by_bbox = best if best and ratios[best] >= a.min_overlap else None
-        m = PRIORITY_RE.match(n['text'])
-        pr_color = priority_from_fill(n['fill']) if FEEDBACK_CLASSES[n['blockClass']] == 'sticky' else None
-        fb = {'itemId': n['id'], 'kind': FEEDBACK_CLASSES[n['blockClass']], 'text': n['text'],
-              'priority': (m.group(1).lower() if m else pr_color),
-              'prioritySource': ('text' if m else 'color' if pr_color else None), 'fill': n['fill'], 'bbox': n['bbox'],
-              'containment': {'childrenIds': by_child, 'via': via, 'bbox': by_bbox,
-                              'bestOverlap': {'frameId': best, 'ratio': round(ratios[best], 3)} if best else None}}
+        kind = FEEDBACK_CLASSES[n['blockClass']]
+        containment = {'childrenIds': by_child, 'via': via, 'bbox': by_bbox,
+                       'bestOverlap': {'frameId': best, 'ratio': round(ratios[best], 3)} if best else None}
         assigned = by_child or by_bbox
+        if BOARD_RE.match(n['text']) or (kind == 'sticky' and is_board_fill(n['fill'])):
+            near = sorted(((edge_distance(n['bbox'], o['bbox']), o['id']) for o in board_elems
+                           if n['bbox'] and o['pageId'] == n['pageId'] and o['id'] != assigned), key=lambda t: t[0])[:3]
+            board.append({'itemId': n['id'], 'kind': kind, 'text': n['text'], 'fill': n['fill'], 'pageId': n['pageId'],
+                          'boardSource': 'text' if BOARD_RE.match(n['text']) else 'color', 'bbox': n['bbox'], 'frameId': assigned,
+                          'nearest': [{'id': i, 'element': element_kind(i), 'distance': round(d, 1)} for d, i in near]})
+            continue
+        pr_text = text_priority(n['text'])
+        pr_color = priority_from_fill(n['fill']) if kind == 'sticky' else None
+        fb = {'itemId': n['id'], 'kind': kind, 'text': n['text'],
+              'priority': pr_text or pr_color,
+              'prioritySource': ('text' if pr_text else 'color' if pr_color else None),
+              'textPriority': pr_text, 'colorPriority': pr_color,
+              'priorityConflict': bool(pr_text and pr_color and pr_text != pr_color),
+              'fill': n['fill'], 'bbox': n['bbox'], 'containment': containment}
+        if fb['priorityConflict']:
+            conflicts.append({'itemId': n['id'], 'textPriority': pr_text, 'colorPriority': pr_color, 'used': pr_text})
+        on_before = [b['id'] for b in before_imgs if n['bbox'] and b['pageId'] == n['pageId']
+                     and overlap_ratio(n['bbox'], b['bbox']) >= a.min_overlap]
+        if on_before:
+            fb['onBeforePanel'] = True
+            fb['beforePanel'] = on_before[0]
+            fb['note'] = "sticky sits on the previous-cycle thumbnail: confirm it is about the current screen before coding"
         if by_child != by_bbox:
             disagreements.append({'itemId': n['id'], 'childrenIds': by_child, 'bbox': by_bbox})
         (groups[assigned] if assigned else outside).append(fb)
@@ -150,6 +212,9 @@ def main():
         'docId': a.doc_id, 'cycle': a.cycle, 'harvestedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'containmentMethod': 'childrenIds (Frame nodes in fetch) with BoundingBox overlap >= %.2f as cross-check' % a.min_overlap,
         'frames': [], 'outsideFrames': outside, 'containmentDisagreements': disagreements,
+        'priorityRule': 'start-of-text keyword (Do:/Must do/Do or Must do -> must, Try: -> try, Consider: -> maybe) wins over fill colour',
+        'priorityConflicts': conflicts,
+        'boardFeedback': board,
         'comments': {'note': 'list_document_threads returns only threadId/created/status and comments carry no shape anchor; '
                              'comments cannot be mapped to frames via the connector', 'unanchored': threads},
     }
@@ -162,7 +227,9 @@ def main():
             'commit': e.get('commit'), 'screenshot': e.get('annotated') or e.get('screenshot'),
             'feedback': groups[fid]})
     json.dump(out, open(a.out, 'w'), indent=2, ensure_ascii=False)
+    on_before = sum(1 for v in groups.values() for x in v if x.get('onBeforePanel'))
     print(f"frames={len(frame_info)} feedback_in_frames={sum(len(v) for v in groups.values())} outside={len(outside)} "
+          f"board={len(board)} onBeforePanel={on_before} priorityConflicts={len(conflicts)} "
           f"disagreements={len(disagreements)} threads={len(threads)} -> {a.out}")
 
 if __name__ == '__main__':
