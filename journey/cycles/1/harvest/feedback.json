@@ -1,0 +1,166 @@
+{
+  "docId": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5",
+  "cycle": 1,
+  "harvestedAt": "2026-10-02T04:55:47.245627+00:00",
+  "containmentMethod": "childrenIds (Frame nodes in fetch) with BoundingBox overlap >= 0.50 as cross-check",
+  "frames": [
+    {
+      "frameId": "frame-signup-01-create-account",
+      "pageId": "p1",
+      "frameTitle": "signup-01-create-account · /signup · Create account · Northwind AI Ops",
+      "stepKey": "signup-01-create-account",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/signup",
+      "url": "https://design-loop-sample-prototype.netlify.app/signup",
+      "title": "Create account · Northwind AI Ops",
+      "h1": "Create your account",
+      "clicked": {
+        "role": "button",
+        "name": "Submit",
+        "cssPath": "div#root > div > main > section > form > button"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/signup/annotated/01-signup-01-create-account.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-signup-02-role",
+      "pageId": "p1",
+      "frameTitle": "signup-02-role · /onboarding/role · Onboarding: role · Northwind AI Ops",
+      "stepKey": "signup-02-role",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/onboarding/role",
+      "url": "https://design-loop-sample-prototype.netlify.app/onboarding/role?ref=signup",
+      "title": "Onboarding: role · Northwind AI Ops",
+      "h1": "What's your role?",
+      "clicked": {
+        "role": "button",
+        "name": "Next",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(2) > button"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/signup/annotated/02-signup-02-role.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-signup-03-goals",
+      "pageId": "p1",
+      "frameTitle": "signup-03-goals · /onboarding/goals · Onboarding: goals · Northwind AI Ops",
+      "stepKey": "signup-03-goals",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/onboarding/goals",
+      "url": "https://design-loop-sample-prototype.netlify.app/onboarding/goals",
+      "title": "Onboarding: goals · Northwind AI Ops",
+      "h1": "Pick your AI goals",
+      "clicked": {
+        "role": "button",
+        "name": "Create workspace",
+        "cssPath": "div#root > div > main > section > div:nth-of-type(2) > button:nth-of-type(2)"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/signup/annotated/03-signup-03-goals.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-signup-04-workspace-created",
+      "pageId": "p1",
+      "frameTitle": "signup-04-workspace-created · /workspace/:id · Workspace created · Northwind AI Ops",
+      "stepKey": "signup-04-workspace-created",
+      "matchedBy": "frame-id",
+      "flow": "signup",
+      "route": "/workspace/:id",
+      "url": "https://design-loop-sample-prototype.netlify.app/workspace/ws-7781",
+      "title": "Workspace created · Northwind AI Ops",
+      "h1": "Workspace created",
+      "clicked": null,
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/signup/annotated/04-signup-04-workspace-created.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-vendor-01-list",
+      "pageId": "p2",
+      "frameTitle": "vendor-01-list · /vendors · Vendors · Northwind AI Ops",
+      "stepKey": "vendor-01-list",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors",
+      "url": "https://design-loop-sample-prototype.netlify.app/vendors",
+      "title": "Vendors · Northwind AI Ops",
+      "h1": "AI vendors",
+      "clicked": {
+        "role": "link",
+        "name": "View Helix LLM Gateway",
+        "cssPath": "div#root > div > main > section > table > tbody > tr:nth-of-type(2) > td:nth-of-type(5) > a"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/01-vendor-01-list.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-vendor-02-detail",
+      "pageId": "p2",
+      "frameTitle": "vendor-02-detail · /vendors/:id · Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-02-detail",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id",
+      "url": "https://design-loop-sample-prototype.netlify.app/vendors/v-2177",
+      "title": "Vendor: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Helix LLM Gateway",
+      "clicked": {
+        "role": "link",
+        "name": "Proceed",
+        "cssPath": "div#root > div > main > section > div > a"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/02-vendor-02-detail.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-vendor-03-review",
+      "pageId": "p2",
+      "frameTitle": "vendor-03-review · /vendors/:id/review · Review: Helix LLM Gateway · Northwind AI Ops",
+      "stepKey": "vendor-03-review",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/review",
+      "url": "https://design-loop-sample-prototype.netlify.app/vendors/v-2177/review",
+      "title": "Review: Helix LLM Gateway · Northwind AI Ops",
+      "h1": "Review Helix LLM Gateway",
+      "clicked": {
+        "role": "button",
+        "name": "Approve",
+        "cssPath": "div#root > div > main > section > div > button:nth-of-type(2)"
+      },
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/03-vendor-03-review.png",
+      "feedback": []
+    },
+    {
+      "frameId": "frame-vendor-04-approved",
+      "pageId": "p2",
+      "frameTitle": "vendor-04-approved · /vendors/:id/approved · Vendor approved · Northwind AI Ops",
+      "stepKey": "vendor-04-approved",
+      "matchedBy": "frame-id",
+      "flow": "vendor-approval",
+      "route": "/vendors/:id/approved",
+      "url": "https://design-loop-sample-prototype.netlify.app/vendors/v-2177/approved",
+      "title": "Vendor approved · Northwind AI Ops",
+      "h1": "Success!",
+      "clicked": null,
+      "commit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+      "screenshot": "out/cycle-1/vendor-approval/annotated/04-vendor-04-approved.png",
+      "feedback": []
+    }
+  ],
+  "outsideFrames": [],
+  "containmentDisagreements": [],
+  "comments": {
+    "note": "list_document_threads returns only threadId/created/status and comments carry no shape anchor; comments cannot be mapped to frames via the connector",
+    "unanchored": []
+  }
+}

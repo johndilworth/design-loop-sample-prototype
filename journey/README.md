@@ -2,14 +2,16 @@
 
 Pipeline: `flows.yaml` → `capture.mjs` (Playwright, 1440×1024) → `manifest.json` + raw PNGs →
 `annotate.py` (3× cursor, hotspot = tip at 27,30 in the 141×198 sprite, clamped in-frame) →
-copy annotated PNGs to the journey-assets Netlify host (`design-loop-c<cycle>-<flow>/`) →
-`lucid/build_spec.py` (one Lucid **frame** per step) → reviewers add stickies → `harvest/harvest.py` → `feedback.json`.
+copy annotated PNGs to the journey-assets Netlify host (new folder per run, e.g. `design-loop-c1r-<flow>/`, files are cached immutable) →
+`lucid/build_spec.py` (one Lucid **frame** per step, one page per flow, legend at top) → reviewers add stickies → `harvest/harvest.py` → `feedback.json`.
 
 ```bash
 npm ci && npx playwright install chromium
 node journey/capture.mjs --cycle 1 [--base-url https://deploy-preview-N--design-loop-sample-prototype.netlify.app] [--flow vendor-approval]
 python3 journey/annotate.py --cycle 1
-LUCID_OUT=/tmp python3 journey/lucid/build_spec.py   # -> /tmp/spec-sparkFrame.json for lucid_create_diagram_from_specification (use_assisted_layout=false)
+python3 journey/lucid/build_spec.py --cycle 1 --asset-prefix design-loop-c1r --layout pages --out journey/cycles/1/lucid-spec.json
+#   -> standard_import_json for lucid_create_diagram_from_specification (product=lucidchart, use_assisted_layout=false)
+#   --layout rows stacks flows as rows on one page (1600px vertical gap)
 ```
 
 No `data-journey-id` attributes: screens are identified by route template (ids → `:id`, query stripped),
@@ -17,6 +19,8 @@ No `data-journey-id` attributes: screens are identified by route template (ids �
 Click targets are located by ARIA role + accessible name.
 
 ## Lucid layout
+- One page per flow (`p1`, `p2`, ...). Each page has a title line plus a legend block (`legend-*` ids): "Leave feedback as sticky notes INSIDE the screen's frame. Red = must, Yellow = try, Blue = maybe. Comments are read as general feedback."
+- **Keep import ids short** (≤ ~36 chars): a 52-char line id made the Lucid import fail with a bare 400. Arrows are `arrow-<flow>-<n>`. Avoid `→` in text (use `>`).
 - Frame shape: `sparkFrame` in Standard Import → `SparkFrameBlock` (works in a Lucidchart doc).
 - Frame 2240×1684: screenshot 1440×1024 at (+400, +260); 400 px margin left/right/below for stickies; 480 px gap between frames; arrows frame→frame.
 - Frame title (visible tab) = `stepKey · route · document.title`; plus a visible header text block inside the frame. No shape `note` fields are used.
@@ -31,4 +35,7 @@ Click targets are located by ARIA role + accessible name.
 
 ## Harvest usage
 See the docstring in `harvest/harvest.py`. Sample input/output: `harvest/sample-fetch-cycle-1.json`, `harvest/sample-feedback-cycle-1.json`.
-Priority is parsed from a leading `must` / `try` / `maybe` (optionally after `TEST:`).
+Priority is parsed from a leading `must` / `try` / `maybe` (optionally after `TEST:`); otherwise from the sticky colour (red/pink = must, yellow = try, blue = maybe; `prioritySource` says which).
+
+## Cycles
+`journey/cycles/<N>/` holds the frozen artifacts of a review cycle: `manifest.json`, `annotated/`, `asset-urls.json`, `lucid-spec.json`, `lucid-doc.json` (doc id / URLs), `export/` (Lucid PNG exports), `harvest/` (fetch transcription + `feedback.json`).

@@ -3,3 +3,4 @@ dist
 .netlify
 journey/out
 *.local
+__pycache__/

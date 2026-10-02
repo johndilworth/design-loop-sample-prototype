@@ -15,10 +15,24 @@ BlockClass "SparkFrameBlock" (primary), and independently recomputes containment
 """
 import argparse, json, re, sys, datetime
 
-GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-')  # ids we create on import
+GENERATED_PREFIXES = ('frame-', 'hdr-', 'img-', 'doc-title', 'arrow-', 'legend-', 'row-title-')  # ids we create on import
 FEEDBACK_CLASSES = {'StickiesStickyNoteBlock': 'sticky', 'TextBlock': 'text', 'DefaultTextBlockNew': 'text',
                     'LucidCardBlock': 'card', 'SparkCalloutSquareBlock': 'callout'}
 FRAME_CLASSES = {'SparkFrameBlock'}
+def priority_from_fill(fill):
+    """Legend on the board: Red = must, Yellow = try, Blue = maybe (by hue of the sticky fill)."""
+    import colorsys
+    m = re.match(r'#?([0-9a-f]{6})', (fill or '').lower())
+    if not m: return None
+    r, g, b = (int(m.group(1)[i:i+2], 16) / 255 for i in (0, 2, 4))
+    h, l, sat = colorsys.rgb_to_hls(r, g, b)
+    if sat < 0.25: return None
+    h *= 360
+    if h < 20 or h >= 320: return 'must'
+    if 40 <= h < 70: return 'try'
+    if 180 <= h < 260: return 'maybe'
+    return None
+
 PRIORITY_RE = re.compile(r'^\s*(?:test\s*[:\-]?\s*)?(must|try|maybe)\b\s*[:\-]?', re.I)
 
 def parse_bbox(s):
@@ -80,7 +94,7 @@ def main():
     frame_info = {}
     for f in frames:
         sk, how = step_for_frame(f)
-        frame_info[f['id']] = {'frameId': f['id'], 'frameTitle': f['text'], 'stepKey': sk, 'matchedBy': how,
+        frame_info[f['id']] = {'frameId': f['id'], 'frameTitle': f['text'], 'stepKey': sk, 'matchedBy': how, 'pageId': f['pageId'],
                                'bbox': f['bbox'], 'childrenIds': f['childrenIds'] or []}
     parent_by_children = {c: fid for fid, fi in frame_info.items() for c in fi['childrenIds']}
 
@@ -95,8 +109,10 @@ def main():
         if best and ratios[best] <= 0: best = None
         by_bbox = best if best and ratios[best] >= a.min_overlap else None
         m = PRIORITY_RE.match(n['text'])
+        pr_color = priority_from_fill(n['fill']) if FEEDBACK_CLASSES[n['blockClass']] == 'sticky' else None
         fb = {'itemId': n['id'], 'kind': FEEDBACK_CLASSES[n['blockClass']], 'text': n['text'],
-              'priority': m.group(1).lower() if m else None, 'fill': n['fill'], 'bbox': n['bbox'],
+              'priority': (m.group(1).lower() if m else pr_color),
+              'prioritySource': ('text' if m else 'color' if pr_color else None), 'fill': n['fill'], 'bbox': n['bbox'],
               'containment': {'childrenIds': by_child, 'bbox': by_bbox,
                               'bestOverlap': {'frameId': best, 'ratio': round(ratios[best], 3)} if best else None}}
         assigned = by_child or by_bbox
@@ -112,10 +128,10 @@ def main():
         'comments': {'note': 'list_document_threads returns only threadId/created/status and comments carry no shape anchor; '
                              'comments cannot be mapped to frames via the connector', 'unanchored': threads},
     }
-    for fid, fi in sorted(frame_info.items(), key=lambda kv: (kv[1]['bbox'] or {}).get('x', 0)):
+    for fid, fi in sorted(frame_info.items(), key=lambda kv: (kv[1]['pageId'] or '', (kv[1]['bbox'] or {}).get('y', 0), (kv[1]['bbox'] or {}).get('x', 0))):
         e = steps.get(fi['stepKey'], {})
         out['frames'].append({
-            'frameId': fid, 'frameTitle': fi['frameTitle'], 'stepKey': fi['stepKey'], 'matchedBy': fi['matchedBy'],
+            'frameId': fid, 'pageId': fi['pageId'], 'frameTitle': fi['frameTitle'], 'stepKey': fi['stepKey'], 'matchedBy': fi['matchedBy'],
             'flow': e.get('flow'), 'route': e.get('route'), 'url': e.get('url'), 'title': e.get('title'), 'h1': e.get('h1'),
             'clicked': ({k: e['clicked'][k] for k in ('role', 'name', 'cssPath')} if e.get('clicked') else None),
             'commit': e.get('commit'), 'screenshot': e.get('annotated') or e.get('screenshot'),

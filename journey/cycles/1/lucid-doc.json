@@ -1,0 +1,36 @@
+{
+  "cycle": 1,
+  "docId": "9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5",
+  "title": "Design loop — Cycle 1 review",
+  "editUrl": "https://lucid.app/lucidchart/9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5/edit",
+  "viewUrl": "https://lucid.app/lucidchart/9a9f5f0a-dfec-4dbb-8249-679a82bd0cb5/view",
+  "layout": "pages",
+  "pages": [
+    {
+      "index": 1,
+      "id": "p1",
+      "title": "1. signup · cycle 1",
+      "flow": "signup",
+      "frames": 4
+    },
+    {
+      "index": 2,
+      "id": "p2",
+      "title": "2. vendor-approval · cycle 1",
+      "flow": "vendor-approval",
+      "frames": 4
+    }
+  ],
+  "createdAt": "2026-10-02T04:54:09Z",
+  "capturedCommit": "77283a96b02b95bdcfcea3a5d1faa9018f8e49cc",
+  "deployUrl": "https://design-loop-sample-prototype.netlify.app",
+  "assetBase": "https://journey-assets-ai-xform.netlify.app/design-loop-c1r-<flow>/",
+  "supersedes": {
+    "docId": "39ce5d6c-d3d5-4581-ae5b-488f6a55566b",
+    "renamedTo": "[superseded test] Design loop · Northwind AI Ops · Vendor approval · cycle 1 · desktop 1440x1024"
+  },
+  "exports": [
+    "export/lucid-export-p1-signup.png",
+    "export/lucid-export-p2-vendor-approval.png"
+  ]
+}
